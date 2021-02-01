@@ -1,0 +1,176 @@
+.display {
+  display: block;
+}
+.hide {
+  display: none;
+}
+body{
+    background-image: url("img/fondo.png");    
+    background-size:cover;
+  }
+.img{
+  margin-top: 5%;
+}
+.btn{
+    letter-spacing:5px;
+    padding:20px 40px;
+    color:#1F9791;
+}
+.img2{
+  display: block;
+  margin: auto;
+}
+.phone_video{
+  width: 100px;
+  height: 200px;
+}
+
+
+.phone_device {
+  background: url(https://pokemongolive.com/img/homepage/phone.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  margin: auto;
+  z-index: 0;
+  width: 400px;
+  height: 250px;
+  bottom: 0;
+  right: 50%;
+  margin-right: -163px;
+  text-align: center;
+  
+}
+
+
+body{
+  background: white;
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header{
+  background: rgb(78, 11, 75);
+  color: white;
+  padding: 1em 0;
+  position: relative; 
+}
+header::after{
+  content: ' ';
+  clear: both;
+  display: block;
+}
+.logo{
+  float: left;
+  font-size: 1em;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.logo span{
+  font-weight: 300;
+}
+.site-nav{
+  top: 100%;
+  right: 0;
+  position:absolute;
+  background: #0a0a38;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 400ms;
+}
+.site-nav-open{
+  clip-path: circle(200% at top right);
+}
+.site-nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav li{
+  border-bottom: 0.5px solid #575766;
+}
+.site-nav li:last-child{
+  border-bottom: none;
+}
+.site-nav a{
+  color: #ebedb3;
+  display:block;
+  text-align: center;
+  padding: 1.4em 3.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+
+.site-nav a:hover,
+.site-nav a:focus{
+  background:#e4e003;
+  color:#040418;
+}
+.menu-toggle{
+  padding: 1em;
+  position:absolute;
+  top: .5em;
+  right: .5em;
+}
+.menu-open .hamburguer{
+  transform: rotate(45deg);
+}
+.menu-open .hamburguer::before{
+  opacity: 0;
+}
+.menu-open .hamburguer::after{
+  transform: translateY(-3px) rotate(-90deg);
+
+}
+.drop-down,
+.drop-down::before,
+.drop-down::after{
+  content: '';
+  display: block;
+  background: white;
+  height: 3px;
+  width: 1.05em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+.drop-down::before{
+  transform: translateY(-6px);
+}
+
+.drop-down::after{
+  transform: translateY(3px);
+}
+
+@media(min-width:700px){
+  .menu-toggle{
+    display: none;
+  }
+  .site-nav{
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    margin-right: 10px;
+    clip-path: initial;
+  }
+  .site-nav li{
+    display: inline-block;
+    border: none;
+  }
+  .site-nav a{
+    padding: 0;
+    margin-left: 3em;
+  }
+  .site-nav--icon{
+    display: none;
+  }
+  .site-nav a:hover,
+  .site-nav a:focus{
+    background: transparent;
+  }
+
+
+}
