@@ -5,7 +5,7 @@ import data from './data/pokemon/pokemon.js';
 
 console.log(example, data); */
  
-const enter = document.getElementById("enter");
+/* const enter = document.getElementById("enter");
 enter.addEventListener("click", ()=>{
     document.getElementById("FirstPage").classList.add("hide");
     document.getElementById("FirstPage").classList.remove("display");
@@ -22,4 +22,4 @@ menu.addEventListener("click", function press2(){
         siteNav.classList.toggle("site-nav-open");
         menu.classList.toggle("menu-open");
 });
-        
+         */
