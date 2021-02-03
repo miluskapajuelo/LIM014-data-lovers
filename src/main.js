@@ -15,11 +15,11 @@ enter.addEventListener("click", ()=>{
     document.getElementById("SecondPage").classList.remove("hide");
     document.body.style.background = "#fff";
 }); 
-
+*/
 const menu = document.getElementById("menu")
 menu.addEventListener("click", function press2(){
     let siteNav = document.getElementById("site-nav");
         siteNav.classList.toggle("site-nav-open");
         menu.classList.toggle("menu-open");
 });
-         */
+         
