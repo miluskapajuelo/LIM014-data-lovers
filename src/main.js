@@ -5,10 +5,10 @@ normal.addEventListener("click", () =>{
     var a = filtrara.filtrar();
     console.log(a)
     for(let i=0;i<a[0].length;i++){
-        var node = document.createElement("figure")
+        var node = document.createElement("figure");
         var node2 = document.createElement("img");
-        var node3 = document.createElement("figcaption")
-        var animacion = document.createElement("div")
+        var node3 = document.createElement("figcaption");
+        var animacion = document.createElement("div");
         animacion.className = 'capa';
         animacion.innerHTML = '<h3>hola</h3>';
         animacion.innerHTML = '<p>hola</p>';
