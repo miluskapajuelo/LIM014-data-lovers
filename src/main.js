@@ -1,25 +1,39 @@
-/* import { example } from './data.js';
-// import data from './data/lol/lol.js';
+// Primera página
+
+//Audio de Pokemon
+var audio = document.getElementById('audio');
+var playPauseBTN = document.getElementById('playPauseBTN');
+var count = 0;
+
+function playPause(){
+    if(count == 0){
+        count = 1;
+        audio.play();
+        playPauseBTN.innerHTML = "Pause &#9208;";
+    }else{
+        count = 0;
+        audio.pause();
+        playPauseBTN.innerHTML = "Play &#9658;";
+    }
+}
+
+function stop(){
+    playPause()
+    audio.pause();
+    audio.currentTime = 0;
+    playPauseBTN.innerHTML = "Play &#9658;";
+}
+
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data); */
+import {
+    filterByName,
+    filteredbyClass,
+    filteredByDifficulty,
+    orderList,
+} from './data.js';
+
+const inputName = document.getElementById('inputName');
+const footerYear = document.getElementById('year');
+footerYear.innerHTML = new Date().getFullYear();
  
-const enter = document.getElementById("enter");
-enter.addEventListener("click", ()=>{
-    document.getElementById("FirstPage").classList.add("hide");
-    document.getElementById("FirstPage").classList.remove("display");
-    
-    
-    document.getElementById("SecondPage").classList.add("display");
-    document.getElementById("SecondPage").classList.remove("hide");
-    document.body.style.background = "#fff";
-}); 
-
-const menu = document.getElementById("menu")
-menu.addEventListener("click", function press2(){
-    let siteNav = document.getElementById("site-nav");
-        siteNav.classList.toggle("site-nav-open");
-        menu.classList.toggle("menu-open");
-});
-        
