@@ -20,7 +20,7 @@ body{
 header{
   background: rgb(30, 4, 71);
   padding: 2em 0;
-  position: relative;
+  position: relative;;
 }
 header::after{
   content: "";
@@ -132,28 +132,10 @@ nav h2{
   transform: translateY(-6px);
 }
 
-
 img {
   width: 220px;
   height: 150px;
 } 
-
-figcaption {
-  background-color: rgb(44, 11, 87);
-  color: rgb(211, 173, 5);
-  text-align: center;
-  font-size: 13px;
-} 
-
-.product-list{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 600px;
-  flex-wrap: wrap;
-  margin: auto;
-}
 
 .product-list figure {
   border: thin #7c7777 solid;
@@ -167,6 +149,7 @@ figcaption {
   rgba(0, 0, 0, 50);
   cursor: pointer;
 
+
 }
 
 .product-list figure img {
@@ -176,35 +159,53 @@ figcaption {
   margin: 10%x;
 }
 
-/* .product-list figure .capa{
+
+.product-list{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+figure{
+  height: 190px;
+  margin-left: 10px;
+}
+
+.product-list figure .capa{
   position: absolute;
   top : 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 103, 123, 0.7);
+  background: rgba(0, 103, 123, 0.4 );
   transition: all 500ms ease-in-out;
   opacity: 0;
   visibility: hidden;
   text-align: center;
+  left: 0px;
+  right: -5px;
+  border-radius: 4px;
 }
 
 .product-list figure:hover > .capa{
   opacity: 1;
   visibility: visible;
-} */
+}
 .product-list figure:hover > img{
-  transform: scale(1.3);
+  transform: scale(1.2);
 
 }
 
-/* .product-list figure:hover > .capa h3{
+.product-list figure:hover > .capa h3{
   margin-top: 70px;
   margin-bottom: 15px;
 
 }
 .product-list figure .capa h3{
   color: #fff;
-  font-weight: 400;
+  font-weight: 200;
   margin-bottom: 120px;
   transition: all 500ms ease-out;
   margin-top: 30px;
@@ -214,9 +215,9 @@ figcaption {
   font-size: 15px;
   line-height: 1.5;
   width: 100%;
-  max-width: 220px;
+  max-width: 100px;
   margin: auto;
-} */
+}
 
 
 figcaption {
@@ -226,8 +227,33 @@ figcaption {
   padding: 3px;
   font-size: 13px;
   text-align: center;
+}
+
+.text {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 40%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  margin-left: 200px;
+  margin-top: 30px;
+  border-color: rgb(11, 170, 143);
+  
 
 }
+.text:hover{
+  border-collapse: collapse;
+
+  color: rgb(15, 2, 61);
+  cursor:text;
+
+}
+#btn{
+  margin-left: 100px;
+  background: red;}
+
 @media(min-width:700px){ 
   .display {
     display: block;
@@ -376,7 +402,6 @@ footer{
 figure{
   margin: 10px;
   height: 190px;
-  font-weight: 40px;
 }
 
 img{
@@ -389,7 +414,7 @@ img{
   top : 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 103, 123, 0.4 );
+  background: rgba(0, 103, 123, 0.6 );
   transition: all 500ms ease-in-out;
   opacity: 0;
   visibility: hidden;
@@ -397,6 +422,7 @@ img{
   left: 0px;
   right: -5px;
   border-radius: 4px;
+  color: white;
 }
 
 .product-list figure:hover > .capa{
@@ -408,12 +434,12 @@ img{
 
 }
 
-.product-list figure:hover > .capa h3{
+.product-list figure:hover > .capa a{
   margin-top: 70px;
   margin-bottom: 15px;
 
 }
-.product-list figure .capa h3{
+.product-list figure .capa a{
   color: #fff;
   font-weight: 200;
   margin-bottom: 120px;
@@ -461,6 +487,7 @@ figcaption {
   cursor:text;
 
 }
+
 #btn{
   margin-left: 100px;
   background: red;}

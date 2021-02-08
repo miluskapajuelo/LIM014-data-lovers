@@ -11,15 +11,19 @@ normal.addEventListener("click", () =>{
         let node2 = document.createElement("img");
         let node3 = document.createElement("figcaption");
         let animacion = document.createElement("div");
+        let node4 = document.createElement("p");
+        let node5 = document.createElement("a");
         animacion.className = 'capa';
-        animacion.innerHTML = '<h3>hola</h3>';
-        animacion.innerHTML = '<p>hola</p>';
+        node5.innerText = a[2][i];
+        node4.innerText = a[3][i];
         node2.src = a[0][i];
         node3.innerText = a[1][i];
         let figura= document.getElementById("lista").appendChild(node);
         figura.appendChild(node2);
         figura.appendChild(node3);
         figura.appendChild(animacion);
+        animacion.appendChild(node4);
+        animacion.appendChild(node5);
         
 }}); 
 
@@ -40,15 +44,16 @@ for(let i=0;i<a[1].length;i++){
     let node3 = document.createElement("figcaption");
     let animacion = document.createElement("div");
     animacion.className = 'capa';
-    animacion.innerHTML = '<h3>hola</h3>';
-    animacion.innerHTML = '<p>hola</p>';
+    node5.innerText = a[2][i];
+    node4.innerText = a[3][i];
     node2.src = a[0][i];
     node3.innerText = a[1][i];
     let figura= document.getElementById("lista").appendChild(node);
     figura.appendChild(node2);
     figura.appendChild(node3);
     figura.appendChild(animacion);
-    console.log(figura)
+    animacion.appendChild(node4);
+    animacion.appendChild(node5);
 }
    
 
