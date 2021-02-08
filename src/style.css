@@ -98,7 +98,6 @@ nav h2{
   text-decoration: none;
 }
 
-
 .menu{
   padding: 1em;
   position: absolute;
@@ -440,19 +439,22 @@ img{
 
 }
 .product-list figure .capa a{
-  color: #fff;
+  color: rgb(4, 14, 70);
   font-weight: 200;
   margin-bottom: 120px;
   transition: all 500ms ease-out;
-  margin-top: 30px;
+/*   top: 80px; */
+  font-weight: bold;
+  
 }
 .product-list figure .capa p{
   color: #fff;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
   width: 100%;
-  max-width: 100px;
+  max-width: 160px;
   margin: auto;
+  margin-top: 2px;
 }
 
 
