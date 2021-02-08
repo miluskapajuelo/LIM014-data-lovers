@@ -1,26 +1,57 @@
 import filtrara from './data.js';
+import data from './data/pokemon/pokemon.js';
+
+  
 
 const normal = document.getElementById("normal");
 normal.addEventListener("click", () =>{
-    var a = filtrara.filtrar();
-    console.log(a)
+  let a = filtrara.filterData(data,"normal");
     for(let i=0;i<a[0].length;i++){
-        var node = document.createElement("figure");
-        var node2 = document.createElement("img");
-        var node3 = document.createElement("figcaption");
-        var animacion = document.createElement("div");
+        let node = document.createElement("figure");
+        let node2 = document.createElement("img");
+        let node3 = document.createElement("figcaption");
+        let animacion = document.createElement("div");
         animacion.className = 'capa';
         animacion.innerHTML = '<h3>hola</h3>';
         animacion.innerHTML = '<p>hola</p>';
         node2.src = a[0][i];
         node3.innerText = a[1][i];
-        var figura= document.getElementById("lista").appendChild(node);
+        let figura= document.getElementById("lista").appendChild(node);
         figura.appendChild(node2);
         figura.appendChild(node3);
         figura.appendChild(animacion);
-        console.log(i)
+        
+}}); 
+
+data.pokemon.sort(function (prev,next){
+    if(prev.name > next.name){
+        return 1;
+    }
+    if(prev.name < next.name){
+        return -1;
+    }
+    return 0;
+});
+
+let a = filtrara.sortdata(data);
+for(let i=0;i<a[1].length;i++){
+    let node = document.createElement("figure");
+    let node2 = document.createElement("img");
+    let node3 = document.createElement("figcaption");
+    let animacion = document.createElement("div");
+    animacion.className = 'capa';
+    animacion.innerHTML = '<h3>hola</h3>';
+    animacion.innerHTML = '<p>hola</p>';
+    node2.src = a[0][i];
+    node3.innerText = a[1][i];
+    let figura= document.getElementById("lista").appendChild(node);
+    figura.appendChild(node2);
+    figura.appendChild(node3);
+    figura.appendChild(animacion);
+    console.log(figura)
 }
-}); 
+   
+
 
 /* var pokemon = total
 const pokemones = document.getElementById("lista").appendChild(pokemon) */
@@ -40,22 +71,9 @@ enter.addEventListener("click", ()=>{
     document.body.style.background = "#fff";
 }); 
  */
-const menu = document.getElementById("menu")
+/* const menu = document.getElementById("menu");
 menu.addEventListener("click", function press2(){
     let siteNav = document.getElementById("site-nav");
         siteNav.classList.toggle("site-nav-open");
         menu.classList.toggle("menu-open");
-});
-
-/* function cambia(){
-    var cosa;
-    cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].value;
-
-}
-
-let filtrar = JSON.stringify(data,["pokemon"]);
-console.log(filtrar) */
-/* 
-1. Llamar al select
-2. Capturar el valor del select
-*/
+})*/
