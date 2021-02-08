@@ -3,7 +3,7 @@
 ## Índice
 
 * [1. Descripción del producto  digital](#1-descripción-del-producto_digital)
-* [3. Objetivos de la página](#3-objetivos-de-la-página)
+* [2. Objetivos de la página](#3-objetivos-de-la-página)
 * [3. Historias de usuario](#3-historias-de-usuario)
 
 
@@ -71,10 +71,11 @@ se optó por poner un botón de Start que cumpla esta funcionalidad.
 
 
 
+
 ## 2. Objetivos de la página
 
 
-## 2. Historias de usuario
+## 3. Historias de usuario
 Las historias de usuario se trabajaron con la herramienta trello en el siguiente [link](https://docs.google.com/spreadsheets/d/1GsK5vld-C2ez0haIdeOaHLzAGcNznEmK/edit#gid=1442775653) donde se puede visualizar 6 historias de usuario que donde cada una consiste con criterios de aceptación, definición de terminado y pequeñas tareas en las cuales fueron subdivididas.
 
 
