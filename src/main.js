@@ -62,7 +62,6 @@ for(let i=0;i<a[1].length;i++){
 const text = document.querySelector("#text");
 const lista = document.getElementById("lista");
 const filtrar = () => {
-   /*  console.log(text.value); */
    lista.innerHTML = "";
    const valorTexto = text.value.toLowerCase();
    let a = filtrara.sortdata(data);

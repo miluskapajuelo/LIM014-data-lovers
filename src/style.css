@@ -12,6 +12,7 @@ body{
   background: rgb(247, 243, 243);
   font-family: 'Roboto', sans-serif;
 }
+/* contenedor de todo */
 .container{
   width: 95%;
   max-width: 1000px;
@@ -97,7 +98,7 @@ nav h2{
   text-transform: uppercase;
   text-decoration: none;
 }
-
+/* menu hamburguesa */
 .menu{
   padding: 1em;
   position: absolute;
@@ -135,7 +136,7 @@ img {
   width: 220px;
   height: 150px;
 } 
-
+/* lista de pokemones */
 .product-list figure {
   border: thin #7c7777 solid;
   display: flex;
@@ -147,18 +148,13 @@ img {
   box-shadow: 0px 15px 25px
   rgba(0, 0, 0, 50);
   cursor: pointer;
-
-
 }
-
 .product-list figure img {
   max-width: 100%;
   max-height: 100%;
   transition: all 500ms ease-in-out;
   margin: 10%x;
 }
-
-
 .product-list{
   width: 100%;
   display:flex;
@@ -187,14 +183,12 @@ figure{
   right: -5px;
   border-radius: 4px;
 }
-
 .product-list figure:hover > .capa{
   opacity: 1;
   visibility: visible;
 }
 .product-list figure:hover > img{
   transform: scale(1.2);
-
 }
 
 .product-list figure:hover > .capa h3{
@@ -267,37 +261,33 @@ figcaption {
   }
   .menu{
     display: none;
-  }
-  nav h1{
-    font-size: 1em;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: rgb(245, 244, 248);
-    text-align: left;
-    margin-left: -120px;
-    padding-top: 20px;
-  }
- 
+  } 
   nav h2{
-    float: right;
-    font-size: 1em;
-    margin:-40px;
+/*     float: right; */
+    font-size: 0.7em;
     margin-right: -100px;
+    margin-top: -40px;
     text-transform: uppercase;
     color: rgb(240, 146, 24);
-    padding-top: 20px;
+  }
+.container h1{
+  height: 0;
+  font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgb(245, 244, 248);
+    text-align: left;
+    margin-left: -100px;
+    margin-top: 20px;
   }
 .site-nav{
-  height: auto;
   position: relative;
   background:transparent;
   float: left;
   margin-left:330px;
   clip-path: initial;
   align-content: center;
-  margin-top:20px ;
-  padding: 0.1em 5em;
+  padding: 0.1em 3em;
   
 }
 .site-nav ul li{
@@ -468,6 +458,9 @@ figcaption {
 
 }
 
+.div1{
+  margin-top: 20px;
+}
 .text {
   background-position: 10px 12px;
   background-repeat: no-repeat;
