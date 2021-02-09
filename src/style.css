@@ -411,7 +411,7 @@ img{
   left: 0px;
   right: -5px;
   border-radius: 4px;
-  color: white;
+/*   color: white; */
 }
 
 .product-list figure:hover > .capa{
@@ -433,9 +433,7 @@ img{
   font-weight: 200;
   margin-bottom: 120px;
   transition: all 500ms ease-out;
-/*   top: 80px; */
   font-weight: bold;
-  
 }
 .product-list figure .capa p{
   color: #fff;

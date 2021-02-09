@@ -5,14 +5,16 @@ import data from './data/pokemon/pokemon.js';
 
 const normal = document.getElementById("normal");
 normal.addEventListener("click", () =>{
+
   let a = filtrara.filterData(data,"normal");
+  lista.innerHTML = "";
     for(let i=0;i<a[0].length;i++){
         let node = document.createElement("figure");
         let node2 = document.createElement("img");
         let node3 = document.createElement("figcaption");
         let animacion = document.createElement("div");
-        let node4 = document.createElement("p");
-        let node5 = document.createElement("a");
+        let node4 = document.createElement("a");
+        let node5 = document.createElement("p");
         animacion.className = 'capa';
         node5.innerText = a[2][i];
         node4.innerText = a[3][i];
