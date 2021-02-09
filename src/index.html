@@ -24,26 +24,26 @@
     Página de presentación de Pok-Dex 
   ---------------------------------------->
 
-    <section id="firstScreen">
-      <header class>
-        <div class="header-overlay"></div>
-      <!--<img src="./img/Inicio.jpg" id="logoPokemon"/> --> 
-        <div class="header-content">
-          <div id="boxLine"></div>
-        </div>
-
-        <!-- Agregar audio de pokemon -->
+    <section class="firstScreen" id="firstScreen">
+      <header class="header1">
+        <img class="logo" src="./img/logo.png">
+        <nav class="container">
+          
+       <!-- Agregar audio de pokemon -->
         <div class="audio">
+          
             <audio id="audio"> 
               <source src="./img/music.mp3" type="audio/mp3" >    
             </audio>
-            <button id="playPauseBTN" onclick="playPause()"> Play &#9658; </button>
+            <button id="playPauseBTN" class="play"> Play &#9658; </button>
             &nbsp;
             &nbsp;
-            <button onclick= "stop()"> Stop &#9611; </button>
+            <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
         </div>
+      </nav>
       </header>
-      
+    <section class="imagen">
+     </section>
       <main class= "mainContainer">
         <div id="mainElements1">
           <p>
@@ -87,6 +87,7 @@
           <button id="buttonEnter">
             <font style="vertical-align: inhherit;">
               <font style="vertical-align: inherit;"> ENTRAR </font>
+               <button></button> 
             </font>
           </button>
         </div>

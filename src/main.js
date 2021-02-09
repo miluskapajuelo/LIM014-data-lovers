@@ -1,11 +1,10 @@
 // Primera página
 
 //Audio de Pokemon
-var audio = document.getElementById('audio');
-var playPauseBTN = document.getElementById('playPauseBTN');
-var count = 0;
-
-function playPause(){
+const audio = document.getElementById('audio');
+const playPauseBTN = document.getElementById('playPauseBTN');
+let count = 0;
+playPauseBTN.addEventListener("click", function playPause(){
     if(count == 0){
         count = 1;
         audio.play();
@@ -15,15 +14,16 @@ function playPause(){
         audio.pause();
         playPauseBTN.innerHTML = "Play &#9658;";
     }
-}
+});  
 
-function stop(){
+const playPauseBTN2 = document.getElementById('playPauseBTN2');
+playPauseBTN2.addEventListener("click", function stop(){
     playPause()
     audio.pause();
     audio.currentTime = 0;
     playPauseBTN.innerHTML = "Play &#9658;";
-}
-
+});   /* averiguar como funciona pause */
+/* 
 import data from './data/pokemon/pokemon.js';
 
 import {
@@ -36,4 +36,4 @@ import {
 const inputName = document.getElementById('inputName');
 const footerYear = document.getElementById('year');
 footerYear.innerHTML = new Date().getFullYear();
- 
+  */
