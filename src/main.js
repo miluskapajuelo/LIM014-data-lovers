@@ -37,3 +37,14 @@ const inputName = document.getElementById('inputName');
 const footerYear = document.getElementById('year');
 footerYear.innerHTML = new Date().getFullYear();
   */
+
+const enter = document.getElementById("buttonEnter");
+enter.addEventListener("click", ()=>{
+    document.getElementById("FirstPage").classList.add("hide");
+    document.getElementById("FirstPage").classList.remove("display");
+    
+    
+    document.getElementById("SecondPage").classList.add("display");
+    document.getElementById("SecondPage").classList.remove("hide");
+    document.body.style.background = "#fff";
+});
