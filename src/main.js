@@ -1,7 +1,14 @@
 import filtrara from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-  
+const botones = document.querySelectorAll(".fa");
+const elegir = (evento) => {
+    console.log(evento.target.id)
+}
+botones.forEach(boton => {
+    boton.addEventListener("click", elegir)
+})
+
 
 const normal = document.getElementById("normal");
 normal.addEventListener("click", () =>{
