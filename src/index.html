@@ -6,8 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/jpg" href="./img/fondo_pantalla1.jpg" /> <!-- Imagen de inicio-->
+    <meta name="viewport" content="width=device-with, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Ruda&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|Marcellus+SC|Roboto|Trade+Winds&display=swap" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
   </head>
   <body>
+     <section class="firstScreen" id="firstScreen">
+      <!-- inicio del primer section -->
+      <header class="header1">
+        <img class="logo" src="./img/logo.png">
+        <nav class="container">
+        <div class="audio">
+            <audio id="audio"> 
+              <source src="./img/music.mp3" type="audio/mp3" >    
+            </audio>
+            <button id="playPauseBTN" class="play"> Play &#9658; </button>
+            &nbsp;
+            &nbsp;
+            <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
+        </div>
+      </nav>
+      </header>
+    <section class="imagen">
+     </section>
+      <main class= "mainContainer">
+        <div id="mainElements1">
+          <p>
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;"> 
+                "
+                Tengo que ser siempre el mejor, mejor que nadie más, ATRAPARLOS MI PRUEBA ES, 
+                    Entrenarlos, mi ideal ... Yo viajaré de aquí a allá, buscando hasta el fin
+                     Oh Pokémon, yo entenderé, tu poder interior Pokémon
+                     "
+              </font>
+            </font>
+          </p>
+        </div>
+        <!-- Agregar el nombre -->
+        <div class="form">  
+          <input type="text" required>
+          <label class="lbl-nombre"></label>
+            <span class="text-nomb" contextmenu="center">
+              Ingrese su nombre
+            </span>
+        </div>
+        <div>
+          <br>
+          <br>
+          <button id="buttonEnter">
+            <!-- <font style="vertical-align: inhherit;">
+              <font style="vertical-align: inherit;"> --> ENTRAR <!-- </font> --> </button>
+          <br>
+          <br>
+          <a href="https://www.pokemon.com/el/app/pokemon-go/" class="nav-link" tarjet="_blank">
+            <button> + INFO </button> </a>
+        </div>
+      </main>
+    <footer class="footer">
+      <article class="right">
+        <p>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              © </font>
+          </font>
+          <span id="year">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">2021</font>
+            </font>
+          </span>
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;"> &nbsp|  </font>
+            <font style="vertical-align: inherit;">Todos los Derechos Reservados
+                </font>
+          </font>
+        </p>
+      </article>
+       </footer>
+
+      <article  id="left">
+        <a href="# ">
+          <img src="./img/shareLogo.webp" id="compartir" class="animated wobble">
+        </a>
+        <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
+          <img src="./img/fbLogo.webp" class="imgRedes">
+        </a>
+        <a href="https://twitter.com/pokemongoapp?lang=es" class="nav-link" target="_blank">
+          <img src="./img/twLogo.webp" class="imgRedes">
+        </a>
+        <a href="https://www.instagram.com/pokemongoapp/" class="nav-link" target="_blank">
+          <img src="./img/igLogo.webp" class="imgRedes">
+        </a>
+      </article>
+    </section>
     <section id="secondscreen" >
     <header>
     <nav class="container">
@@ -65,11 +159,11 @@
 </section>
 <script type="module" src="main.js"></script>
 <script type="module" src="data.js"></script>
-</body>
+
 <footer>
       © 2021 Proyecto Data Lovers
 </footer>
-</section>
+</body>
 </html>
 
    
