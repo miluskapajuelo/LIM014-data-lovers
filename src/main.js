@@ -122,14 +122,6 @@ playPauseBTN.addEventListener("click", function playPause(){
     }
 });  
 
-/* const playPauseBTN2 = document.getElementById('playPauseBTN2');
-playPauseBTN2.addEventListener("click", function stop(){
-    playPause()
-    audio.pause();
-    audio.currentTime = 0;
-    playPauseBTN.innerHTML = "Play &#9658;";
-});    */
-
 const entrar = document.getElementById("entrar");
 entrar.addEventListener("click", ()=>{
     console.log(entrar)
