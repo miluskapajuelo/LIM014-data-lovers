@@ -1,3 +1,4 @@
+
 import filtrara from './data.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -67,9 +68,6 @@ data.pokemon.sort(function (prev,next){
     return 0;
 });
 
-/* 
-} */
-
 
 const text = document.querySelector("#text");
 const lista = document.getElementById("lista");
@@ -104,18 +102,34 @@ const filtrar = () => {
 
     text.addEventListener("keyup", filtrar);
     filtrar();
-    
+  
 
+//Audio de Pokemon
+/* const audio = document.getElementById('audio');
+const playPauseBTN = document.getElementById('playPauseBTN');
+let count = 0;
+playPauseBTN.addEventListener("click", function playPause(){
+    if(count == 0){
+        count = 1;
+        audio.play();
+        playPauseBTN.innerHTML = "Pause &#9208;";
+    }else{
+        count = 0;
+        audio.pause();
+        playPauseBTN.innerHTML = "Play &#9658;";
+    }
+});  
+ */
 
 const entrar = document.getElementById("entrar");
+
 entrar.addEventListener("click", ()=>{
     document.getElementById("firstscreen").classList.add("hide");
-    document.getElementById("firstscreen").classList.remove("display");
-    
-    
+    document.getElementById("firstscreen").classList.remove("display");     
     document.getElementById("secondscreen").classList.add("display");
     document.getElementById("secondscreen").classList.remove("hide");
     document.body.style.background = "#fff";
+   
 }); 
  
 
@@ -148,3 +162,4 @@ incicio.addEventListener("click", function(){
     animacion.appendChild(node4);
     animacion.appendChild(node5);
     }});
+
