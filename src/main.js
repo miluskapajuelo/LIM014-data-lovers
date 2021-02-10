@@ -132,8 +132,11 @@ playPauseBTN2.addEventListener("click", function stop(){
 
 const entrar = document.getElementById("entrar");
 entrar.addEventListener("click", ()=>{
+    console.log(entrar)
+
     document.getElementById("FirstPage").classList.add("hide");
     document.getElementById("FirstPage").classList.remove("display");
+    
     document.getElementById("SecondPage").classList.add("display");
     document.getElementById("SecondPage").classList.remove("hide");
  /*    document.body.style.background = "#fff"; */
