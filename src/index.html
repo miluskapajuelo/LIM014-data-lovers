@@ -18,9 +18,11 @@
     <!-- <link type="text/css" rel="stylesheet" charset="UTF-8" 
     href="https://translate.googleapis.com/translate_static/css/translateelement.css">
     <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
-  --> </head>
+  --> 
+  </head>
   <body>
-     <section class="hide" id="FirstPage">
+
+    <section id="FirstPage">
       <!-- inicio del primer section -->
       <header class="header1">
         <img class="logo" src="./img/logo.png">
@@ -34,10 +36,9 @@
             &nbsp;
             <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
         </div>
-      </nav>
+        </nav>
       </header>
     <section class="imagen">
-     </section>
       <main class= "mainContainer">
         <div id="mainElements1">
           <p>
@@ -54,11 +55,10 @@
         </div>
         <!-- Agregar el nombre -->
         <div class="form">  
-          <input type="text" required>
-          <label class="lbl-nombre"></label>
-            <span class="text-nomb" contextmenu="center">
-              Ingrese su nombre
-            </span>
+          <input type="text" id="nombre" style="
+          width: 200px;
+          height: 30px;      
+          "> 
         </div>
         <div>
           <br>
@@ -105,10 +105,18 @@
           <img src="./img/igLogo.webp" class="imgRedes">
         </a>
       </article>
-    </footer>
-    <!-- fin del primer section -->
+    </footer> 
   </section>
-  <section id="SecondPage" class="display">
+  <!-- fin del primer section -->
+
+  
+  <!-- second section -->
+
+  <section id="SecondPage">
+    <div class="SecondPage">
+      <h1 id="nombreUsuario"></h1>
+    </div>
+
     <nav class="container">
       <h1 class="logo">Tablero de pokemones</h1>
       <h2 class="name">Bienvenida Miluska </h2>

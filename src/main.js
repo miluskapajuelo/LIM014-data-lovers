@@ -130,6 +130,8 @@ playPauseBTN2.addEventListener("click", function stop(){
     playPauseBTN.innerHTML = "Play &#9658;";
 });    */
 
+/*
+
 const entrar = document.getElementById("entrar");
 entrar.addEventListener("click", ()=>{
     console.log(entrar)
@@ -139,6 +141,18 @@ entrar.addEventListener("click", ()=>{
     
     document.getElementById("SecondPage").classList.add("display");
     document.getElementById("SecondPage").classList.remove("hide");
- /*    document.body.style.background = "#fff"; */
+ /*    document.body.style.background = "#fff"; 
 });
-  
+
+*/
+
+document.getElementById("SecondPage").style.display="none";
+const botonOne = document.getElementById("entrar");
+
+botonOne.addEventListener("click", function(){
+    document.getElementById("FirstPage").style.display= "none";
+    document.getElementById("SecondPage").style.display= "block";
+    const usuario = document.getElementById("nombre").value;
+    const registro = document.getElementById("nombreUsuario");
+    registro.innerHTML = "Bienvenid@ entrenador" + " " + usuario;
+ });
