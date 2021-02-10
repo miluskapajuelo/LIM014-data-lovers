@@ -22,21 +22,7 @@ playPauseBTN2.addEventListener("click", function stop(){
     audio.pause();
     audio.currentTime = 0;
     playPauseBTN.innerHTML = "Play &#9658;";
-});   /* averiguar como funciona pause */
-/* 
-import data from './data/pokemon/pokemon.js';
-
-import {
-    filterByName,
-    filteredbyClass,
-    filteredByDifficulty,
-    orderList,
-} from './data.js';
-
-const inputName = document.getElementById('inputName');
-const footerYear = document.getElementById('year');
-footerYear.innerHTML = new Date().getFullYear();
-  */
+});   
 
 const enter = document.getElementById("buttonEnter");
 enter.addEventListener("click", ()=>{
