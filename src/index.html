@@ -8,7 +8,60 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="secondscreen" >
+    <section id="firstscreen" class="display" >
+      <header>
+        <nav class="container">
+          <div class="audio">
+            <audio id="audio2">
+            <source=".img/music.mp3" type="audio/mp3">
+            </audio>
+            <button id="playPauseBTN" class="play"> Play &#9658; </button>
+            &nbsp;
+            &nbsp;
+            <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
+            </div>
+        </nav>
+      </header>
+      <main class="mainContainer">
+      <p> "
+        Tengo que ser siempre el mejor, mejor que nadie más, ATRAPARLOS MI PRUEBA ES,<br> 
+            Entrenarlos, mi ideal ... Yo viajaré de aquí a allá, buscando hasta el fin<br>
+             Oh Pokémon, yo entenderé, tu poder interior Pokémon
+             "</p>
+      <div>
+        <input type="text" placeholder="Ingrese su nombre">
+      </div>
+      <div>
+        <input type="button" class="btn"  name="entrar" value="entrar" id="entrar">
+        <input type="button"  class="btn"name="info" value="info" id="info">
+      </div>
+      </main>
+      <footer class="footer">
+        <article class="right">
+          <p class="arroba" style="vertical-align: inherit">
+          @ 2021 &nbsp| Todos los Derechos Reservados
+          </p>
+        </article>
+        <article id="left">
+          <a>
+            <img src="./img/shareLogo.webp" id="compartir" class="animated wobble">
+          </a>
+          <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
+            <img src="./img/fbLogo.webp" class="imgRedes">
+          </a>
+          <a href="https://twitter.com/pokemongoapp?lang=es" class="nav-link" target="_blank">
+            <img src="./img/twLogo.webp" class="imgRedes">
+          </a>
+          <a href="https://www.instagram.com/pokemongoapp/" class="nav-link" target="_blank">
+            <img src="./img/igLogo.webp" class="imgRedes">
+          </a>
+        </article>
+      </footer>
+      
+
+
+    </section>
+    <section id="secondscreen" class="hide">
     <header>
     <nav class="container">
       <h1 class="logo">Tablero de pokemones</h1>
@@ -66,8 +119,8 @@
 <script type="module" src="main.js"></script>
 <script type="module" src="data.js"></script>
 </body>
-<footer>
-      © 2021 Proyecto Data Lovers
+<footer class="arroba" style="vertical-align: inherit">
+  @ 2021 &nbsp| Todos los Derechos Reservados
 </footer>
 </section>
 </html>

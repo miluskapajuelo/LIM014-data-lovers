@@ -106,19 +106,19 @@ const filtrar = () => {
     filtrar();
     
 
-/* button.addEventListener("click", filtrar); */
 
-/*  const enter = document.getElementById("enter");
-enter.addEventListener("click", ()=>{
-    document.getElementById("FirstPage").classList.add("hide");
-    document.getElementById("FirstPage").classList.remove("display");
+const entrar = document.getElementById("entrar");
+entrar.addEventListener("click", ()=>{
+    document.getElementById("firstscreen").classList.add("hide");
+    document.getElementById("firstscreen").classList.remove("display");
     
     
-    document.getElementById("SecondPage").classList.add("display");
-    document.getElementById("SecondPage").classList.remove("hide");
+    document.getElementById("secondscreen").classList.add("display");
+    document.getElementById("secondscreen").classList.remove("hide");
     document.body.style.background = "#fff";
 }); 
- */
+ 
+
 const menu = document.getElementById("menu");
 menu.addEventListener("click", function press2(){
     let siteNav = document.getElementById("site-nav");

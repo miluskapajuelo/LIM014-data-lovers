@@ -9,10 +9,15 @@
   padding: 0;
 }
 body{
-  background: rgb(247, 243, 243);
-  font-family: 'Roboto', sans-serif;
+  background: url(./img/fondo.png);
+  background-attachment: fixed;
+  background-size: cover;
+  line-height: 1;
+  font-size: 1rem;
+  color: #333;
+  width: 100%;
 }
-/* contenedor de todo */
+
 .container{
   width: 95%;
   max-width: 1000px;
@@ -259,7 +264,16 @@ figcaption {
     padding: 0;
     box-sizing:border-box ;
   }
-  .menu{
+  body{
+    background: url(./img/fondo.png);
+    background-attachment: fixed;
+    background-size: cover;
+    line-height: 1;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+  }
+   .menu{
     display: none;
   } 
   nav h2{
