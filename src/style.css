@@ -9,6 +9,7 @@
 *{
   margin: 0;
   padding: 0;
+  background: cover;
 /*   outline: none;
   box-sizing: border-box; */
 }
@@ -124,7 +125,7 @@ button {
   width: 100%;
   display: flex;
   margin: 1rem 0;
-  padding: 0 1rem;
+  /*padding: 0 1rem;*/
   align-items: center;
   flex-direction: column;
 }
@@ -143,10 +144,77 @@ button {
   width: 100%;
 }
 
+/*Para poner el input*/
+
+/*
+.form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: fantasy;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: chartreuse;*/
+
+  /*<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">*/
+
+
+.form{
+width: 100%;
+height: 50px;
+max-width: 400px;
+position: relative;
+overflow: hidden;
+white-space: nowrap;
+margin-top: 2rem;
+}
+
+.form input {
+  outline: none;
+  padding: 0 3rem;
+  text-align: center;
+  font-size: 1.25rem;
+  border: transparent;
+  letter-spacing: 0.625rem;
+  text-transform: capitalize;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(252, 250, 250, 0.932);
+  text-shadow: 0.0625rem 0.0625rem 0.5rem #fe1288, 0 0 1em #2de907,
+    0 0 0.2em #07e91a;
+}
+
+.form .name{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid hsl(0, 96%, 50%);
+}
+
+.form .name::after{
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.3s ease;
+  border-bottom: 0.125rem solid #07cbe9;
+}
+
+
+/*
 .form {
   border: none;
   display: flex;
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: max-content;
   position: relative;
   white-space: nowrap;
@@ -222,6 +290,7 @@ button {
     0 0 0.2em #07cbe9;
 }
 
+*/
 
 .nav-link,
 #mainElements5 {
@@ -243,7 +312,7 @@ button {
 footer {
   width: 100%;
   display: flex;
-  padding: 1rem;
+  /*padding: 1rem;*/
   padding-top: 10%;
   justify-content: space-between;
 }
@@ -269,7 +338,7 @@ footer {
   width: 50px;
   height: 50px;
   text-decoration: none;
-  margin-left: 0.625rem;
+  /*margin-left: 0.625rem;*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
