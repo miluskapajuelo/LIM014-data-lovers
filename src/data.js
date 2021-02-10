@@ -1,12 +1,13 @@
 import data from './data/pokemon/pokemon.js';
-  const filtrara={
-  filterData : function(data, normal){
+
+  const filtrara={ 
+  filterData : function(data, tipo){
     let imagen =[];
     let nombre =[];
     let about = [];
     let number = [];
     data.pokemon.forEach(function(task){
-    if(task.type == normal){
+    if(task.type == tipo){
         imagen.push(task.img)
         nombre.push(task.name)
         about.push(task.about)

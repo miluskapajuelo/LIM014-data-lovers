@@ -308,6 +308,7 @@ figcaption {
   left: 0;
   width: 190px;
   height: 198px;
+  z-index: 20;
 } 
 .tipo{
   display:block;
@@ -316,31 +317,30 @@ figcaption {
   left: 0px;
   width: 670px;
   height: 198px;
+  z-index: 20;
 } 
 .tipo li a{
-  padding: 1em 3em;
+  padding: 1em 2em;
   line-height:unset;
   display: flex;
   white-space:nowrap;
-} /* -- */
+  width: 100%;
+} 
 .tipo li {
   width: 20%;
   float: left;
-  margin-right: 1%;
-} /* -- */
+} 
 .ball li a{
   padding: 1em 2em;
   line-height:unset;
   display: flex;
   white-space:nowrap;
+  width: 100%;
 }
 .ball li {
-  width: 120%;
+  width: 80%;
   float: left;
-  margin-right: 1%;
-
 }
-
 .site-nav ul li{
   float: left;
   list-style: none;
@@ -351,14 +351,13 @@ nav ul li a{
   padding: 0 2rem;
   line-height: 2rem;
   text-decoration: none;
-  font-weight: 200;
   width: 55%;
 }
 .fa{
   color: rgb(245, 152, 12);
   background: rgb(30, 4, 71);
   display: block;
-  padding: 2em 6em;
+/*   padding: 2em 2em; */
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -366,10 +365,12 @@ nav ul li a{
 .tipo li a:hover{
   background: rgb(245, 152, 12);
   color: rgb(30, 4, 71);
+  width: 100%;
 }
 .ball li a:hover{
   background: rgb(245, 152, 12);
   color: rgb(30, 4, 71);
+  width: 100%;
 }
 footer{
     display: flex;
