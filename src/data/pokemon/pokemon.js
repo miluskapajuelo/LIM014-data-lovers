@@ -1,4 +1,5 @@
-export default {
+export default 
+ {
   "pokemon": [{
     "num": "001",
     "name": "bulbasaur",
@@ -23949,5 +23950,5 @@ export default {
     "evolution": {
       "candy": "celebi candy"
     }
-  }]
-};
+  }]};
+
