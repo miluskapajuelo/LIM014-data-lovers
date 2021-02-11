@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/jpg" href="./img/fondo_pantalla1.jpg" /> 
@@ -18,94 +18,67 @@
     <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
    --></head>
   <body>
-     <section class="display" id="FirstPage">
-      <!-- inicio del primer section -->
-      <nav class="container2">
-        <img class="logo" src="./img/logo.png">
-        
-        <div class="audio">
-            <audio id="audio"> 
-              <source src="./img/music.mp3" type="audio/mp3" >    
+
+    <section id="firstscreen" class="display" >
+      <header>
+        <nav class="container">
+          <div class="audio">
+            <audio id="audio2">
+            <source=".img/music.mp3" type="audio/mp3">
+
             </audio>
             <button id="playPauseBTN" class="play"> Play &#9658; </button>
             &nbsp;
             &nbsp;
             <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
-        </div>
-      </nav>
-    <section class="imagen">
-     </section>
-      <main class= "mainContainer">
-        <div id="mainElements1">
-          <p>
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;"> 
-                "
-                Tengo que ser siempre el mejor, mejor que nadie más, ATRAPARLOS MI PRUEBA ES, 
-                    Entrenarlos, mi ideal ... Yo viajaré de aquí a allá, buscando hasta el fin
-                     Oh Pokémon, yo entenderé, tu poder interior Pokémon
-                     "
-              </font>
-            </font>
+
+            </div>
+        </nav>
+      </header>
+      <main class="mainContainer">
+      <p> "
+        Tengo que ser siempre el mejor, mejor que nadie más, ATRAPARLOS MI PRUEBA ES,<br> 
+            Entrenarlos, mi ideal ... Yo viajaré de aquí a allá, buscando hasta el fin<br>
+             Oh Pokémon, yo entenderé, tu poder interior Pokémon
+             "</p>
+            
+      <section class="form">
+      <div>
+        <input class="text" type="text" placeholder="Ingrese su nombre">
+      </div>
+      <div>
+        <input type="button" class="btn"  name="entrar" value="entrar" id="entrar">
+        <input type="button"  class="btn"name="info" value="info" id="info">
+      </div>
+    </section>
+  </main>
+      <footer class="footer">
+        <article class="right">
+          <p class="arroba" style="vertical-align: inherit">
+          @ 2021 &nbsp| Todos los Derechos Reservados
           </p>
-        </div>
-        <!-- Agregar el nombre -->
-        <div class="form">  
-          <input type="text" required>
-          <label class="lbl-nombre"></label>
-            <span class="text-nomb" contextmenu="center">
-              Ingrese su nombre
-            </span>
-        </div>
-        <div>
-          <br>
-          <br>
-          <input type="button" name="entrar" id="entrar" value="click-me">
-          <br>
-          <br>
-          <a href="https://www.pokemon.com/el/app/pokemon-go/" class="btn1" tarjet="_blank">
-            <button> + INFO </button> </a>
-        </div>
-      </main>
-    <footer class="footer">
-      <article class="right">
-        <p>
-          <font style="vertical-align: inherit;">
-            <font style="vertical-align: inherit;">
-              © </font>
-          </font>
-          <span id="year">
-            <font style="vertical-align: inherit;">
-              <font style="vertical-align: inherit;">2021</font>
-            </font>
-          </span>
-          <font style="vertical-align: inherit;">
-            <font style="vertical-align: inherit;"> &nbsp|  </font>
-            <font style="vertical-align: inherit;">Todos los Derechos Reservados
-                </font>
-          </font>
-        </p>
-      </article>
-      <article  id="left">
-        <a href="# ">
-          <img src="./img/shareLogo.webp" id="compartir" class="animated wobble">
-        </a>
-        <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
-          <img src="./img/fbLogo.webp" class="imgRedes">
-        </a>
-        <a href="https://twitter.com/pokemongoapp?lang=es" class="nav-link" target="_blank">
-          <img src="./img/twLogo.webp" class="imgRedes">
-        </a>
-        <a href="https://www.instagram.com/pokemongoapp/" class="nav-link" target="_blank">
-          <img src="./img/igLogo.webp" class="imgRedes">
-        </a>
-      </article>
-    </footer>
-    <!-- fin del primer section -->
-  </section>
-  <section id="SecondPage" class="hide">
-    <nav class="container2">
-      <h1 class="logo2">Tablero de pokemones</h1>
+        </article>
+        <article id="left">
+          <a>
+            <img src="./img/shareLogo.webp" id="compartir" class="animated wobble">
+          </a>
+          <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
+            <img src="./img/fbLogo.webp" class="imgRedes">
+          </a>
+          <a href="https://twitter.com/pokemongoapp?lang=es" class="nav-link" target="_blank">
+            <img src="./img/twLogo.webp" class="imgRedes">
+          </a>
+          <a href="https://www.instagram.com/pokemongoapp/" class="nav-link" target="_blank">
+            <img src="./img/igLogo.webp" class="imgRedes">
+          </a>
+        </article>
+      </footer>
+    </section>
+    <section id="secondscreen" class="hide">
+    <header>
+    <nav class="container">
+      <h1 class="logo">Tablero de pokemones</h1>
+
       <h2 class="name">Bienvenida Miluska </h2>
       <nav id="site-nav" class="site-nav" name="formulario1">
       <ul class="site-nav2" name="cosa"> 
@@ -146,9 +119,17 @@
     </div>
   </nav>
   <div class="div1">
-  <input type="text" class="text" id="text" placeholder="Escribe tu pokemon">
-  <button id="button" class="fas fa-sort-amount-down">sort</button> 
-  </div>
+
+  <input type="text" class="text1" id="text" placeholder="Escribe tu pokemon">  
+</div>
+<select class="selecta">
+  <option value="0" selected>ordenar por</option>
+  <option class="selectora" value="Ascendente" >Ascendente</option>
+  <option class="selectora" value="Debilidad">Debilidad</option>
+  <option class="selectora" value="Descendente">Descendente</option>
+  <option class="selectora" value="Fortaleza">Fortaleza</option>
+</select>
+
   <nav id="lista" class="product-list">
   </nav>
   <footer>
@@ -157,6 +138,12 @@
 </section>
 <script type="module" src="main.js"></script>
 <script type="module" src="data.js"></script>
+
+</body>
+<footer class="arroba" style="vertical-align: inherit">
+  @ 2021 &nbsp| Todos los Derechos Reservados
+</footer>
+
 </body>
 </html>
 

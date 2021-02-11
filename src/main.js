@@ -1,6 +1,8 @@
 import filtrara from './data.js';
 import data from './data/pokemon/pokemon.js';
 
+
+
 const botones = document.querySelectorAll(".fa");
 const elegir = (evento) => {
     lista.innerHTML = "";
@@ -23,21 +25,11 @@ const elegir = (evento) => {
         figura.appendChild(animacion);
         animacion.appendChild(node4);
         animacion.appendChild(node5);
-        
-}};
+}
+};
 
 botones.forEach(boton => {
     boton.addEventListener("click", elegir)
-});
-
-data.pokemon.sort(function (prev,next){
-    if(prev.name > next.name){
-        return 1;
-    }
-    if(prev.name < next.name){
-        return -1;
-    }
-    return 0;
 });
 
 const text = document.querySelector("#text");
@@ -56,6 +48,7 @@ const filtrar = () => {
             let node5 = document.createElement("p");
             let node4 = document.createElement("a");
             animacion.className = 'capa';
+            node.className = "fig"
             node5.innerText = a[2][i];
             node4.innerText = a[3][i];
             node2.src = a[0][i];
@@ -73,8 +66,38 @@ const filtrar = () => {
 
     text.addEventListener("keyup", filtrar);
     filtrar();
-    
 
+
+//Audio de Pokemon
+/* const audio = document.getElementById('audio');
+const playPauseBTN = document.getElementById('playPauseBTN');
+let count = 0;
+playPauseBTN.addEventListener("click", function playPause(){
+    if(count == 0){
+        count = 1;
+        audio.play();
+        playPauseBTN.innerHTML = "Pause &#9208;";
+    }else{
+        count = 0;
+        audio.pause();
+        playPauseBTN.innerHTML = "Play &#9658;";
+    }
+});  
+ */
+
+/* Ingresar a la segunda pantalla */
+const entrar = document.getElementById("entrar");
+
+entrar.addEventListener("click", ()=>{
+    document.getElementById("firstscreen").classList.add("hide");
+    document.getElementById("firstscreen").classList.remove("display");     
+    document.getElementById("secondscreen").classList.add("display");
+    document.getElementById("secondscreen").classList.remove("hide");
+    document.body.style.background = "#fff";
+   
+}); 
+ 
+/* Menú desplegable */
 
 const menu = document.getElementById("menu");
 menu.addEventListener("click", function press2(){
@@ -82,6 +105,7 @@ menu.addEventListener("click", function press2(){
         siteNav.classList.toggle("site-nav-open");
         menu.classList.toggle("menu-open");
 });
+
 
 const incicio = document.getElementById("inicio");
 incicio.addEventListener("click", function(){
