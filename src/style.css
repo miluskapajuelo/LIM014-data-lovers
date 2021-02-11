@@ -51,7 +51,7 @@ body{
   
 }
 header{
-  background: rgb(30, 4, 71);
+  background: rgb(62, 31, 121);
   padding: 2em 0;
   position: relative;;
 }
@@ -547,9 +547,9 @@ figcaption {
 
 }
 
-.div1{
+/* .div1{
   margin-top: 20px;
-}
+} */
 .text {
   background-position: 10px 12px;
   background-repeat: no-repeat;
