@@ -663,4 +663,8 @@ footer {
   width: 150%;
   height: 150%;
   filter: blur(23px);}
+
+.counter{
+  color: #333;
+}
 }

@@ -36,23 +36,23 @@
 
    sorted : function(data, TypeOrder){
     let filtroOrden = "";
-    if(TypeOrder == "Ascendente"){
-      filtroOrden = data.pokemon.sort((a, b) => {
+    if(TypeOrder === "Ascendente"){
+      filtroOrden = data.sort((a, b) => {
         return a.name - b.name;
-      })}
-    else if(TypeOrder =="Descendente"){
-      filtroOrden = data.pokemon.sort((a, b) => {
+      }) 
+      }
+    else if(TypeOrder ==="Descendente"){
+      filtroOrden = data.sort((a, b) => {
         return b.name - a.name;
     })}
-     else if(TypeOrder=="Debilidad"){
-      filtroOrden = data.pokemon.sort((a, b) => {
-        return b.weaknesses.lenght.localeCompare(a.weaknesses.lenght)
+     else if(TypeOrder==="Debilidad"){
+      filtroOrden = data.sort((a, b) => {
+        return a.weaknesses.lenght.localeCompare(b.weaknesses.lenght)
     })}
-    else if(TypeOrder=="Fortaleza"){
-      filtroOrden = data.pokemon.sort((a, b) => {
+    else if(TypeOrder==="Fortaleza"){
+      filtroOrden = data.sort((a, b) => {
       return b.resistant.lenght.localeCompare(a.name.resistant.lenght)
-    })}; 
-    console.log(filtroOrden);
+    })}
     return filtroOrden;} 
     
   };
