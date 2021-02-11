@@ -1,5 +1,3 @@
-import data from './data/pokemon/pokemon.js';
-
   const filtrara={ 
   filterData : function(data, tipo){
     let imagen =[];
@@ -34,6 +32,26 @@ import data from './data/pokemon/pokemon.js';
     let bebe = [imagen,nombre,about,number]
     console.log(bebe)
     return bebe
-  }
-  };
+  },
+
+  sorted : function(data, TypeOrder){
+    let filtroOrden = "";
+    if(TypeOrder == "Ascendente"){
+      filtroOrden = data.pokemon.sort((a, b) => {
+        return a.name.localeCompare(b.name);
+    })}
+    else if(TypeOrder =="Descendente"){
+      filtroOrden = data.pokemon.sort((a, b) => {
+        return b.name.localeCompare(a.name);
+    })}
+    else if(TypeOrder=="Debilidad"){
+      filtroOrden = data.pokemon.sort((a, b) => {
+        return b.weaknesses.lenght.localeCompare(a.weaknesses.lenght)
+    })}
+    else if(TypeOrder=="Fortaleza"){
+      filtroOrden = data.pokemon.sort((a, b) => {
+      return b.resistant.lenght.localeCompare(a.name.resistant.lenght)
+    })};
+    return  filtroOrden
+  
 export default filtrara
