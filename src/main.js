@@ -1,4 +1,3 @@
-
 import filtrara from './data.js';
 import data from './data/pokemon/pokemon.js';
 
@@ -36,8 +35,6 @@ botones.forEach(boton => {
     boton.addEventListener("click", elegir)
 });
 
-
-/* Busqueda por texto (filtro) */
 const text = document.querySelector("#text");
 const lista = document.getElementById("lista");
 const filtrar = () => {
@@ -72,7 +69,7 @@ const filtrar = () => {
 
     text.addEventListener("keyup", filtrar);
     filtrar();
-  
+
 
 //Audio de Pokemon
 /* const audio = document.getElementById('audio');
@@ -104,6 +101,7 @@ entrar.addEventListener("click", ()=>{
 }); 
  
 /* Menú desplegable */
+
 const menu = document.getElementById("menu");
 menu.addEventListener("click", function press2(){
     let siteNav = document.getElementById("site-nav");
@@ -135,3 +133,31 @@ incicio.addEventListener("click", function(){
     animacion.appendChild(node5);
     }});
 
+    //Audio de Pokemon
+const audio = document.getElementById('audio');
+const playPauseBTN = document.getElementById('playPauseBTN');
+let count = 0;
+playPauseBTN.addEventListener("click", function playPause(){
+    if(count == 0){
+        count = 1;
+        audio.play();
+        playPauseBTN.innerHTML = "Pause &#9208;";
+    }else{
+        count = 0;
+        audio.pause();
+        playPauseBTN.innerHTML = "Play &#9658;";
+    }
+});  
+
+const entrar = document.getElementById("entrar");
+entrar.addEventListener("click", ()=>{
+    console.log(entrar)
+
+    document.getElementById("FirstPage").classList.add("hide");
+    document.getElementById("FirstPage").classList.remove("display");
+    
+    document.getElementById("SecondPage").classList.add("display");
+    document.getElementById("SecondPage").classList.remove("hide");
+ /*    document.body.style.background = "#fff"; */
+});
+  
