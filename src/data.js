@@ -34,24 +34,26 @@
     return bebe
   },
 
-  sorted : function(data, TypeOrder){
+   sorted : function(data, TypeOrder){
     let filtroOrden = "";
     if(TypeOrder == "Ascendente"){
       filtroOrden = data.pokemon.sort((a, b) => {
-        return a.name.localeCompare(b.name);
-    })}
+        return a.name - b.name;
+      })}
     else if(TypeOrder =="Descendente"){
       filtroOrden = data.pokemon.sort((a, b) => {
-        return b.name.localeCompare(a.name);
+        return b.name - a.name;
     })}
-    else if(TypeOrder=="Debilidad"){
+     else if(TypeOrder=="Debilidad"){
       filtroOrden = data.pokemon.sort((a, b) => {
         return b.weaknesses.lenght.localeCompare(a.weaknesses.lenght)
     })}
     else if(TypeOrder=="Fortaleza"){
       filtroOrden = data.pokemon.sort((a, b) => {
       return b.resistant.lenght.localeCompare(a.name.resistant.lenght)
-    })};
-    return  filtroOrden
-  
+    })}; 
+    console.log(filtroOrden);
+    return filtroOrden;} 
+    
+  };
 export default filtrara

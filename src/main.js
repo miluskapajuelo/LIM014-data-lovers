@@ -2,7 +2,10 @@
 import filtrara from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-
+const ordera = document.querySelector("#selecta");
+ordera.addEventListener('change', (event) => {
+    console.log(event.target.value);
+    });
 
 const botones = document.querySelectorAll(".fa");
 const elegir = (evento) => {

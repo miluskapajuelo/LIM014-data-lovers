@@ -395,7 +395,7 @@ figcaption {
 .site-nav a{
   padding:0;
   margin-left: 4em;
-  color: rgb(24, 240, 89);
+  color: rgb(252, 124, 4);
   position: relative;
 }
 .ball{
@@ -618,9 +618,7 @@ footer {
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-  
-
-  .play {
+    .play {
   padding: 8px 10px;
   font-size: 13px;
   line-height: 7px;
