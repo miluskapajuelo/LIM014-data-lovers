@@ -303,6 +303,8 @@ figcaption {
   margin-left: 100px;
   background: red;}
 
+  :lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+
 @media(min-width:700px){ 
   .display {
     display: block;
@@ -667,4 +669,5 @@ footer {
 .counter{
   color: #333;
 }
+:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
 }

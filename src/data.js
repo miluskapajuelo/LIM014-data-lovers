@@ -34,6 +34,7 @@
   },
 
    sorted : function(data, TypeOrder){
+     let alma =[];
     if(TypeOrder === "Ascendente"){
           data.pokemon.sort((a, b) => {
             if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
@@ -49,18 +50,19 @@
           }); return data.pokemon}
           
     else if(TypeOrder==="Debilidad"){
-      return data.pokemon[0].weaknesses, /* lo correcto */
-      data.pokemon[0].weaknesses.sort((a, b) => {
-        if(b.weaknesses.lenght < a.weaknesses.lenght) return -1;
-        if(a.weaknesses.lenght > b.weaknesses.lenght) return 1;
-        return 0;
-       }),
-       return data.pokemon} }};
-/* 
-    else if(TypeOrder==="Fortaleza"){
       data.pokemon.sort((a, b) => {
-      b.resistant.lenght.localeCompare(a.name.resistant.lenght)
-    })}
-    return data.pokemon;}};   */
+        if(a.weaknesses < b.weaknesses) return -1;
+        if(b.weaknesses > a.weaknesses) return 1;
+        return 0;
+      }); return data.pokemon}
+    
+    else if(TypeOrder==="Resistencia"){
+      data.pokemon.sort((a, b) => {
+        if(b.resistant > a.resistant) return -1;
+        if(a.resistant < b.resistant) return 1;
+        return 0;
+      }); return data.pokemon}
+    }};
+
     
 export default filtrara

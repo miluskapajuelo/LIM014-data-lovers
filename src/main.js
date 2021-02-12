@@ -6,8 +6,7 @@ ordera.addEventListener('change', (event) => {
     lista.innerHTML = "";
     let valor = event.target.value;
     let a = filtrara.sorted(data,valor);
-    console.log(a[0])
-    /* for(let i=0;i<a.length;i++){
+     for(let i=0;i<a.length;i++){
         let node = document.createElement("figure");
         let node2 = document.createElement("img");
         let node3 = document.createElement("figcaption");
@@ -25,8 +24,8 @@ ordera.addEventListener('change', (event) => {
         figura.appendChild(animacion);
         animacion.appendChild(node4);
         animacion.appendChild(node5);   
-    } */
-    }); 
+    }
+     }); 
 
 const botones = document.querySelectorAll(".fa");
 const elegir = (evento) => {
