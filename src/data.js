@@ -30,30 +30,37 @@
         }
     });
     let bebe = [imagen,nombre,about,number]
-    console.log(bebe)
     return bebe
   },
 
    sorted : function(data, TypeOrder){
-    let filtroOrden = "";
     if(TypeOrder === "Ascendente"){
-      filtroOrden = data.sort((a, b) => {
-        return a.name - b.name;
-      }) 
-      }
-    else if(TypeOrder ==="Descendente"){
-      filtroOrden = data.sort((a, b) => {
-        return b.name - a.name;
-    })}
-     else if(TypeOrder==="Debilidad"){
-      filtroOrden = data.sort((a, b) => {
-        return a.weaknesses.lenght.localeCompare(b.weaknesses.lenght)
-    })}
+          data.pokemon.sort((a, b) => {
+            if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+            if(b.name.toLowerCase()> a.name.toLowerCase()) return 1;
+            return 0;
+          }); return data.pokemon}
+          
+    else if(TypeOrder === "Descendente"){
+          data.pokemon.sort((a, b) => {
+            if(b.name.toLowerCase() < a.name.toLowerCase()) return -1;
+            if(a.name.toLowerCase()> b.name.toLowerCase()) return 1;
+            return 0;
+          }); return data.pokemon}
+          
+    else if(TypeOrder==="Debilidad"){
+      return data.pokemon[0].weaknesses, /* lo correcto */
+      data.pokemon[0].weaknesses.sort((a, b) => {
+        if(b.weaknesses.lenght < a.weaknesses.lenght) return -1;
+        if(a.weaknesses.lenght > b.weaknesses.lenght) return 1;
+        return 0;
+       }),
+       return data.pokemon} }};
+/* 
     else if(TypeOrder==="Fortaleza"){
-      filtroOrden = data.sort((a, b) => {
-      return b.resistant.lenght.localeCompare(a.name.resistant.lenght)
+      data.pokemon.sort((a, b) => {
+      b.resistant.lenght.localeCompare(a.name.resistant.lenght)
     })}
-    return filtroOrden;} 
+    return data.pokemon;}};   */
     
-  };
 export default filtrara
