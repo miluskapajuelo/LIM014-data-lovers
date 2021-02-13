@@ -34,7 +34,6 @@
   },
 
    sorted : function(data, TypeOrder){
-     let alma =[];
     if(TypeOrder === "Ascendente"){
           data.pokemon.sort((a, b) => {
             if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;

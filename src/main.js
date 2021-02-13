@@ -130,9 +130,10 @@ menu.addEventListener("click", function press2(){
         menu.classList.toggle("menu-open");
 });
 
-
-const incicio = document.getElementById("inicio");
+/*sin filtro*/
+const incicio = document.getElementById("inicio2");
 incicio.addEventListener("click", function(){
+    lista.innerHTML = "";
     let a = filtrara.sortdata(data);
     for(let i=0;i<a[1].length;i++){
     let node = document.createElement("figure");
