@@ -39,22 +39,34 @@ const elegir = (evento) => {
         let node4 = document.createElement("a");
         let node5 = document.createElement("p");
         animacion.className = 'capa';
+        node2.className = 'img';
+        node4.className = 'aa';
         node5.innerText = a[2][i];
         node4.innerText = a[3][i];
         node2.src = a[0][i];
         node3.innerText = a[1][i];
         let figura= document.getElementById("lista").appendChild(node);
+        let genial = document.getElementById("descripModal");
+        genial.appendChild(node2);
         figura.appendChild(node2);
         figura.appendChild(node3);
         figura.appendChild(animacion);
         animacion.appendChild(node4);
-        animacion.appendChild(node5);
-}
-};
+        animacion.appendChild(node5);  
+}};
 
 botones.forEach(boton => {
     boton.addEventListener("click", elegir)
 });
+
+/* const capa = document.querySelector("#aa");
+const modal = document.getElementById("myModal");
+    const modales = () =>{
+        console.log("estamos cerca")
+    };
+    capa.forEach(capas => {
+    capas.addEventListener("click", modales);
+    }) */
 
 const text = document.querySelector("#text");
 const lista = document.getElementById("lista");
@@ -91,6 +103,7 @@ const filtrar = () => {
     text.addEventListener("keyup", filtrar);
     filtrar();
 
+    
 
 //Audio de Pokemon
 /* const audio = document.getElementById('audio');
@@ -169,5 +182,4 @@ playPauseBTN.addEventListener("click", function playPause(){
         audio.pause();
         playPauseBTN.innerHTML = "Play &#9658;";
     }
-});  
-
+}); 
