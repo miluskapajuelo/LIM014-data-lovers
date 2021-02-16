@@ -1,24 +1,40 @@
-  const filtrara={ 
-  filterData : function(data, tipo){
-    
-    let newArray = []
-    data.pokemon.forEach(function(task){
-    if(task.type == tipo){
-        newArray.push({
-          "img" : task.img,
-          "name" : task.name,
-          "about" : task.about,
-          "number" : task.num,       
-        })
-        }
+const filtrara={ 
+ /*  FILTRO POKEMON */
+  FilterData : function(data, tipo){
+    let PokemonesFiltrados = data.pokemon.filter(data => data.type == tipo);
+    let newArray = [] 
+    PokemonesFiltrados.forEach(function(pokemones){
+      
+      newArray.push({
+        "img" : pokemones.img,
+        "name" : pokemones.name,
+        "about" : pokemones.about,
+        "number" : pokemones.num, 
+        "type" : pokemones.type      
+      })
     });
-    return newArray
+   
+    return newArray;
+
   },
 
-  
+  /*  FILTRO TEXTO POKEMON */
+/*   FilterText : function(data, nombre){
+    let PokemonesFiltrados = data.pokemon.filter(data => data.name.toLowerCase == nombre);
+    let newArray = [] 
+    PokemonesFiltrados.forEach(function(pokemones){
+      newArray.push({
+        "img" : pokemones.img,
+        "name" : pokemones.name,
+        "about" : pokemones.about,
+        "number" : pokemones.num, 
+        "type" : pokemones.type      
+      })
+       */
 
+  /* TODOS LOS POKEMONES */
 
-  sortdata : function(data){
+  AllData : function(data){
     let imagen =[];
     let nombre =[];
     let about = [];
@@ -35,31 +51,32 @@
     return bebe
   },
 
-   sorted : function(data, TypeOrder){
-  /*   if(TypeOrder === "Ordenar por"){break};  */
+  /* ORDENAR DATA */
 
-    if(TypeOrder === "Ascendente"){
+  sortData : function(data,sortOrder){
+
+    if(sortOrder === "Ascendente"){
           data.pokemon.sort((a, b) => {
             if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
             if(b.name.toLowerCase()> a.name.toLowerCase()) return 1;
             return 0;
           }); return data.pokemon}
           
-    else if(TypeOrder === "Descendente"){
+    else if(sortOrder === "Descendente"){
           data.pokemon.sort((a, b) => {
             if(b.name.toLowerCase() < a.name.toLowerCase()) return -1;
             if(a.name.toLowerCase()> b.name.toLowerCase()) return 1;
             return 0;
           }); return data.pokemon}
           
-    else if(TypeOrder==="Debilidad"){
+    else if(sortOrder==="Debilidad"){
       data.pokemon.sort((a, b) => {
         if(a.weaknesses < b.weaknesses) return -1;
         if(b.weaknesses > a.weaknesses) return 1;
         return 0;
       }); return data.pokemon}
     
-    else if(TypeOrder==="Resistencia"){
+    else if(sortOrder==="Resistencia"){
       data.pokemon.sort((a, b) => {
         if(b.resistant > a.resistant) return -1;
         if(a.resistant < b.resistant) return 1;

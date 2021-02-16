@@ -1,25 +1,32 @@
-/* Primera página*/
-.display {
-  display: block;
-}
-.hide {
-  display: none;
-}
 
-*{
-  margin: 0;
-  padding: 0;
-}
-body{
-  background: url(./img/Inicio.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  line-height: 1;
-  font-size: 1rem;
-  color: #333;
-  width: 100%;
-}
- 
+
+  .display {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header .img{
+    height: 90px;
+    width: 140px;
+  }
+  
+  header{
+    width: 100%;
+    background: rgb(21, 10, 41);
+    padding: 1em 0;
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+  }
+  
 .mainContainer {
   width: 100%;
   display: flex;
@@ -49,27 +56,42 @@ body{
   margin-top: 40px;
   
 }
-header{
-  background: rgb(21, 10, 41);
-  padding: 2em 0;
-  position: relative;
-  z-index: 10;
-}
-header::after{
-  content: "";
-  clear: both;
-  display: block;
-} 
+  
+  .text1{
+    width: 33%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-color: rgb(20, 1, 27);
+    border-radius: 30px;
+    color:rgb(11, 170, 143,0.5);
+  }
+  h2{
+    font-size: 20px;
+    color: rgb(255, 230, 0);
+  }
 
-h1{
-  font-size: 1.2em;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: rgb(250, 247, 252);
-  text-align: center;
+body{
+  background: url(./img/Inicio.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  line-height: 1;
+  font-size: 1rem;
+  color: #333;
+  width: 100%;
 }
 
+.labels-sort{
+  display: none;
+}
+.space-around{
+  justify-content: space-around;
+}
+
+.flex{
+display: flex;
+}
 .site-nav{
   left: -190px;
   position: absolute;
@@ -96,7 +118,6 @@ h1{
   height: 500px;
 }
 
-/* Scroll Bar */
  ::-webkit-scroll,
 ::-webkit-scrollbar {
   width: 0.9025rem;
@@ -112,14 +133,14 @@ h1{
   z-index: 30;
   }
 
-/*rama_Miluska_P2*/
 .hola{
   color: rgb(30, 4, 71,0.5);
   display: block;
-  padding: 2em 6em;
+  padding: 2em 3em;
   text-transform: uppercase;
   text-decoration: none;
-  z-index: 30;
+  z-index: 100;
+  margin-left: 210px;
 } 
 
 .tipo li a:hover{
@@ -145,8 +166,7 @@ h1{
   text-transform: uppercase;
   text-decoration: none;
   z-index: 30;
-}
-/* menu hamburguesa */
+  margin-left: 180px;}
 .menu{
   padding: 1em;
   position: absolute;
@@ -166,7 +186,7 @@ h1{
 .hamburguesa::after{
   content: "";
   display: block;
-  background: rgb(133, 13, 13);
+  background: rgb(14, 2, 46);
   height: 3px;
   width: 1.2em;
   border-radius: 3px;
@@ -183,7 +203,6 @@ img {
   height: 150px;
   z-index: 20;
 } 
-/* lista de pokemones */
 .product-list figure {
   border: thin #7c7777 solid;
   display: flex;
@@ -293,38 +312,48 @@ figcaption {
   border-color: rgb(11, 170, 143);
 }
 
-.text1{
-  width: 15%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  margin-top: -20px;
-  border-color: rgb(11, 170, 143);
-  margin-left: 70px;
-  border-radius: 4px;
-  color:rgb(11, 170, 143,0.5);
-}
 .text:hover{
   border-collapse: collapse;
   color: rgb(11, 170, 143,0.5);
   cursor:text;
 }
 
-@media(min-width:700px){ 
+.dropdown1{
+  width: 140px;
+  padding: 12px 20px 12px 10px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid rgb(11, 170, 143);
+  /* display: flex;
+  position: relative; */
+  font-size: 16px;
+  cursor: pointer;  
+  z-index: 80;
+  margin-left: 210px;
+  justify-content:space-around;
+    align-items: center;
+    display: flex;
+  
 
-  .display {
-    display: block;
-  }
-  .hide {
-    display: none;
-  }
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box ;
-  }
-
+}
+.dropdown2{
+  width: 140px;
+  padding: 12px 20px 12px 10px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid rgb(11, 170, 143);
+/*   display: flex;
+  position: relative; */
+  font-size: 16px;
+  cursor: pointer;  
+  z-index: 80;
+/*   margin-left: 250px;
+  margin-top: -20px; */
+  justify-content:space-around;
+  align-items: center;
+  display: flex;
+}
+ @media(min-width:700px){ 
   body{
     background: url(./img/Inicio.jpg);
     background-attachment: fixed;
@@ -334,94 +363,11 @@ figcaption {
     color: #333;
     width: 100%;
   }
-  
-.mainContainer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background: white;
-  height: 340px;
-  margin-top: 200px;
-}
-.mainContainer .text{
-  margin-top: 47px;
-  text-align: center;
-  font-size: 30px;
-  color: rgb(4, 80, 29);
-  font-family: 'Marcellus SC', serif;
-  text-shadow: 0.0625rem 0.0625rem 0.375rem #35ce21;
-}
-.mainContainer p {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 1.875rem;
-  color: rgb(4, 80, 29);
-  font-family: 'Marcellus SC', serif;
-  text-shadow: 0.0625rem 0.0625rem 0.375rem #35ce21;
-}
-.mainContainer .btn{
-  margin-top: 40px;
-  
-}
+
   .menu{
     display: none;
   } 
-  header{
-    background: rgb(21, 10, 41);
-    padding: 3.8em 0;
-    position: relative;
-    z-index: 10;
-     display: flex;
-  flex-direction: column;
-  }
-  header .img{
-    height: 90px;
-    width: 140px;
-/*     text-align: left;
-    display: block;
-    margin:auto; */
-    margin-left: 40px;
-    margin-top: -41px;
-    z-index: 120;
-  }
-  .text1{
-    width: 33%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    margin-top: -60px;
-    border-color: rgb(20, 1, 27);
-    margin-left: 390px;
-    border-radius: 30px;
-    color:rgb(11, 170, 143,0.5);
-  }
-  
-  h2{
-    margin:0;
-    color: rgb(245, 152, 12);
-/*     margin-right: 26px; */
-    text-align: right;
-  }
-
-  .name{
-    float: right;
-    font-size: 1.2em;
-    margin:0;
-    color: rgb(245, 152, 12);
-    margin-top: -19px;
-    margin-right: 36px;
-  }
-  .jugar{
-    float: right;
-    font-size: 1.2em;
-    margin:0;
-    color: rgb(245, 152, 12);
-    margin-top: -37px;
-    margin-right: 130px;
-  }
-.labels-sort{
+  .labels-sort{
     display: none;
   }
 .space-around{
@@ -439,9 +385,8 @@ div{
   z-index: 40;
   margin-top: 50px;
 
-}
-.labels-sort nav{
- /*  position: relative; */
+} 
+ .labels-sort nav{
   background:transparent;
   float: left;
   margin-left:330px;
@@ -502,10 +447,9 @@ nav ul li a{
   width: 55%;
   z-index: 30;
 }
-.fa{
+  .fa{
   background: rgb(6, 202, 170,0.7);
   display: block;
-/*   padding: 2em 2em; */
   text-transform: uppercase;
 }
 
@@ -518,11 +462,10 @@ nav ul li a{
 
 
 .product-list{
-  width: 80%;
+  width: 75%;
   display:flex;
   justify-content: center;
   align-content: center;
-  height: 100%;
   border-radius: 25px;
   margin-left: 140px;
   margin-top:20px;
@@ -553,8 +496,6 @@ img{
   text-align: center;
   left: 0px;
   right: -5px;
-  border-radius: 4px;
-/*   color: white; */
 z-index: 20;
 }
 
@@ -595,20 +536,7 @@ z-index: 20;
 }
 
 
-figcaption {
-  background: rgb(44, 11, 87);
-  color: rgb(211, 173, 5);
-  font: italic smaller sans-serif;
-  padding: 3px;
-  font-size: 13px;
-  text-align: center;
-  z-index: 20;
 
-}
-
-/* .div1{
-  margin-top: 20px;
-} */
 .text {
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -633,7 +561,6 @@ figcaption {
 footer {
   width: 100%;
   display: flex;
-  /*padding: 1rem;*/
   padding-top: 10%;
   justify-content: space-between;
   background: white;
@@ -660,7 +587,6 @@ footer {
   width: 50px;
   height: 50px;
   text-decoration: none;
-  /*margin-left: 0.625rem;*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -759,6 +685,3 @@ footer {
   margin-left: 940px;
   margin-top: -45px;
 }}
-
-
-

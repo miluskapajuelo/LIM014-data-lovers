@@ -1,6 +1,8 @@
 import filtrara from './data.js';
 import data from './data/pokemon/pokemon.js';
 
+/* FUNCIÓN DE APOYO */
+
 function mostrarCard(array){
         array.forEach(function(element){
         let node = document.createElement("figure");
@@ -23,40 +25,46 @@ function mostrarCard(array){
     })
 }
 
+/* FILTRO TIPO DE POKEMON */
+
+const botones = document.querySelectorAll(".fa");
+const elegir = (evento) => {
+    lista.innerHTML = "";
+    let a = filtrara.FilterData(data,evento.target.id);
+    console.log(a)
+    mostrarCard(a)}; 
+
+botones.forEach(boton => {
+    boton.addEventListener("click", elegir)
+});
+
+/* ORDEN A-Z */
+
 const ordera = document.querySelector("#selecta");
 ordera.addEventListener('change', (event) => {
     lista.innerHTML = "";
     let valor = event.target.value;
-    let a = filtrara.sorted(data,valor);
+    let a = filtrara.sortData(data,valor);
     mostrarCard(a)
      }); 
 const ordera2  = document.querySelector("#selecta1");
 ordera2.addEventListener('change', (event) => {
     lista.innerHTML = "";
     let valor = event.target.value;
-    let a = filtrara.sorted(data,valor);
+    let a = filtrara.sortData(data,valor);
     mostrarCard(a)
      }); 
      
+     
 
-const botones = document.querySelectorAll(".fa");
-const elegir = (evento) => {
-    lista.innerHTML = "";
-    let a = filtrara.filterData(data,evento.target.id);
-    console.log(a)
-    mostrarCard(a)}
-
-botones.forEach(boton => {
-    boton.addEventListener("click", elegir)
-});
-
+/* BUSQUEDA POR TEXTO */
 
 const text = document.querySelector("#text");
 const lista = document.getElementById("lista");
 const filtrar = () => {
    lista.innerHTML = "";
    const valorTexto = text.value.toLowerCase();
-   let a = filtrara.sortdata(data);
+   let a = filtrara.AllData(data);
    console.log(a)
    for(let i=0;i<a[1].length;i++){
    let nombre = a[1][i].toLowerCase();
@@ -114,7 +122,7 @@ menu.addEventListener("click", function press2(){
 const incicio = document.getElementById("inicio2");
 incicio.addEventListener("click", function(){
     lista.innerHTML = "";
-    let a = filtrara.sortdata(data);
+    let a = filtrara.AllData(data);
     for(let i=0;i<a[1].length;i++){
     let node = document.createElement("figure");
     let node2 = document.createElement("img");
@@ -149,4 +157,4 @@ playPauseBTN.addEventListener("click", function playPause(){
         audio.pause();
         playPauseBTN.innerHTML = "Play &#9658;";
     }
-}); 
+});
