@@ -75,53 +75,59 @@
       </footer>
     </section>
     <section id="secondscreen" class="hide">
-    <header>
-    
-      <h1 class="logo">POKEDEX 2021</h1>
-      <h2 class="name">Hola Maestr@ Pokemón </h2>
+    <header class="header">
+      <img src="./img/logo.png" class="img">
+      <input type="text" class="text1" id="text">  
+      <h2 class="jugar" >Jugar    /</h2>
+      <h2 class="name">Bienvenida</h2>
     </header>
-    <main class="container3">
-      <input type="text" class="text1" id="text" placeholder="Escribe tu pokemon">  
-      <nav id="site-nav" class="site-nav" name="formulario1">
-      <ul class="site-nav2"> 
-        <li><a href="" class="hola" id="inicio1">INICIO</a></li>
-        <li><a href="" class="hola" id="inicio2">S/FILTRO</a></li>
-        <li><a href="" class="hola">TIPO</a>  
-          <ul class="tipo">
-            <li><a id="normal" href="#" class="fa" category= "normal" >NORMAL</a></li>
-            <li><a id="fire" href="#" class="fa" category= "fire">FUEGO</a></li>
-            <li><a id="water" href="#" class="fa" category="water">WATER</a></li>
-            <li><a id="grass" href="#" class="fa" category="grass">GRASS</a></li>
-            <li><a id="electric" href="#" class="fa" category="electric">ELECTRICO</a></li>
-            <li><a id="fight" href="#" class="fa" category="fight">LUCHA</a></li>
-            <li><a id="poison" href="#" class="fa" category="poison">POISON</a></li>
-            <li><a id="ground" href="#" class="fa" category="ground">TIERRA</a></li>
-            <li><a id="flying" href="#" class="fa" category="flying">FLYING</a></li>
-            <li><a id="psychic" href="#" class="fa" category="psychic">PSIQUICO</a></li>
-            <li><a id="bug" href="#" class="fa" category="bug">BICHO</a></li>
-            <li><a id="rock" href="#" class="fa" category="rock">ROCA</a></li>
-            <li><a id="ghost" href="#" class="fa" category="ghost">FANTASMA</a></li>
-            <li><a id="ice" href="#" class="fa" category="ice">HIELO</a></li>
-            <li><a id="dragon" href="#" class="fa" category="dragon">DRAGON</a></li>
-            <li><a id="dark" href="#" class="fa" category="dark">SINIESTRO</a></li>
-            <li><a id="steel" href="#" class="fa" category="steel">ACERO</a></li>
-            <li><a id="fairy" href="#" class="fa" value="fairy">HADA</a></li>
-          </ul>
-      </li>
+        <div class="labels-sort flex space-around">
+          <label class="label1">ORDENAR POR</label>
+          <nav id="site-nav" class="site-nav" name="formulario1">
+            <ul class="site-nav2"> 
+              <li><a href="" class="hola" id="inicio1">INICIO</a></li>
+              <li><a href="" class="hola" id="inicio2">S/FILTRO</a></li>
+              <li><a href="" class="hola">TIPO</a>  
+            <ul class="tipo">
+              <li><a id="normal" href="#" class="fa" category= "normal" >NORMAL</a></li>
+              <li><a id="fire" href="#" class="fa" category= "fire">FUEGO</a></li>
+              <li><a id="water" href="#" class="fa" category="water">WATER</a></li>
+              <li><a id="grass" href="#" class="fa" category="grass">GRASS</a></li>
+              <li><a id="electric" href="#" class="fa" category="electric">ELECTRICO</a></li>
+              <li><a id="fight" href="#" class="fa" category="fight">LUCHA</a></li>
+              <li><a id="poison" href="#" class="fa" category="poison">POISON</a></li>
+              <li><a id="ground" href="#" class="fa" category="ground">TIERRA</a></li>
+              <li><a id="flying" href="#" class="fa" category="flying">FLYING</a></li>
+              <li><a id="psychic" href="#" class="fa" category="psychic">PSIQUICO</a></li>
+              <li><a id="bug" href="#" class="fa" category="bug">BICHO</a></li>
+              <li><a id="rock" href="#" class="fa" category="rock">ROCA</a></li>
+              <li><a id="ghost" href="#" class="fa" category="ghost">FANTASMA</a></li>
+              <li><a id="ice" href="#" class="fa" category="ice">HIELO</a></li>
+              <li><a id="dragon" href="#" class="fa" category="dragon">DRAGON</a></li>
+              <li><a id="dark" href="#" class="fa" category="dark">SINIESTRO</a></li>
+              <li><a id="steel" href="#" class="fa" category="steel">ACERO</a></li>
+              <li><a id="fairy" href="#" class="fa" value="fairy">HADA</a></li>
+            </ul>
+        </li>
       </ul>
     </nav>
+  </div>
     <div class="menu" id="menu">
       <div class="hamburguesa"></div>
     </div>
-    <select id="selecta" class="dropdown-select">
-      <option class="selectora" value="0" selected>Ordenar por</option>
+    <div class="portada2">
+    <select id="selecta" class="dropdown1">
+      <option class="selectora" value="0" selected>ABC</option>
       <option class="selectora" value="Ascendente" >Ascendente</option>
-      <option class="selectora" value="Debilidad">Debilidad</option>
       <option class="selectora" value="Descendente">Descendente</option>
-      <option class="selectora" value="Resistencia">Fortaleza</option>
     </select>
-  
-</main>
+    <select id="selecta1" class="dropdown2">
+      <option class="selectora" value="0" selected>Importante</option>
+      <option class="selectora" value="Debilidad">Debilidad</option>
+      <option class="selectora" value="Resistencia">Resistencia</option>
+    </select>
+  </div>
+
   <nav id="lista" class="product-list">
   </nav>
   <!-- <div id="myModal" class="modal">

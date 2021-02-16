@@ -1,20 +1,22 @@
   const filtrara={ 
   filterData : function(data, tipo){
-    let imagen =[];
-    let nombre =[];
-    let about = [];
-    let number = [];
+    
+    let newArray = []
     data.pokemon.forEach(function(task){
     if(task.type == tipo){
-        imagen.push(task.img)
-        nombre.push(task.name)
-        about.push(task.about)
-        number.push(task.num)
+        newArray.push({
+          "img" : task.img,
+          "name" : task.name,
+          "about" : task.about,
+          "number" : task.num,       
+        })
         }
     });
-    let bebe = [imagen,nombre,about,number]
-    return bebe
+    return newArray
   },
+
+  
+
 
   sortdata : function(data){
     let imagen =[];
@@ -34,6 +36,8 @@
   },
 
    sorted : function(data, TypeOrder){
+  /*   if(TypeOrder === "Ordenar por"){break};  */
+
     if(TypeOrder === "Ascendente"){
           data.pokemon.sort((a, b) => {
             if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;

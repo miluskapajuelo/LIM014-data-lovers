@@ -1,12 +1,8 @@
 import filtrara from './data.js';
 import data from './data/pokemon/pokemon.js';
 
-const ordera = document.querySelector("#selecta");
-ordera.addEventListener('change', (event) => {
-    lista.innerHTML = "";
-    let valor = event.target.value;
-    let a = filtrara.sorted(data,valor);
-     for(let i=0;i<a.length;i++){
+function mostrarCard(array){
+        array.forEach(function(element){
         let node = document.createElement("figure");
         let node2 = document.createElement("img");
         let node3 = document.createElement("figcaption");
@@ -14,59 +10,46 @@ ordera.addEventListener('change', (event) => {
         let node4 = document.createElement("a");
         let node5 = document.createElement("p");
         animacion.className = 'capa';
-        node5.innerText = a[i].about;
-        node4.innerText = a[i].num;
-        node2.src = a[i].img;
-        node3.innerText = a[i].name;
+        node5.innerText = element.about;
+        node4.innerText = element.num;
+        node2.src = element.img;
+        node3.innerText = element.name;
         let figura= document.getElementById("lista").appendChild(node);
         figura.appendChild(node2);
         figura.appendChild(node3);
         figura.appendChild(animacion);
         animacion.appendChild(node4);
         animacion.appendChild(node5);   
-    }
+    })
+}
+
+const ordera = document.querySelector("#selecta");
+ordera.addEventListener('change', (event) => {
+    lista.innerHTML = "";
+    let valor = event.target.value;
+    let a = filtrara.sorted(data,valor);
+    mostrarCard(a)
      }); 
+const ordera2  = document.querySelector("#selecta1");
+ordera2.addEventListener('change', (event) => {
+    lista.innerHTML = "";
+    let valor = event.target.value;
+    let a = filtrara.sorted(data,valor);
+    mostrarCard(a)
+     }); 
+     
 
 const botones = document.querySelectorAll(".fa");
 const elegir = (evento) => {
     lista.innerHTML = "";
     let a = filtrara.filterData(data,evento.target.id);
-    for(let i=0;i<a[0].length;i++){
-        let node = document.createElement("figure");
-        let node2 = document.createElement("img");
-        let node3 = document.createElement("figcaption");
-        let animacion = document.createElement("div");
-        let node4 = document.createElement("a");
-        let node5 = document.createElement("p");
-        animacion.className = 'capa';
-        node2.className = 'img';
-        node4.className = 'aa';
-        node5.innerText = a[2][i];
-        node4.innerText = a[3][i];
-        node2.src = a[0][i];
-        node3.innerText = a[1][i];
-        let figura= document.getElementById("lista").appendChild(node);
-        let genial = document.getElementById("descripModal");
-        genial.appendChild(node2);
-        figura.appendChild(node2);
-        figura.appendChild(node3);
-        figura.appendChild(animacion);
-        animacion.appendChild(node4);
-        animacion.appendChild(node5);  
-}};
+    console.log(a)
+    mostrarCard(a)}
 
 botones.forEach(boton => {
     boton.addEventListener("click", elegir)
 });
 
-/* const capa = document.querySelector("#aa");
-const modal = document.getElementById("myModal");
-    const modales = () =>{
-        console.log("estamos cerca")
-    };
-    capa.forEach(capas => {
-    capas.addEventListener("click", modales);
-    }) */
 
 const text = document.querySelector("#text");
 const lista = document.getElementById("lista");
@@ -74,6 +57,7 @@ const filtrar = () => {
    lista.innerHTML = "";
    const valorTexto = text.value.toLowerCase();
    let a = filtrara.sortdata(data);
+   console.log(a)
    for(let i=0;i<a[1].length;i++){
    let nombre = a[1][i].toLowerCase();
         if(nombre.indexOf(valorTexto) !==-1){            
@@ -104,23 +88,6 @@ const filtrar = () => {
     filtrar();
 
     
-
-//Audio de Pokemon
-/* const audio = document.getElementById('audio');
-const playPauseBTN = document.getElementById('playPauseBTN');
-let count = 0;
-playPauseBTN.addEventListener("click", function playPause(){
-    if(count == 0){
-        count = 1;
-        audio.play();
-        playPauseBTN.innerHTML = "Pause &#9208;";
-    }else{
-        count = 0;
-        audio.pause();
-        playPauseBTN.innerHTML = "Play &#9658;";
-    }
-});  
- */
 
 /* Ingresar a la segunda pantalla */
 const entrar = document.getElementById("entrar");
