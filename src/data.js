@@ -9,7 +9,7 @@ const funciones={
         "img" : pokemones.img,
         "name" : pokemones.name,
         "about" : pokemones.about,
-        "number" : pokemones.num, 
+        "num" : pokemones.num, 
         "type" : pokemones.type      
       })
     });

@@ -15,18 +15,18 @@ function mostrarCard(array){
         let node2 = document.createElement("img");
         let node3 = document.createElement("figcaption");
         let animacion = document.createElement("div");
-        let node4 = document.createElement("a");
+      /*   let node4 = document.createElement("a"); */
         let node5 = document.createElement("p");
         animacion.className = 'capa';
         node5.innerText = element.about;
-        node4.innerText = element.num;
+        /* node4.innerText = element.num; */
         node2.src = element.img;
         node3.innerText = element.name;
         let figura= document.getElementById("lista").appendChild(node);
         figura.appendChild(node2);
         figura.appendChild(node3);
         figura.appendChild(animacion);
-        animacion.appendChild(node4);
+        /* animacion.appendChild(node4); */
         animacion.appendChild(node5); 
         node.innerHTML += ` <input type="button" value="Boton" id="mostrarModal"> `;
 
@@ -98,18 +98,18 @@ const filtrar = () => {
             let node3 = document.createElement("figcaption");
             let animacion = document.createElement("div");
             let node5 = document.createElement("p");
-            let node4 = document.createElement("a");
+           /*  let node4 = document.createElement("a"); */
             animacion.className = 'capa';
             node.className = "fig"
             node5.innerText = a[2][i];
-            node4.innerText = a[3][i];
+           /*  node4.innerText = a[3][i]; */
             node2.src = a[0][i];
             node3.innerText = a[1][i];
             let figura= document.getElementById("lista").appendChild(node);
             figura.appendChild(node2);
             figura.appendChild(node3);
             figura.appendChild(animacion);
-            animacion.appendChild(node4);
+            /* animacion.appendChild(node4); */
             animacion.appendChild(node5);
         }
     if(lista.innerHTML === ""){
@@ -141,30 +141,7 @@ menu.addEventListener("click", function press2(){
         menu.classList.toggle("menu-open");
 });
 
-/*sin filtro*/
-const incicio = document.getElementById("inicio2");
-incicio.addEventListener("click", function(){
-    lista.innerHTML = "";
-    let a = funciones.AllData(data);
-    for(let i=0;i<a[1].length;i++){
-    let node = document.createElement("figure");
-    let node2 = document.createElement("img");
-    let node3 = document.createElement("figcaption");
-    let animacion = document.createElement("div");
-    let node5 = document.createElement("p");
-    let node4 = document.createElement("a");
-    animacion.className = 'capa';
-    node5.innerText = a[2][i];
-    node4.innerText = a[3][i];
-    node2.src = a[0][i];
-    node3.innerText = a[1][i];
-    let figura= document.getElementById("lista").appendChild(node);
-    figura.appendChild(node2);
-    figura.appendChild(node3);
-    figura.appendChild(animacion);
-    animacion.appendChild(node4);
-    animacion.appendChild(node5);
-    }});
+
 
     //Audio de Pokemon
 const audio = document.getElementById('audio');
