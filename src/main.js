@@ -3,6 +3,10 @@ import data from './data/pokemon/pokemon.js';
 
 const lista = document.getElementById("lista");
 
+const modalMode = document.getElementById('modal-mode'); // trae el div de la pantalla modal
+const modalWindow = document.getElementById('modal-window'); //llamada a la ventana modal
+  
+
 /* FUNCIÓN DE APOYO */
 
 function mostrarCard(array){
@@ -23,7 +27,29 @@ function mostrarCard(array){
         figura.appendChild(node3);
         figura.appendChild(animacion);
         animacion.appendChild(node4);
-        animacion.appendChild(node5);   
+        animacion.appendChild(node5); 
+        node.innerHTML += ` <input type="button" value="Boton" id="mostrarModal"> `;
+
+ 
+        let btnModal = node.querySelector('#mostrarModal')
+        btnModal.addEventListener('click', mostrarModal);
+        
+        function mostrarModal() {
+            modalMode.classList.toggle('hide'); 
+            modalMode.innerHTML =            
+            `<h2> ${element.name} </h2><input type="button" value="Boton" id="cerrarModal">  `;
+
+            const btnCloseModal = modalMode.querySelector('#cerrarModal'); 
+ 
+            btnCloseModal.addEventListener('click', cerrarModal);
+}
+
+ 
+
+function cerrarModal() {
+    modalMode.classList.toggle('hide');
+}
+        
     })}
 
 
@@ -155,3 +181,5 @@ playPauseBTN.addEventListener("click", function playPause(){
         playPauseBTN.innerHTML = "Play &#9658;";
     }
 });
+
+ 
