@@ -1,4 +1,4 @@
-const filtrara={ 
+const funciones={ 
  /*  FILTRO POKEMON */
   FilterData : function(data, tipo){
     let PokemonesFiltrados = data.pokemon.filter(data => data.type == tipo);
@@ -19,8 +19,8 @@ const filtrara={
   },
 
   /*  FILTRO TEXTO POKEMON */
-/*   FilterText : function(data, nombre){
-    let PokemonesFiltrados = data.pokemon.filter(data => data.name.toLowerCase == nombre);
+  FilterText : function(data, nombre){
+    let PokemonesFiltrados = data.pokemon.filter(data => data.name == nombre);
     let newArray = [] 
     PokemonesFiltrados.forEach(function(pokemones){
       newArray.push({
@@ -29,8 +29,10 @@ const filtrara={
         "about" : pokemones.about,
         "number" : pokemones.num, 
         "type" : pokemones.type      
-      })
-       */
+      })}); return newArray,
+      console.log(newArray)
+    },
+      
 
   /* TODOS LOS POKEMONES */
 
@@ -85,4 +87,4 @@ const filtrara={
     }};
 
     
-export default filtrara
+export default funciones

@@ -1,5 +1,7 @@
-import filtrara from './data.js';
+import funciones from './data.js';
 import data from './data/pokemon/pokemon.js';
+
+const lista = document.getElementById("lista");
 
 /* FUNCIÓN DE APOYO */
 
@@ -22,15 +24,15 @@ function mostrarCard(array){
         figura.appendChild(animacion);
         animacion.appendChild(node4);
         animacion.appendChild(node5);   
-    })
-}
+    })}
+
 
 /* FILTRO TIPO DE POKEMON */
 
 const botones = document.querySelectorAll(".fa");
 const elegir = (evento) => {
     lista.innerHTML = "";
-    let a = filtrara.FilterData(data,evento.target.id);
+    let a = funciones.FilterData(data,evento.target.id);
     console.log(a)
     mostrarCard(a)}; 
 
@@ -44,27 +46,23 @@ const ordera = document.querySelector("#selecta");
 ordera.addEventListener('change', (event) => {
     lista.innerHTML = "";
     let valor = event.target.value;
-    let a = filtrara.sortData(data,valor);
+    let a = funciones.sortData(data,valor);
     mostrarCard(a)
      }); 
 const ordera2  = document.querySelector("#selecta1");
 ordera2.addEventListener('change', (event) => {
     lista.innerHTML = "";
     let valor = event.target.value;
-    let a = filtrara.sortData(data,valor);
+    let a = funciones.sortData(data,valor);
     mostrarCard(a)
      }); 
      
-     
-
-/* BUSQUEDA POR TEXTO */
-
-const text = document.querySelector("#text");
-const lista = document.getElementById("lista");
+  /* BUSQUEDA POR TEXTO */
+  const text = document.querySelector("#text");
 const filtrar = () => {
    lista.innerHTML = "";
    const valorTexto = text.value.toLowerCase();
-   let a = filtrara.AllData(data);
+   let a = funciones.AllData(data);
    console.log(a)
    for(let i=0;i<a[1].length;i++){
    let nombre = a[1][i].toLowerCase();
@@ -95,7 +93,6 @@ const filtrar = () => {
     text.addEventListener("keyup", filtrar);
     filtrar();
 
-    
 
 /* Ingresar a la segunda pantalla */
 const entrar = document.getElementById("entrar");
@@ -122,7 +119,7 @@ menu.addEventListener("click", function press2(){
 const incicio = document.getElementById("inicio2");
 incicio.addEventListener("click", function(){
     lista.innerHTML = "";
-    let a = filtrara.AllData(data);
+    let a = funciones.AllData(data);
     for(let i=0;i<a[1].length;i++){
     let node = document.createElement("figure");
     let node2 = document.createElement("img");

@@ -68,7 +68,7 @@
     color:rgb(11, 170, 143,0.5);
   }
   h2{
-    font-size: 20px;
+    font-size:17px;;
     color: rgb(255, 230, 0);
   }
 
@@ -84,7 +84,9 @@ body{
 
 .labels-sort{
   display: none;
+  margin-top: 20px;
 }
+
 .space-around{
   justify-content: space-around;
 }
@@ -139,24 +141,24 @@ display: flex;
   padding: 2em 3em;
   text-transform: uppercase;
   text-decoration: none;
-  z-index: 100;
-  margin-left: 210px;
+  z-index: 400;
+  margin-left: 200px;
 } 
 
 .tipo li a:hover{
   background: rgb(245, 152, 12,0.5);
   color: rgb(30, 4, 71);
-  z-index: 30;
+  z-index: 300;
 }
 
 
 .site-nav ul li ul{
   display:none;
-  z-index: 30;
+  z-index: 300;
 }
 .site-nav ul li:hover ul{
   display: block;
-  z-index: 30;
+  z-index: 300;
 }
 .fa{
   color: rgb(245, 152, 12,0.5);
@@ -165,7 +167,7 @@ display: flex;
   padding: 2em 6em;
   text-transform: uppercase;
   text-decoration: none;
-  z-index: 30;
+  z-index: 300;
   margin-left: 180px;}
 .menu{
   padding: 1em;
@@ -318,22 +320,27 @@ figcaption {
   cursor:text;
 }
 
+.portada2{
+  justify-content:space-around;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  background: transparent;
+  padding: 1em 0;
+  height: 100%;
+  flex-wrap: wrap;
+
+}
+
 .dropdown1{
   width: 140px;
   padding: 12px 20px 12px 10px;
   border-radius: 4px;
   background-color: white;
   border: 1px solid rgb(11, 170, 143);
-  /* display: flex;
-  position: relative; */
   font-size: 16px;
   cursor: pointer;  
-  z-index: 80;
-  margin-left: 210px;
-  justify-content:space-around;
-    align-items: center;
-    display: flex;
-  
+
 
 }
 .dropdown2{
@@ -342,17 +349,13 @@ figcaption {
   border-radius: 4px;
   background-color: white;
   border: 1px solid rgb(11, 170, 143);
-/*   display: flex;
-  position: relative; */
   font-size: 16px;
   cursor: pointer;  
-  z-index: 80;
-/*   margin-left: 250px;
-  margin-top: -20px; */
   justify-content:space-around;
   align-items: center;
   display: flex;
 }
+
  @media(min-width:700px){ 
   body{
     background: url(./img/Inicio.jpg);
@@ -363,7 +366,24 @@ figcaption {
     color: #333;
     width: 100%;
   }
-
+  h2{
+    font-size:27px;;
+    color: rgb(255, 230, 0);
+  }
+  .portada2{
+    justify-content:flex-end;
+    align-items:center;
+    display: flex;
+    width: 100%;
+    padding: 1em 0;
+    float: right;
+      }
+.dropdown2{
+  margin-right: 320px
+}
+.dropdown1{
+  margin-right:30px
+}
   .menu{
     display: none;
   } 
@@ -381,11 +401,12 @@ div{
   display: block;
 }
 .labels-sort label{
-  margin-left: 500px;
+  margin-left: 400px;
   z-index: 40;
   margin-top: 50px;
 
 } 
+
  .labels-sort nav{
   background:transparent;
   float: left;
@@ -459,84 +480,10 @@ nav ul li a{
   width: 100%;
 }
 
-
-
 .product-list{
   width: 75%;
-  display:flex;
-  justify-content: center;
-  align-content: center;
-  border-radius: 25px;
   margin-left: 140px;
-  margin-top:20px;
-  z-index: 20;
-  
 }
-figure{
-  margin: 10px;
-  height: 190px;
-  z-index: 20;
-}
-
-img{
-  margin: 0;
-  display: inline-block;
-  z-index: 20;
-}
-
-.product-list figure .capa{
-  position: absolute;
-  top : 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 103, 123, 0.6 );
-  transition: all 500ms ease-in-out;
-  opacity: 0;
-  visibility: hidden;
-  text-align: center;
-  left: 0px;
-  right: -5px;
-z-index: 20;
-}
-
-.product-list figure:hover > .capa{
-  opacity: 1;
-  visibility: visible;
-  z-index: 20;
-}
-.product-list figure:hover > img{
-  transform: scale(1.2);
-  z-index: 20;
-
-}
-
-.product-list figure:hover > .capa a{
-  margin-top: 70px;
-  margin-bottom: 15px;
-  z-index: 20;
-
-}
-.product-list figure .capa a{
-  color: rgb(4, 14, 70);
-  font-weight: 200;
-  margin-bottom: 120px;
-  transition: all 500ms ease-out;
-  font-weight: bold;
-  z-index: 20;
-}
-.product-list figure .capa p{
-  color: #fff;
-  font-size: 13px;
-  line-height: 1.5;
-  width: 100%;
-  max-width: 160px;
-  margin: auto;
-  margin-top: 2px;
-  z-index: 20;
-}
-
-
-
 .text {
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -651,37 +598,5 @@ footer {
 .counter{
   color: #333;
 }
-.portada2{
-  margin-top:40px ;
-  display: flex;
-  flex-direction: column;
-}
 
-.dropdown1{
-  width: 140px;
-  padding: 12px 20px 12px 10px;
-  border-radius: 4px;
-  background-color: white;
-  border: 1px solid rgb(11, 170, 143);
-  display: flex;
-  position: relative;
-  font-size: 16px;
-  cursor: pointer;  
-  z-index: 80;
-  margin-left: 790px;
-  margin-top: -30px;
 }
-.dropdown2{
-  width: 140px;
-  padding: 12px 20px 12px 10px;
-  border-radius: 4px;
-  background-color: white;
-  border: 1px solid rgb(11, 170, 143);
-  display: flex;
-  position: relative;
-  font-size: 16px;
-  cursor: pointer;  
-  z-index: 80;
-  margin-left: 940px;
-  margin-top: -45px;
-}}
