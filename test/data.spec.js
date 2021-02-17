@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data/pokemon/pokemon.js';
+import { example, anotherExample } from '../src/data/.js';
 
 
 describe('example', () => {

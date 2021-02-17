@@ -1,0 +1,248 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/jpg" href="./img/fondo_pantalla1.jpg" /> 
+<!--     <meta name="viewport" content="width=device-with, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Ruda&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|Marcellus+SC|Roboto|Trade+Winds&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="fyo.css" />
+    <link rel="stylesheet" href="caracteristicas.css" /> -->
+   <!--  <link type="text/css" rel="stylesheet" charset="UTF-8" 
+    href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+   --></head>
+  <body>
+
+    <section id="firstscreen" class="display" >
+      <header class="header">
+        <nav class="container">
+          <div class="audio">
+            <audio id="audio2">
+            <source=".img/music.mp3" type="audio/mp3">
+
+            </audio>
+            <button id="playPauseBTN" class="play"> Play &#9658; </button>
+            &nbsp;
+            &nbsp;
+            <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
+
+            </div>
+        </nav>
+      </header>
+      <main class="mainContainer">
+      <p> "
+        Tengo que ser siempre el mejor, mejor que nadie más, ATRAPARLOS MI PRUEBA ES,<br> 
+            Entrenarlos, mi ideal ... Yo viajaré de aquí a allá, buscando hasta el fin<br>
+             Oh Pokémon, yo entenderé, tu poder interior Pokémon
+             "</p>
+            
+      <section class="form">
+      <div>
+        <input class="text" type="text" placeholder="Ingrese su nombre">
+      </div>
+      <div>
+        <input type="button" class="btn"  name="entrar" value="entrar" id="entrar">
+        <input type="button"  class="btn"name="info" value="info" id="info">
+      </div>
+    </section>
+  </main>
+      <footer class="footer">
+        <article class="right">
+          <p class="arroba" style="vertical-align: inherit">
+          @ 2021 &nbsp| Todos los Derechos Reservados
+          </p>
+        </article>
+        <article id="left">
+          <a>
+            <img src="./img/shareLogo.webp" id="compartir" class="animated wobble">
+          </a>
+          <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
+            <img src="./img/fbLogo.webp" class="imgRedes">
+          </a>
+          <a href="https://twitter.com/pokemongoapp?lang=es" class="nav-link" target="_blank">
+            <img src="./img/twLogo.webp" class="imgRedes">
+          </a>
+          <a href="https://www.instagram.com/pokemongoapp/" class="nav-link" target="_blank">
+            <img src="./img/igLogo.webp" class="imgRedes">
+          </a>
+        </article>
+      </footer>
+    </section>
+    <section id="secondscreen" class="hide">
+    <header class="header">
+      <img src="./img/logo.png" class="img">
+      <input type="text" class="text1" id="text">  
+      <h2 class="te1 jugar" >Jugar / Bienvenida</h2>
+    </header>
+        <div class="labels-sort flex space-around">
+          <label class="label1">ORDENAR POR</label>
+          <nav id="site-nav" class="site-nav" name="formulario1">
+            <ul class="site-nav2"> 
+              <li><a href="" class="hola" id="inicio1">INICIO</a></li>
+              <li><a href="" class="hola" id="inicio2">S/FILTRO</a></li>
+              <li><a href="" class="hola">TIPO</a>  
+            <ul class="tipo">
+              <li><a id="normal" href="#" class="fa" category= "normal" >NORMAL</a></li>
+              <li><a id="fire" href="#" class="fa" category= "fire">FUEGO</a></li>
+              <li><a id="water" href="#" class="fa" category="water">WATER</a></li>
+              <li><a id="grass" href="#" class="fa" category="grass">GRASS</a></li>
+              <li><a id="electric" href="#" class="fa" category="electric">ELECTRICO</a></li>
+              <li><a id="fight" href="#" class="fa" category="fight">LUCHA</a></li>
+              <li><a id="poison" href="#" class="fa" category="poison">POISON</a></li>
+              <li><a id="ground" href="#" class="fa" category="ground">TIERRA</a></li>
+              <li><a id="flying" href="#" class="fa" category="flying">FLYING</a></li>
+              <li><a id="psychic" href="#" class="fa" category="psychic">PSIQUICO</a></li>
+              <li><a id="bug" href="#" class="fa" category="bug">BICHO</a></li>
+              <li><a id="rock" href="#" class="fa" category="rock">ROCA</a></li>
+              <li><a id="ghost" href="#" class="fa" category="ghost">FANTASMA</a></li>
+              <li><a id="ice" href="#" class="fa" category="ice">HIELO</a></li>
+              <li><a id="dragon" href="#" class="fa" category="dragon">DRAGON</a></li>
+              <li><a id="dark" href="#" class="fa" category="dark">SINIESTRO</a></li>
+              <li><a id="steel" href="#" class="fa" category="steel">ACERO</a></li>
+              <li><a id="fairy" href="#" class="fa" value="fairy">HADA</a></li>
+            </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+    <div class="menu" id="menu">
+      <div class="hamburguesa"></div>
+    </div>
+    <div class="portada2">
+    <select id="selecta" class="dropdown1">
+      <option class="selectora" value="0" selected>ABC</option>
+      <option class="selectora" value="Ascendente" >Ascendente</option>
+      <option class="selectora" value="Descendente">Descendente</option>
+    </select>
+    <select id="selecta1" class="dropdown2">
+      <option class="selectora" value="0" selected>Importante</option>
+      <option class="selectora" value="Debilidad">Debilidad</option>
+      <option class="selectora" value="Resistencia">Resistencia</option>
+    </select>
+  </div>
+
+  <nav id="lista" class="product-list">
+  </nav>
+  <!-- ************* -->
+  <section class="hide">
+    <div class="container">
+    <div class="interior">
+      <a class="btn" href="#open-modal">👋 Basic CSS-Only Modal</a>
+    </div>
+  </div>
+  <div id="open-modal" class="modal-window">
+    <div>
+      <a href="#" title="Close" class="modal-close">Close</a>
+      <h1>Voilà!</h1>
+      <div>A CSS-only modal based on the :target pseudo-class. Hope you find it helpful.</div>
+      <div><small>Check out</small></div>
+      <a href="https://aminoeditor.com" target="_blank">👉 Amino: Live CSS Editor for Chrome</div>
+      </div>
+  </div>
+
+</section>
+<!-- ************* -->
+<footer class="arroba" style="vertical-align: inherit">
+  @ 2021 &nbsp| Todos los Derechos Reservados
+</footer>
+</section>
+
+<!--  Pantalla Modal-->
+
+<div id="modal-mode">     
+
+  <div id="modal-window" class="fixed">
+
+    <i class="icon-cross " id="close-modal"></i>
+
+    <div id="div-img-modal">
+      <img id="img-pokemon-modal" class="image-modal" src="img/pika.png">
+    </div>  
+    
+    <section id="body-modal" class="modal flex-wrap">  
+      <span id="pokemon-name-modal" class="font f-medium f-blue one-fraction"> nombre del pokemon</span>
+
+      <div class="column-1 flex-wrap color-container ">
+        <img src="images/tallaPokemon.png" alt="" class="icon-medium">          
+        <div class="font f-small">
+            <span class="block f-green">Height</span><span id="value-height" class=""></span>
+        </div>
+      </div>  
+
+      <div class="column-1 flex-wrap color-container">
+        <img src="images/pesoPokemon.png" alt="" class="icon-medium">
+        <div class="font f-small">
+          <span class="block f-green">Weight</span><span id="value-weight" class="color-gray"></span>
+        </div>          
+      </div>
+
+      <div class="column-1 flex-wrap color-container">
+        <img src="images/region.png" alt="" class="icon-medium">
+        <div class="font f-small">
+          <span class="block f-green">Region</span><span id="value-region" class="color-gray"></span>
+        </div>
+      </div>
+
+      <div class="column-1 flex-wrap color-container">
+        <img src="images/cramelos.png" alt="" class="icon-medium">
+        <div class="font f-small">
+          <span class="block f-green">Candy</span><span id="value-candy" class="color-gray"></span>
+        </div>
+      </div>
+    
+      <div class="column-3 font color-container flex-wrap">
+        <span class="f-small f-green three-fraction"> Type</span>            
+        <span class="f-small f-green three-fraction"> Resistant</span>            
+        <span class="f-small f-green three-fraction"> Weaknesses</span>            
+        <div id = "types" class="section-modal flex-wrap"></div>
+        <div id = "resistant" class="section-modal flex-wrap"></div>
+        <div id = "weaknesses" class="section-modal flex-wrap"></div>
+      </div>
+
+      <div class="column-3 flex-wrap color-container">
+        <button id="btn-calculate" class="font f-small f-red grow" name = "calculate"> Skills </button>
+
+        <div id="move-and-attack" class="column-3 flex-wrap">
+          <span class="two-fraction font f-small f-blue">special attacks</span>
+          <span class="two-fraction font f-small f-blue">quick move</span>
+
+          <table id="special-attacks-table" class="column-2 font">
+
+            <!-- <tr><th>tipo</th><th>daño</th><th>energia</th>time</tr> -->
+          </table>
+
+          <table id="quick-move-table" class="column-2 font">                
+          </table>        
+        </div>
+
+        <div id="calculate-damage" class="column-3 flex-wrap">
+          <table id="table-damage" class=" column-3 font text-aling"></table>
+        </div>
+      </div>
+
+      <span class="one-fraction f-blue font f-small">Evolution</span>            
+
+      <div id="evolution" class="column-3 flex-wrap"></div>          
+      
+    </section>
+</div>
+</div>
+
+<!-- Fin de la Pantalla Modal-->
+
+<script type="module" src="main.js"></script>
+<script type="module" src="data.js"></script>
+
+
+
+
+</body>
+</html>
+
+   
