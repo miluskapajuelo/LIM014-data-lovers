@@ -26,6 +26,7 @@
     align-items: center;
     display: flex;
   }
+ 
   
 .mainContainer {
   width: 100%;
@@ -367,6 +368,7 @@ figcaption {
     color: #333;
     width: 100%;
   }
+
   h2{
     font-size:27px;;
     color: rgb(255, 230, 0);
@@ -651,6 +653,7 @@ footer {
   margin: auto;
   z-index: 1;
  }
+
  #div-img-modal{
   z-index: 0;
   width: 20vh;
@@ -664,12 +667,12 @@ footer {
   #img-pokemon-modal{
     position: relative;
     left: calc((20% - 0px)/2);
-  /*   top: 0x; */
     width: 120px;
     height: 120px;
-
   }
-   .nombrePoke{
+    
+  /* caracteristicas del modal */
+  .nombrePoke{
     text-align: center;
     color: #fcdd00;
     width: auto;
@@ -679,4 +682,18 @@ footer {
     text-transform: uppercase;
     
   } 
-  
+  .Characters{
+    text-align: center;
+    color: #00cafc;
+    width: auto;
+    position: relative;
+    top: 60px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  .icono{
+    height: 30px;
+    width: 30px;
+  }
+ 
+  /* caracteristicas del modal */
