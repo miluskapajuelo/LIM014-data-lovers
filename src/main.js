@@ -3,9 +3,8 @@ import data from './data/pokemon/pokemon.js';
 
 const lista = document.getElementById("lista");
 
-const modalMode = document.getElementById('modal-mode'); // trae el div de la pantalla modal
-const modalWindow = document.getElementById('modal-window'); //llamada a la ventana modal
-  
+const modalMode = document.getElementById('modal-mode'); // trae el div de la pantalla modal 
+const modalWindow = document.getElementById('modal-window');  
 
 /* FUNCIÓN DE APOYO */
 
@@ -28,18 +27,28 @@ function mostrarCard(array){
         figura.appendChild(animacion);
         /* animacion.appendChild(node4); */
         animacion.appendChild(node5); 
-        node.innerHTML += ` <input type="button" value="Boton" id="mostrarModal"> `;
-
  
-        let btnModal = node.querySelector('#mostrarModal')
+        let btnModal = node.querySelector('.capa')
         btnModal.addEventListener('click', mostrarModal);
         
         function mostrarModal() {
             modalMode.classList.toggle('hide'); 
-            modalMode.innerHTML =            
-            `<h2> ${element.name} </h2><input type="button" value="Boton" id="cerrarModal">  `;
+            modalWindow.classList.toggle('hide');
+            modalWindow.innerHTML =            
+            `<div id="div-img-modal">
+            <img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
+          </div> 
+          <h2 class="nombrePoke"> ${element.name} </h2>
+          <p class="nombrePoke"> Tipo </p>
+          <p class="nombrePoke"> ${element.type} </p>
+          <p class="nombrePoke"> ${element.generation} </p>
+          <p class="nombrePoke"> ${element.height} </p>
+          <p class="nombrePoke"> ${element.weight} </p>
+          <p class="nombrePoke"> Debilidades </p>
+          <p class="nombrePoke"> ${element.weaknesses} </p>`;
+         
 
-            const btnCloseModal = modalMode.querySelector('#cerrarModal'); 
+            const btnCloseModal = modalWindow.querySelector('#img-pokemon-modal'); 
  
             btnCloseModal.addEventListener('click', cerrarModal);
 }
@@ -48,6 +57,7 @@ function mostrarCard(array){
 
 function cerrarModal() {
     modalMode.classList.toggle('hide');
+    modalWindow.classList.toggle('hide');
 }
         
     })}

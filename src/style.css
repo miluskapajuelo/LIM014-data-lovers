@@ -629,38 +629,53 @@ footer {
 }
 
 #modal-mode{  
-  width:600px; 
-	height:100%; 
-	background: rgba(243, 242, 242, 0.801);
+  width:100%; 
+/* 	height:100%;  */
+	background: rgba(252, 252, 252, 0.779);
 	position:fixed;
 	top:0;
 	left:0; 
   z-index: 999;
+  align-content: center; 
+  height: 100%;
+  margin: auto;
 }
 
-.hide {
-  display: none;
-}
-
-
-#modal-window{  
-  background: rgb(173, 34, 34);
-  border-radius: 1em;
-  z-index: 1;    
-  box-shadow: 0 0 20px rgb(33, 36, 35); 
-}
-
+#modal-window{
+  background: rgb(2, 0, 0);
+  position: relative;
+  top: 20%;
+  width: 60%;
+  height: 67%;
+  border-radius: 15px;
+  margin: auto;
+  z-index: 1;
+ }
  #div-img-modal{
-  z-index: 999;
+  z-index: 0;
   width: 20vh;
   height: 20vh;
   position: absolute;
   top:-10vh;
-  background: rgb(40, 4, 243);
+  background: rgb(0, 0, 0);
   border-radius: 8em;
   left:  calc((100% - 20vh)/2);
-  } .img-medium{    
-    width: 50px;
-    height: 50px;
-    margin: calc((100% - 10vh)/2);
   }
+  #img-pokemon-modal{
+    position: relative;
+    left: calc((20% - 0px)/2);
+  /*   top: 0x; */
+    width: 120px;
+    height: 120px;
+
+  }
+   .nombrePoke{
+    text-align: center;
+    color: #fcdd00;
+    width: auto;
+    position: relative;
+    top: 60px;
+    font-size: 30px;
+    text-transform: uppercase;
+    
+  } 
