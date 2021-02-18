@@ -4,7 +4,6 @@ const funciones = {
     let PokemonesFiltrados = data.pokemon.filter((data) => data.type == tipo);
     let newArray = [];
     PokemonesFiltrados.forEach(function (pokemones) {
-      console.log(pokemones.evolution["next-evolution"]);
       newArray.push({
         img: pokemones.img,
         name: pokemones.name,
@@ -30,9 +29,30 @@ const funciones = {
   /*  BUSCAR TEXTO POKEMON */
   BuscarTexto: function (data, valorTexto) {
     let findId1user = data.filter((elemento) =>
-      elemento.name.includes(valorTexto)
-    );
-    return findId1user;
+      elemento.name.includes(valorTexto));
+      
+      let newArray = [];
+      findId1user.forEach(function (pokemones) {
+      /* console.log(pokemones.evolution["next-evolution"]); */
+      newArray.push({
+        img: pokemones.img,
+        name: pokemones.name,
+        about: pokemones.about,
+        num: pokemones.num,
+        type: pokemones.type,
+        weaknesses: pokemones.weaknesses,
+        resistant: pokemones.resistant,
+        generation: pokemones.generation["name"],
+        height: pokemones.size["height"],
+        weight: pokemones.size["weight"],
+        baseAttack: pokemones.stats["base-attack"],
+        baseDefense: pokemones.stats["base-defense"],
+        baseStamina: pokemones.stats["base-stamina"],
+        maxCp: pokemones.stats["max-cp"],
+        maxHp: pokemones.stats["max-hp"],
+      });
+    })
+    return newArray;
   },
 
   /* ORDENAR DATA */

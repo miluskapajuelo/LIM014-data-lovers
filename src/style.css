@@ -614,7 +614,7 @@ footer {
 }
 
 .f-green{
-  color: #39e639; 
+  color: #fdd008; 
 }
 
 .f-black{
@@ -663,6 +663,7 @@ footer {
   background: rgb(0, 0, 0);
   border-radius: 8em;
   left:  calc((100% - 20vh)/2);
+  margin-top: 30px;
   }
   #img-pokemon-modal{
     position: relative;
@@ -670,7 +671,17 @@ footer {
     width: 120px;
     height: 120px;
   }
-    
+  #pokemon-name-modal{
+    display: block;
+    color: rgb(255, 238, 0);
+    padding: .1rem 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 82px;
+    font-size: 40px;
+  }
+  
+
   /* caracteristicas del modal */
   .nombrePoke{
     text-align: center;
@@ -680,6 +691,7 @@ footer {
     top: 60px;
     font-size: 30px;
     text-transform: uppercase;
+  
     
   } 
   .Characters{
@@ -695,5 +707,67 @@ footer {
     height: 30px;
     width: 30px;
   }
+  .column-1{  
+    width: 23%;
+    height: auto;
+    padding: .2em 0;
+    margin: 4px;
+    border-radius: 28px
+  }
+
+.flex-wrap{ 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.color-container{ 
+  background-color: rgb(253, 253, 251); 
+}
+.block{ 
+  display: block; 
+}
+
+.icon-medium{
+  width: 30px;
+  height: 32px;
+  margin: 1px;
+}
+.one-fraction{
+  text-transform: capitalize;  
+  text-align: center;
+  width: 100%;
+}
+
+.font{
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.f-medium{
+  font-size: 1.5em;;
+}
+
+.font-g{
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.f-medium-g{
+  font-size: 0.5em;;
+}
+
+#pokemon-generacion-modal{
+  display: block;
+  color: rgb(6, 241, 202);
+  padding: .1rem 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.3px;
+  font-size: 16px;
+}
+
+
+
  
   /* caracteristicas del modal */

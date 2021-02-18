@@ -3,13 +3,12 @@ import data from "./data/pokemon/pokemon.js";
 
 const lista = document.getElementById("lista");
 
-const modalMode = document.getElementById("modal-mode"); // trae el div de la pantalla modal
+const modalMode = document.getElementById("modal-mode"); 
 const modalWindow = document.getElementById("modal-window");
 
 /* FUNCIÓN DE APOYO */
 
 function mostrarCard(array) {
-    console.log(array.length)
   if (array.length !== 0) {
     array.forEach(function (element) {
       let node = document.createElement("figure");
@@ -30,24 +29,52 @@ function mostrarCard(array) {
       /* animacion.appendChild(node4); */
       animacion.appendChild(node5);
 
+      
       let btnModal = node.querySelector(".capa");
       btnModal.addEventListener("click", mostrarModal);
+      
 
       function mostrarModal() {
+        console.log(element.img.length);
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
         modalWindow.innerHTML = `<div id="div-img-modal">
             <img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
             </div> 
-            <h2 class="nombrePoke"> ${element.name} </h2>
-            <p class="nombrePoke"> ${element.generation} </p>
-         
-            <p class="Characters"> Height </p>
-            <p class="Characters"> Weight </p>
-            <p class="Characters"> Tipo </p>
+            
+            <section id="body-modal" class="modal flex-wrap">
+            <article id="pokemon-name-modal" class="font f-medium f-green one-fraction"> 
+            ${element.name}
+            </article>
+            <article id="pokemon-generacion-modal" class="font-g f-medium-g f-green-g one-fraction "> 
+            (${element.generation})
+            </article>
+            <br>
+            <br>
+            <div class="column-1 flex-wrap color-container ">  
+            <img src="./img/talla.png" alt="" class="icon-medium">           
+            <div class="font f-small">
+                <span class="block f-green">Height: </span><span id="value-height" class="">${element.height}</span>
+            </div> 
+            </div>
+            <div class="column-1 flex-wrap color-container ">  
+            <img src="./img/weight.png" alt="" class="icon-medium">           
+            <div class="font f-small">
+                <span class="block f-green">Weight: </span><span id="value-height" class="">${element.weight}</span>
+            </div> 
+            </div>
+            <div class="column-1 flex-wrap color-container ">            
+            <div class="font f-small">
+                <span class="block f-green">Type: </span><span id="value-height" class=""><img src="/img/${element.type}.png" class="icono"></span>
+            </div> 
+            </div>
+            
+            </section>
           
-            <img src="/img/${element.type}.png" class="icono">
-            <p class="Characters"> ${element.height} </p>
+         
+
+
+            
             <p class="Characters"> ${element.weight} </p>
             <p class="Characters"> ${element.weaknesses} </p>
             <p class="Characters"> ${element.resistant} </p>
@@ -111,7 +138,6 @@ const filtrar = () => {
   let a = funciones.BuscarTexto(data.pokemon, valorTexto);
   mostrarCard(a);
 };
-
 text.addEventListener("keyup", filtrar);
 filtrar();
 
