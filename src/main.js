@@ -37,6 +37,8 @@ function mostrarCard(array) {
       function mostrarModal() {
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
+        if(element.type.length !== 1){
+          
         modalWindow.innerHTML = `<div id="div-img-modal">
             <img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
             </div> 
@@ -64,16 +66,12 @@ function mostrarCard(array) {
             </div>
             <div class="column-1 flex-wrap color-container ">            
             <div class="font f-small">
-                <span class="block f-green">Type: </span><span id="value-height" class="">${element.type.length}</span>
+                <span class="image-size">Type: </span><span id="value-height">${element.type.length}<img src="./img/${element.type[1]}.png" alt="" class="icon-medium"><img src="./img/${element.type[0]}.png" alt="" class="icon-medium"></span>
             </div> 
             </div>
             
             </section>
-          
-         
-
-
-            
+        
             <p class="Characters"> ${element.weight} </p>
             <p class="Characters"> ${element.weaknesses} </p>
             <p class="Characters"> ${element.resistant} </p>
@@ -83,7 +81,52 @@ function mostrarCard(array) {
             <p class="Characters"> ${element.maxCp} </p>
             <p class="Characters"> ${element.maxHp} </p>
            `;
-
+        }
+        else{
+          /* console.log(element.type) */
+          modalWindow.innerHTML = `<div id="div-img-modal">
+            <img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
+            </div> 
+            
+            <section id="body-modal" class="modal flex-wrap">
+            <article id="pokemon-name-modal" class="font f-medium f-green one-fraction"> 
+            ${element.name}
+            </article>
+            <article id="pokemon-generacion-modal" class="font-g f-medium-g f-green-g one-fraction "> 
+            (${element.generation})
+            </article>
+            <br>
+            <br>
+            <div class="column-1 flex-wrap color-container ">  
+            <img src="./img/talla.png" alt="" class="icon-medium">           
+            <div class="font f-small">
+                <span class="block f-green">Height: </span><span id="value-height" class="">${element.height}</span>
+            </div> 
+            </div>
+            <div class="column-1 flex-wrap color-container ">  
+            <img src="./img/weight.png" alt="" class="icon-medium">           
+            <div class="font f-small">
+                <span class="block f-green">Weight: </span><span id="value-height" class="">${element.weight}</span>
+            </div> 
+            </div>
+            <div class="column-1 flex-wrap color-container ">            
+            <div class="font f-small">
+                <span class="block f-green">Type: </span><span id="value-height">${element.type.length}<img src="./img/${element.type}.png" alt="" class="icon-medium"></span>
+            </div> 
+            </div>
+            
+            </section>
+                     
+            <p class="Characters"> ${element.weight} </p>
+            <p class="Characters"> ${element.weaknesses} </p>
+            <p class="Characters"> ${element.resistant} </p>
+            <p class="Characters"> ${element.baseAttack} </p>
+            <p class="Characters"> ${element.baseDefense} </p>
+            <p class="Characters"> ${element.baseStamina} </p>
+            <p class="Characters"> ${element.maxCp} </p>
+            <p class="Characters"> ${element.maxHp} </p>
+           `;
+        }
         const btnCloseModal = modalWindow.querySelector("#img-pokemon-modal");
 
         btnCloseModal.addEventListener("click", cerrarModal);
