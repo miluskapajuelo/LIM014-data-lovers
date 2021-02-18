@@ -40,7 +40,7 @@ function mostrarCard(array){
           </div> 
           <h2 class="nombrePoke"> ${element.name} </h2>
           <p class="nombrePoke"> Tipo </p>
-          <p class="nombrePoke"> ${element.type} </p>
+          <p class="nombrePoke"> <img src="./img/${element.type}.png"></a></p>
           <p class="nombrePoke"> ${element.generation} </p>
           <p class="nombrePoke"> ${element.height} </p>
           <p class="nombrePoke"> ${element.weight} </p>
@@ -69,8 +69,7 @@ const botones = document.querySelectorAll(".fa");
 const elegir = (evento) => {
     lista.innerHTML = "";
     let a = funciones.FilterData(data,evento.target.id);
-    console.log(a)
-    mostrarCard(a)}; 
+       mostrarCard(a)}; 
 
 botones.forEach(boton => {
     boton.addEventListener("click", elegir)
