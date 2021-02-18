@@ -10,11 +10,17 @@ const funciones={
         "name" : pokemones.name,
         "about" : pokemones.about,
         "num" : pokemones.num, 
-        "type" : pokemones.type      
+        "type" : pokemones.type,
+        "weaknesses" : pokemones.weaknesses,
+        "generation" : pokemones.generation['name'],
+        "height": pokemones.size['height'],
+        "weight": pokemones.size['weight']
+        
       })
-    });
+          
+    })
    
-    return newArray;
+    return newArray
 
   },
 
