@@ -35,7 +35,6 @@ function mostrarCard(array) {
       
 
       function mostrarModal() {
-        console.log(element.img.length);
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
         modalWindow.innerHTML = `<div id="div-img-modal">
@@ -65,7 +64,7 @@ function mostrarCard(array) {
             </div>
             <div class="column-1 flex-wrap color-container ">            
             <div class="font f-small">
-                <span class="block f-green">Type: </span><span id="value-height" class=""><img src="/img/${element.type}.png" class="icono"></span>
+                <span class="block f-green">Type: </span><span id="value-height" class="">${element.type.length}</span>
             </div> 
             </div>
             
@@ -99,7 +98,7 @@ function mostrarCard(array) {
     lista.innerHTML = "<h1>no se ha encontrado pokemos</h1>";
   }
 }
-
+/* ${element.type} */
 /* FILTRO TIPO DE POKEMON */
 
 const botones = document.querySelectorAll(".fa");
