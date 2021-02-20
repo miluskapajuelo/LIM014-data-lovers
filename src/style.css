@@ -626,13 +626,11 @@ footer {
 .font{
   font-family: 'Baloo Thambi 2', cursive;
   font-weight: bolder;
-  /* text-align: center; */
   text-transform: capitalize;
 }
 
 #modal-mode{  
   width:100%; 
-/* 	height:100%;  */
 	background: rgba(252, 252, 252, 0.779);
 	position:fixed;
 	top:0;
@@ -677,8 +675,9 @@ footer {
     padding: .1rem 0;
     width: 100%;
     text-align: center;
-    margin-top: 82px;
+    margin-top: 74px;
     font-size: 40px;
+    z-index: 99
   }
   
 
@@ -691,8 +690,6 @@ footer {
     top: 60px;
     font-size: 30px;
     text-transform: uppercase;
-  
-    
   } 
   .Characters{
     text-align: center;
@@ -715,6 +712,7 @@ footer {
     border-radius: 28px
   }
 
+ 
 .flex-wrap{ 
   display: flex; 
   flex-wrap: wrap; 
@@ -766,8 +764,117 @@ footer {
   margin-top: 0.3px;
   font-size: 16px;
 }
+.column-2{
+  width: 39%;
+  height: auto;
+  padding: .2em 0;
+  margin: 3px;
+
+}
+.modal2{
+  margin-top: 9px;}
+  
+.flex-wrap2{
+  display: flex; 
+  flex-wrap: wrap; 
+  margin-left: 29px;
+  flex-direction: column;
+}
+.color-container2{ 
+  background-color: transparent
+}
+
+.font2{
+  font-weight: bolder;
+  text-align: inherit;
+  text-transform: capitalize;
+  color: #35ce21;
+}
+.column-3{
+  width: 39%;
+  height: auto;
+  padding: .2em 0;
+  margin: 3px;
+
+}
+.flex-wrap3{
+  display: flex; 
+  flex-wrap: wrap; 
+  margin-left: 29px;
+}
+.color-container3{ 
+  background-color: transparent
+}
+
+.font3{
+  font-weight: bolder;
+  text-align: inherit;
+  text-transform: capitalize;
+  color: #35ce21;
+}
+.color-gray2{
+  color: #faf4f4;
+  font-size: 16px;
+  font-family: -webkit-pictograph;
+  font-weight: inherit;
+  transition: clip-path ease-in-out 400ms;
+}
+.box1 {
+  color: #feb412;
+  width: 220px;
+  padding: 20px;
+  border: 1px solid #3c6;
+  margin: 10px}
+
+.box{
+  flex-direction: column;
+}
+.titulo{
+  margin-bottom: 7px;
+  color: white;
+  font-size: 20px;
+}
+.caract{
+  color: rgb(51 204 102);
+  font-size: 14px;
+}
+/* tabla de stats */
+img.icon-small{
+  width: 20px;
+  height: 20px;
+  right: 1em;
+  top: 1em;      
+}
+.column-4{    
+  margin: 3px 1px;
+  width: 47%;     
+  margin: 3px;  
+}
+.fontTabla{
+  font-family: 'Baloo Thambi 2', cursive;
+  font-weight: bolder;
+  /* text-align: center; */
+  text-transform: capitalize;
+}
+
+/* separando tablas stat */
+
+.right-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  margin-top: -230px;
+  color: antiquewhite
+}
+
+.left-stat {
+  width: min-content;
+  display: flex;
+  float: left;
+  flex-direction: column;
+  
+}
 
 
-
- 
   /* caracteristicas del modal */

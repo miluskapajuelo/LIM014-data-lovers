@@ -24,16 +24,51 @@ const funciones = {
     });
 
     return newArray;
+
   },
 
+  /* Grafica: function(data1){
+    let newArray = [];
+    data1.pokemon.forEach(function (pokemones) {
+      newArray.push({
+        baseAttack: pokemones.stats["base-attack"],
+        baseDefense: pokemones.stats["base-defense"],
+        baseStamina: pokemones.stats["base-stamina"],
+        maxCp: pokemones.stats["max-cp"],
+        maxHp: pokemones.stats["max-hp"],
+      });})
+
+
+      let chart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            datasets: [{
+                label: 'Gráfico radial de pokemones',
+                data: [newArray.baseAttack, newArray.baseDefense, newArray.baseStamina, newArray.maxCp,newArray.maxHp]
+            }],
+            labels: ['base-attack', 'base-defense', 'base-stamina', 'max-cp','max-hp']
+        },
+        options: {
+            scale: {
+                ticks: {
+                    suggestedMin: 50,
+                    suggestedMax: 2000
+                }
+            }
+        }
+          
+      })
+      return chart}
+
+       */
+
   /*  BUSCAR TEXTO POKEMON */
-  BuscarTexto: function (data, valorTexto) {
+    BuscarTexto: function (data, valorTexto) {
     let findId1user = data.filter((elemento) =>
       elemento.name.includes(valorTexto));
       
       let newArray = [];
       findId1user.forEach(function (pokemones) {
-      /* console.log(pokemones.evolution["next-evolution"]); */
       newArray.push({
         img: pokemones.img,
         name: pokemones.name,
@@ -53,7 +88,7 @@ const funciones = {
       });
     })
     return newArray;
-  },
+  }, 
 
   /* ORDENAR DATA */
 
@@ -67,7 +102,7 @@ const funciones = {
       
       let newArray = [];
       data.pokemon.forEach(function (pokemones) {
-      /* console.log(pokemones.evolution["next-evolution"]); */
+
       newArray.push({
         img: pokemones.img,
         name: pokemones.name,
@@ -95,7 +130,6 @@ const funciones = {
       });
       let newArray = [];
       data.pokemon.forEach(function (pokemones) {
-      /* console.log(pokemones.evolution["next-evolution"]); */
       newArray.push({
         img: pokemones.img,
         name: pokemones.name,
@@ -123,7 +157,6 @@ const funciones = {
       });
       let newArray = [];
       data.pokemon.forEach(function (pokemones) {
-      /* console.log(pokemones.evolution["next-evolution"]); */
       newArray.push({
         img: pokemones.img,
         name: pokemones.name,
@@ -151,7 +184,6 @@ const funciones = {
       });
       let newArray = [];
       data.pokemon.forEach(function (pokemones) {
-      /* console.log(pokemones.evolution["next-evolution"]); */
       newArray.push({
         img: pokemones.img,
         name: pokemones.name,
@@ -174,5 +206,4 @@ const funciones = {
     }
   },
 };
-
 export default funciones;
