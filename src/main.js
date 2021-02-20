@@ -1,6 +1,40 @@
 import funciones from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
+const btnn = document.getElementById("btn10");
+btnn.addEventListener("click", function(){
+
+const poke=data.pokemon;
+let array = [];
+poke.forEach(function(elemento){
+  array.push(parseInt(elemento.stats["max-cp"]))
+})
+let sum = array.reduce((a, b) => a + b, 0);
+let avg = sum / array.length;
+
+console.log(Math.max(...array))
+console.log(Math.min(...array))
+console.log(avg.toFixed(2))})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const lista = document.getElementById("lista");
 
 const modalMode = document.getElementById("modal-mode"); 
