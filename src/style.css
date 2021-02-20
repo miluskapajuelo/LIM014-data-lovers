@@ -624,9 +624,15 @@ footer {
   color: #464343;
 }
 .font{
-  font-family: 'Baloo Thambi 2', cursive;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bolder;
   text-transform: capitalize;
+}
+.font1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-transform: capitalize;
+  font-size: 12px;
+  color: white;
 }
 
 #modal-mode{  
@@ -660,12 +666,12 @@ footer {
   top:-10vh;
   background: rgb(0, 0, 0);
   border-radius: 8em;
-  left:  calc((100% - 20vh)/2);
-  margin-top: 30px;
+  left: calc((100% - 130vh)/2);
+  margin-top: 10px
   }
   #img-pokemon-modal{
     position: relative;
-    left: calc((20% - 0px)/2);
+    left: calc((20% - 40px)/2);
     width: 120px;
     height: 120px;
   }
@@ -675,8 +681,8 @@ footer {
     padding: .1rem 0;
     width: 100%;
     text-align: center;
-    margin-top: 74px;
-    font-size: 40px;
+    margin-top: 8px;
+    font-size: 28px;
     z-index: 99
   }
   
@@ -705,9 +711,8 @@ footer {
     width: 30px;
   }
   .column-1{  
-    width: 23%;
+    width: 19%;
     height: auto;
-    padding: .2em 0;
     margin: 4px;
     border-radius: 28px
   }
@@ -737,18 +742,14 @@ footer {
   width: 100%;
 }
 
-.font{
-  font-family: 'Baloo Thambi 2', cursive;
-  font-weight: bolder;
-  text-transform: capitalize;
-}
+
 .f-medium{
   font-size: 1.5em;;
 }
 
 .font-g{
-  font-family: 'Baloo Thambi 2', cursive;
-  font-weight: bolder;
+  font-family: system-ui;
+  font-weight: 700;
   text-transform: capitalize;
 }
 .f-medium-g{
@@ -761,7 +762,7 @@ footer {
   padding: .1rem 0;
   width: 100%;
   text-align: center;
-  margin-top: 0.3px;
+  margin-top: 3px;
   font-size: 16px;
 }
 .column-2{
@@ -845,11 +846,9 @@ img.icon-small{
   right: 1em;
   top: 1em;      
 }
-.column-4{    
-  margin: 3px 1px;
-  width: 47%;     
-  margin: 3px;  
-}
+.column-4{  
+  width: 100%;  margin: 3px 0 3px 0;}
+
 .fontTabla{
   font-family: 'Baloo Thambi 2', cursive;
   font-weight: bolder;
@@ -857,24 +856,26 @@ img.icon-small{
   text-transform: capitalize;
 }
 
-/* separando tablas stat */
+/* triple tabla de contenidos */
 
-.right-stat {
+.two-fraction{
+  text-transform: capitalize; 
+  text-align: center;
+  width: 45%;
+}
+ .f-blue{
+  color: #04617e; 
+}
+.column-5{    
+  margin: 3px 1px;
+/*  width: 47%;  */  
+  margin: 3px;  
+}
+.tablas{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  float: right;
-  margin-top: -230px;
-  color: antiquewhite
 }
 
-.left-stat {
-  width: min-content;
-  display: flex;
-  float: left;
-  flex-direction: column;
-  
-}
+
 
 
   /* caracteristicas del modal */
