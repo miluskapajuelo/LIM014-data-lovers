@@ -11,6 +11,7 @@ const modalWindow = document.getElementById("modal-window");
 function mostrarCard(array) {
   if (array.length !== 0) {
     array.forEach(function (element) {
+      let node0 = document.createElement("figcaption");
       let node = document.createElement("figure");
       let node2 = document.createElement("img");
       let node3 = document.createElement("figcaption");
@@ -19,8 +20,10 @@ function mostrarCard(array) {
       animacion.className = "capa";
       node5.innerText = element.about;
       node2.src = element.img;
-      node3.innerText = element.name;
+      node0.innerHTML=`<p style="font-size: 13px;text-align: end"> CP: ${element.maxCp}</p>`;
+      node3.innerText= element.name;
       let figura = document.getElementById("lista").appendChild(node);
+      figura.appendChild(node0);
       figura.appendChild(node2);
       figura.appendChild(node3);
       figura.appendChild(animacion);
@@ -250,12 +253,16 @@ const elegir = (evento) => {
 })
   let sum = array.reduce((a, b) => a + b, 0);
   let avg = sum / array.length;
+  let max = Math.max(...array);
+  let min = Math.min(...array);
+  let average = avg.toFixed(2);
 
-  console.log(Math.max(...array))
-  console.log(Math.min(...array))
-  console.log(avg.toFixed(2))
-
-  ;
+  const PMax = document.getElementById("max");
+  const PMin = document.getElementById("min");
+  const Pavg = document.getElementById("avg");
+  PMax.innerHTML = `<p>MAX CP:</p><p>${max}</p>`;
+  PMin.innerHTML = `<p>MIN CP:</p><p>${min}</p>`;
+  Pavg.innerHTML = `<p>PROM CP:</p><p>${average}</p>`;
 };
 
 botones.forEach((boton) => {

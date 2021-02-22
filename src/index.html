@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/jpg" href="./img/fondo_pantalla1.jpg" /> 
     <link href = "https://fonts.googleapis.com/css2? family = Reggae + One & display = swap" rel = "hoja de estilo">
-</head>
+    
+  </head>
   <body>
 
-    <section id="firstscreen" class="display" >
+    <section id="firstscreen" class="hide" >
       <header class="header">
         <nav class="container">
           <div class="audio">
@@ -33,8 +34,9 @@
              "</p>
             
       <section class="form">
-      <div>
+      <div">
         <input class="text" type="text" placeholder="Ingrese su nombre">
+  
       </div>
       <div>
         <input type="button" class="btn"  name="entrar" value="entrar" id="entrar">
@@ -66,22 +68,20 @@
         </article>
       </footer>
     </section>
-    <section id="secondscreen" class="hide">
+    <section id="secondscreen" class="display">
     <header class="header">
       <img src="./img/logo.png" class="img">
-      <input type="text" class="text1" id="text">  
-      <h2 class="te1 jugar" >Jugar / Bienvenida</h2>
-      <input type="button" id = "btn10" value="probando">
+      <input type="text" class="text1" id="text" placeholder="Ingrese el nombre del pokemón">  
+      <h2 class="te1 jugar" >Bienvenida Pamela</h2>
   <!--     <input type="button" id="pruebaRadial" value="radial">
       <canvas id="marksChart" width="600" height="400"></canvas> -->
     </header>
         <div class="labels-sort flex space-around">
-          <label class="label1">ORDENAR POR</label>
           <nav id="site-nav" class="site-nav" name="formulario1">
             <ul class="site-nav2"> 
               <li><a href="" class="hola" id="inicio1">INICIO</a></li>
-              <li><a class="hola" id="inicio2">S/FILTRO</a></li>
               <li><a class="hola">TIPO</a>  
+                
             <ul class="tipo">
               <li><a id="normal" href="#" class="fa" category= "normal" >NORMAL</a></li>
               <li><a id="fire" href="#" class="fa" category= "fire">FUEGO</a></li>
@@ -109,22 +109,38 @@
     <div class="menu" id="menu">
       <div class="hamburguesa"></div>
     </div>
+    
     <div class="portada2">
+      <div class="portadaCen">
     <select id="selecta" class="dropdown1">
       <option class="selectora" value="0" selected>ABC</option>
       <option class="selectora" value="Ascendente" >Ascendente</option>
       <option class="selectora" value="Descendente">Descendente</option>
     </select>
-    <select id="selecta1" class="dropdown2">
+    <select id="selecta1" class="dropdown1">
       <option class="selectora" value="0" selected>Importante</option>
       <option class="selectora" value="Debilidad">Debilidad</option>
       <option class="selectora" value="Resistencia">Resistencia</option>
     </select>
   </div>
+</div>
+  <div id="DatosExt">
+    <p id="avg" class="pepo"></p>
+    <p id="min" class="pepo"></p>
+    <p id="max" class="pepo"></p>
+   
+    
+  </div>
+  <div class="relleno">
 
+  </div>
+  
   <nav id="lista" class="product-list">
+    
   </nav>
- 
+ <div class="relleno">
+
+ </div>
 <div id="body-Modal">
 <div id="modal-mode" class="hide">     
   <div id="modal-window" class="hide">
