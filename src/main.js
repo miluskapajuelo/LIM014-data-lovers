@@ -6,11 +6,51 @@ const lista = document.getElementById("lista");
 const modalMode = document.getElementById("modal-mode"); 
 const modalWindow = document.getElementById("modal-window");
 
+
+/* probando */
+const valor = document.getElementById("valor")
+valor.addEventListener("click", function(){
+let PokemonesFiltrados = data.pokemon.filter((data) => data.name == "venusaur");
+PokemonesFiltrados.forEach(function(elemento){
+  
+  if(elemento.evolution){ 
+
+    if(elemento.evolution["next-evolution"]){
+      let next = getNextEvol(elemento.evolution["next-evolution"]);
+      next.map(function (evolucion) {
+      console.log(evolucion.name)})}    
+    if(elemento.evolution["prev-evolution"]){
+      let prev = getPrevEvol(elemento.evolution["prev-evolution"]);
+     prev.map(function (evolucion1){
+      console.log(evolucion1.name)})}
+      }})})
+
+function getNextEvol(evol){
+    let netevol = evol[0]["next-evolution"];
+    const evolution = [];
+    if(netevol){
+      evolution.push(...getNextEvol(netevol));
+    }
+    evolution.push(evol[0]);
+    return evolution;
+    }
+function getPrevEvol(evol){
+  let netevol = evol[0]["prev-evolution"];
+  const evolution = [];
+  if(netevol){
+    evolution.push(...getPrevEvol(netevol));
+  }
+  evolution.push(evol[0]);
+  return evolution;
+  };
+
+
 /* FUNCIÓN DE APOYO */
 
 function mostrarCard(array) {
   if (array.length !== 0) {
     array.forEach(function (element) {
+      let node0 = document.createElement("figcaption");
       let node = document.createElement("figure");
       let node2 = document.createElement("img");
       let node3 = document.createElement("figcaption");
@@ -19,8 +59,10 @@ function mostrarCard(array) {
       animacion.className = "capa";
       node5.innerText = element.about;
       node2.src = element.img;
-      node3.innerText = element.name;
+      node0.innerHTML=`<p style="font-size: 13px;text-align: end"> CP: ${element.maxCp}</p>`;
+      node3.innerText= element.name;
       let figura = document.getElementById("lista").appendChild(node);
+      figura.appendChild(node0);
       figura.appendChild(node2);
       figura.appendChild(node3);
       figura.appendChild(animacion);
@@ -250,12 +292,16 @@ const elegir = (evento) => {
 })
   let sum = array.reduce((a, b) => a + b, 0);
   let avg = sum / array.length;
+  let max = Math.max(...array);
+  let min = Math.min(...array);
+  let average = avg.toFixed(2);
 
-  console.log(Math.max(...array))
-  console.log(Math.min(...array))
-  console.log(avg.toFixed(2))
-
-  ;
+  const PMax = document.getElementById("max");
+  const PMin = document.getElementById("min");
+  const Pavg = document.getElementById("avg");
+  PMax.innerHTML = `<p>MAX CP:</p><p>${max}</p>`;
+  PMin.innerHTML = `<p>MIN CP:</p><p>${min}</p>`;
+  Pavg.innerHTML = `<p>PROM CP:</p><p>${average}</p>`;
 };
 
 botones.forEach((boton) => {
