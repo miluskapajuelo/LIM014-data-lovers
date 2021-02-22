@@ -80,6 +80,7 @@ body{
   font-size: 1rem;
   color: #333;
   width: 100%;
+  opacity:inherit;
 }
 
 .labels-sort{
@@ -436,6 +437,7 @@ div{
   color: white;
   position: relative;
   z-index: 30;
+  font-weight: bold;
 }
 
 .tipo{
@@ -675,7 +677,7 @@ footer {
   }
   #img-pokemon-modal{
     position: relative;
-    left: calc((20% - 40px)/2);
+    left: calc((49% - 40px)/2);
     width: 120px;
     height: 120px;
   }

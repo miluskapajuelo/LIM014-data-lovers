@@ -6,6 +6,45 @@ const lista = document.getElementById("lista");
 const modalMode = document.getElementById("modal-mode"); 
 const modalWindow = document.getElementById("modal-window");
 
+
+/* probando */
+const valor = document.getElementById("valor")
+valor.addEventListener("click", function(){
+let PokemonesFiltrados = data.pokemon.filter((data) => data.name == "venusaur");
+PokemonesFiltrados.forEach(function(elemento){
+  
+  if(elemento.evolution){ 
+
+    if(elemento.evolution["next-evolution"]){
+      let next = getNextEvol(elemento.evolution["next-evolution"]);
+      next.map(function (evolucion) {
+      console.log(evolucion.name)})}    
+    if(elemento.evolution["prev-evolution"]){
+      let prev = getPrevEvol(elemento.evolution["prev-evolution"]);
+     prev.map(function (evolucion1){
+      console.log(evolucion1.name)})}
+      }})})
+
+function getNextEvol(evol){
+    let netevol = evol[0]["next-evolution"];
+    const evolution = [];
+    if(netevol){
+      evolution.push(...getNextEvol(netevol));
+    }
+    evolution.push(evol[0]);
+    return evolution;
+    }
+function getPrevEvol(evol){
+  let netevol = evol[0]["prev-evolution"];
+  const evolution = [];
+  if(netevol){
+    evolution.push(...getPrevEvol(netevol));
+  }
+  evolution.push(evol[0]);
+  return evolution;
+  };
+
+
 /* FUNCIÓN DE APOYO */
 
 function mostrarCard(array) {
