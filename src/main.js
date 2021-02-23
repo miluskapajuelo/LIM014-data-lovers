@@ -3,61 +3,155 @@ import data from "./data/pokemon/pokemon.js";
 
 const lista = document.getElementById("lista");
 
-const modalMode = document.getElementById("modal-mode"); // trae el div de la pantalla modal
+const modalMode = document.getElementById("modal-mode"); 
 const modalWindow = document.getElementById("modal-window");
+
+function getNextEvol(evol){
+    let netevol = evol[0]["next-evolution"];
+    const evolution = [];
+    if(netevol){
+      evolution.push(...getNextEvol(netevol));
+    }
+    evolution.push(evol[0]);
+    return evolution;
+    }
+function getPrevEvol(evol){
+  let netevol = evol[0]["prev-evolution"];
+  const evolution = [];
+  if(netevol){
+    evolution.push(...getPrevEvol(netevol));
+  }
+  evolution.push(evol[0]);
+  return evolution;
+  }
+
 
 /* FUNCIÓN DE APOYO */
 
 function mostrarCard(array) {
-    console.log(array.length)
   if (array.length !== 0) {
     array.forEach(function (element) {
+      let node0 = document.createElement("figcaption");
       let node = document.createElement("figure");
       let node2 = document.createElement("img");
       let node3 = document.createElement("figcaption");
       let animacion = document.createElement("div");
-      /*   let node4 = document.createElement("a"); */
       let node5 = document.createElement("p");
       animacion.className = "capa";
       node5.innerText = element.about;
-      /* node4.innerText = element.num; */
       node2.src = element.img;
-      node3.innerText = element.name;
+      node0.innerHTML=`<p style="font-size: 13px;text-align: end"> CP: ${element.maxCp}</p>`;
+      node3.innerText= element.name;
       let figura = document.getElementById("lista").appendChild(node);
+      figura.appendChild(node0);
       figura.appendChild(node2);
       figura.appendChild(node3);
       figura.appendChild(animacion);
-      /* animacion.appendChild(node4); */
       animacion.appendChild(node5);
+      
+      let next;
+      function evolucionNext(){
+        if(element.evolution){ 
+          let cade = "";
+          if(element.evolutionNext){
+            next = getNextEvol(element.evolutionNext);
+            next.forEach(elemento => cade += `<p>HOLA MUNDO ${elemento.name}</p>`)
+            }
+            return cade
+      }
+    }
+
+    let prev;
+    function evolucionPre(){
+      if(element.evolution){ 
+        let cade = "";
+        if(element.evolutionPrev){
+          prev = getPrevEvol(element.evolutionPrev);
+          prev.forEach(elemento => cade += `<p>HOLA MUNDO ${elemento.name}</p>`)
+          }
+          return cade
+    }
+  }
 
       let btnModal = node.querySelector(".capa");
       btnModal.addEventListener("click", mostrarModal);
-
+      
       function mostrarModal() {
+    
+
+        /* if(element.evolution){ 
+          if(element.evolutionNext){
+            next = getNextEvol(element.evolutionNext);
+            console.log(next)
+            next.forEach(elemento => 
+               modalWindow.querySelector(".olo").textContent= `<p>HOLA MUNDO ${elemento.name}</p>`  
+               /* console.log(elemento.name) )
+            } */
+            
+          /* if(element.evolutionPrev){
+            prev = getPrevEvol(element.evolutionPrev)
+            prev.forEach(elemento => console.log(elemento.name))
+            }} */
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
-        modalWindow.innerHTML = `<div id="div-img-modal">
-            <img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
+        
+              
+        modalWindow.innerHTML = 
+        `<div id="div-img-modal"><img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
             </div> 
-            <h2 class="nombrePoke"> ${element.name} </h2>
-            <p class="nombrePoke"> ${element.generation} </p>
-         
-            <p class="Characters"> Height </p>
-            <p class="Characters"> Weight </p>
-            <p class="Characters"> Tipo </p>
-          
-            <img src="/img/${element.type}.png" class="icono">
-            <p class="Characters"> ${element.height} </p>
-            <p class="Characters"> ${element.weight} </p>
-            <p class="Characters"> ${element.weaknesses} </p>
-            <p class="Characters"> ${element.resistant} </p>
-            <p class="Characters"> ${element.baseAttack} </p>
-            <p class="Characters"> ${element.baseDefense} </p>
-            <p class="Characters"> ${element.baseStamina} </p>
-            <p class="Characters"> ${element.maxCp} </p>
-            <p class="Characters"> ${element.maxHp} </p>
-           `;
-
+            
+            <section id="body-modal" class="modal flex-wrap">
+            <article id="NameModal" class="font f-medium f-green one-fraction"> 
+            <p class="nameP"></p>
+            ${element.name}
+            </article>
+            <article id="pokemon-generacion-modal" class="font-g f-medium-g f-green-g one-fraction "> 
+            Generación : ${element.generation}
+            </article>
+            <br>
+            <br>
+            <div class="column-1 flex-wrap color-container ">  
+            <img src="./img/talla.png" alt="" class="icon-medium">           
+            <div class="font f-small">
+                <span class="block f-green">Height: </span><span id="otro" class="">${element.height}</span>
+            </div> 
+            </div>
+            <div class="column-1 flex-wrap color-container ">  
+            <img src="./img/weight.png" alt="" class="icon-medium">           
+            <div class="font f-small">
+                <span class="block f-green">Weight: </span><span id="value-height" class="">${element.weight}</span>
+            </div> 
+            </div>
+            <div class="column-1 flex-wrap color-container ">            
+            <div class="font f-small">
+                <span class="image-size">Type: </span>
+                <span id="value-height">
+                  ${element.type.length === 1 ?
+                   '<img src="./img/' + element.type[0]+ '.png" alt="" class="icon-medium">' :
+                   '<img src="./img/' + element.type[0]+ '.png" alt="" class="icon-medium"><img src="./img/' + element.type[1]+ '.png" alt="" class="icon-medium">'}
+                </span>
+            </div> 
+            </div>
+            </section>
+            <section id="body-modal2" class="modal2 flex-wrap2">
+            <div class="left-stat">
+            <div class="box1">
+                <p class="titulo" >Resistant: </p>
+                <p class="caract">${element.resistant}</P>
+            </div>
+            <div class="box1">
+              <p class="titulo" >Weaknesses: </p>
+              <p class="caract">${element.weaknesses}</P>
+            </div>
+            </div>
+            <div class="olo">${evolucionNext()}${evolucionPre()}
+            </div>
+            <div>
+            <a href="#" title="Close" class="modal-close">Close</a>
+            </div>
+            </section>`;
+        
+        
         const btnCloseModal = modalWindow.querySelector("#img-pokemon-modal");
 
         btnCloseModal.addEventListener("click", cerrarModal);
@@ -71,21 +165,65 @@ function mostrarCard(array) {
   } else {
     lista.innerHTML = "<h1>no se ha encontrado pokemos</h1>";
   }
-}
+} 
+
+
 
 /* FILTRO TIPO DE POKEMON */
+
+/* GRAFICO RADIAL */
+/* var marksCanvas = document.getElementById("marksChart");
+
+var marksData = {
+  labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
+  datasets: [{
+    label: "Student A",
+    backgroundColor: "rgba(200,0,0,0.2)",
+    data: [65, 75, 70, 80, 60, 80]
+  }, {
+    label: "Student B",
+    backgroundColor: "rgba(0,0,200,0.2)",
+    data: [54, 65, 60, 70, 70, 75]
+  }]
+};
+
+var radarChart = new Chart(marksCanvas, {
+  type: 'radar',
+  data: marksData
+}); 
+
+return radarChart */
+  
 
 const botones = document.querySelectorAll(".fa");
 const elegir = (evento) => {
   lista.innerHTML = "";
   let a = funciones.FilterData(data, evento.target.id);
-  mostrarCard(a);
+
+  mostrarCard(a)
+  let array = [];
+  a.forEach(function(elemento){
+    
+  array.push(parseInt(elemento.maxCp))
+})
+  let sum = array.reduce((a, b) => a + b, 0);
+  let avg = sum / array.length;
+  let max = Math.max(...array);
+  let min = Math.min(...array);
+  let average = avg.toFixed(2);
+
+  const PMax = document.getElementById("max");
+  const PMin = document.getElementById("min");
+  const Pavg = document.getElementById("avg");
+  PMax.innerHTML = `<p>MAX CP:</p><p>${max}</p>`;
+  PMin.innerHTML = `<p>MIN CP:</p><p>${min}</p>`;
+  Pavg.innerHTML = `<p>PROM CP:</p><p>${average}</p>`;
 };
 
 botones.forEach((boton) => {
   boton.addEventListener("click", elegir);
 });
-
+ 
 /* ORDEN A-Z */
 
 const ordera = document.querySelector("#selecta");
@@ -95,13 +233,7 @@ ordera.addEventListener("change", (event) => {
   let a = funciones.sortData(data, valor);
   mostrarCard(a);
 });
-const ordera2 = document.querySelector("#selecta1");
-ordera2.addEventListener("change", (event) => {
-  lista.innerHTML = "";
-  let valor = event.target.value;
-  let a = funciones.sortData(data, valor);
-  mostrarCard(a);
-});
+
 
 /* BUSQUEDA POR TEXTO */
 const text = document.querySelector("#text");
@@ -111,9 +243,8 @@ const filtrar = () => {
   let a = funciones.BuscarTexto(data.pokemon, valorTexto);
   mostrarCard(a);
 };
-
 text.addEventListener("keyup", filtrar);
-filtrar();
+filtrar(); 
 
 /* Ingresar a la segunda pantalla */
 const entrar = document.getElementById("entrar");
@@ -124,7 +255,7 @@ entrar.addEventListener("click", () => {
   document.getElementById("secondscreen").classList.add("display");
   document.getElementById("secondscreen").classList.remove("hide");
   document.body.style.background = "#fff";
-});
+}); 
 
 /* Menú desplegable */
 
@@ -133,7 +264,7 @@ menu.addEventListener("click", function press2() {
   let siteNav = document.getElementById("site-nav");
   siteNav.classList.toggle("site-nav-open");
   menu.classList.toggle("menu-open");
-});
+}); 
 
 //Audio de Pokemon
 const audio = document.getElementById("audio");
@@ -149,4 +280,5 @@ playPauseBTN.addEventListener("click", function playPause() {
     audio.pause();
     playPauseBTN.innerHTML = "Play &#9658;";
   }
-});
+}); 
+
