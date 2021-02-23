@@ -5,21 +5,25 @@ const funciones = {
     let newArray = [];
     PokemonesFiltrados.forEach(function (pokemones) {
       newArray.push({
-        img: pokemones.img,
-        name: pokemones.name,
-        about: pokemones.about,
-        num: pokemones.num,
-        type: pokemones.type,
-        weaknesses: pokemones.weaknesses,
-        resistant: pokemones.resistant,
-        generation: pokemones.generation["name"],
-        height: pokemones.size["height"],
-        weight: pokemones.size["weight"],
-        baseAttack: pokemones.stats["base-attack"],
-        baseDefense: pokemones.stats["base-defense"],
-        baseStamina: pokemones.stats["base-stamina"],
-        maxCp: pokemones.stats["max-cp"],
-        maxHp: pokemones.stats["max-hp"],
+        "img": pokemones.img,
+        "name": pokemones.name,
+        "about": pokemones.about,
+        "num": pokemones.num,
+        "type": pokemones.type,
+        "weaknesses": pokemones.weaknesses,
+        "resistant": pokemones.resistant,
+        "generation": pokemones.generation["name"],
+        "height": pokemones.size["height"],
+        "weight": pokemones.size["weight"],
+        "baseAttack": pokemones.stats["base-attack"],
+        "baseDefense": pokemones.stats["base-defense"],
+        "baseStamina": pokemones.stats["base-stamina"],
+        "maxCp": pokemones.stats["max-cp"],
+        "maxHp": pokemones.stats["max-hp"],
+        "evolution": pokemones.evolution,
+        "evolutionNext": pokemones.evolution["next-evolution"],
+        "evolutionPrev": pokemones.evolution["prev-evolution"],
+        "especialAttack": pokemones["special-attack"]
       });
     });
 

@@ -10,51 +10,43 @@
     <link href = "https://fonts.googleapis.com/css2? family = Reggae + One & display = swap" rel = "hoja de estilo">
     
   </head>
-  <body>
-
-    <section id="firstscreen" class="hide" >
-      <header class="header">
-        <nav class="container">
-          <div class="audio">
-            <audio id="audio2">
-            <source=".img/music.mp3" type="audio/mp3">
-            </audio>
-            <button id="playPauseBTN" class="play"> Play &#9658; </button>
-            &nbsp;
-            &nbsp;
-            <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
-            </div>
-        </nav>
-      </header>
-      <main class="mainContainer">
+  
+  <section id="firstscreen" class="display" >
+    <div class="audio">
+      <audio id="audio2">
+        <source=".img/music.mp3" type="audio/mp3">
+        </audio>
+      <button id="playPauseBTN" class="play"> Play &#9658; </button>
+          &nbsp;
+          &nbsp;
+        <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
+    </div>
+    <main class="mainContainer">
+      <img src="./img/pantalla.gif" class="gif">
       <p> "
         Tengo que ser siempre el mejor, mejor que nadie más, ATRAPARLOS MI PRUEBA ES,<br> 
             Entrenarlos, mi ideal ... Yo viajaré de aquí a allá, buscando hasta el fin<br>
              Oh Pokémon, yo entenderé, tu poder interior Pokémon
              "</p>
-            
       <section class="form">
-      <div">
-        <input class="text" type="text" placeholder="Ingrese su nombre">
-  
-      </div>
-      <div>
-        <input type="button" class="btn"  name="entrar" value="entrar" id="entrar">
-        <input type="button"  class="btn"name="info" value="info" id="info">
-      </div>
-    </section>
-  </main>
-
-      <footer class="footer">
+        <img src="./img/logo.png" class="logo1">
+        <div">
+          <input class="text" type="text" placeholder="Ingrese su nombre">
+        </div>
+        <div>
+          <input type="button" class="btn"  name="entrar" value="entrar" id="entrar">
+          <input type="button"  class="btn"name="info" value="info" id="info">
+        </div>
+      </section>
+    </main>
+        <footer class="footer">
         <article class="right">
           <p class="arroba" style="vertical-align: inherit">
           @ 2021 &nbsp| Todos los Derechos Reservados
           </p>
         </article>
         <article id="left">
-          <a>
-           
-            <img src="./img/shareLogo.webp" id="compartir" class="animated wobble">
+          <a><img src="./img/shareLogo.webp" id="compartir" class="animated wobble">
           </a>
           <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
             <img src="./img/fbLogo.webp" class="imgRedes">
@@ -68,12 +60,11 @@
         </article>
       </footer>
     </section>
-    <section id="secondscreen" class="display">
+    <section id="secondscreen" class="hide">
     <header class="header">
       <img src="./img/logo.png" class="img">
       <input type="text" class="text1" id="text" placeholder="Ingrese el nombre del pokemón">  
       <h2 class="te1 jugar" >Bienvenida Pamela</h2>
-      <input type="button" value="probando" id="valor">
   <!--     <input type="button" id="pruebaRadial" value="radial">
       <canvas id="marksChart" width="600" height="400"></canvas> -->
     </header>
@@ -86,39 +77,39 @@
             <ul class="tipo">
               <li><a id="normal" href="#" class="fa" category= "normal" >NORMAL</a>
               </li>
-              <li><a id="fire" href="#" class="fa" category= "fire">FUEGO</a>
+              <li><a id="fire" href="#" class="fa" category= "fire">FIRE</a>
               </li>
               <li><a id="water" href="#" class="fa" category="water">WATER</a>
               </li>
               <li><a id="grass" href="#" class="fa" category="grass">GRASS</a>
               </li>
-              <li><a id="electric" href="#" class="fa" category="electric">ELECTRICO</a>
+              <li><a id="electric" href="#" class="fa" category="electric">ELECTRIC</a>
               </li>
-              <li><a id="fight" href="#" class="fa" category="fight">LUCHA</a>
+              <li><a id="fight" href="#" class="fa" category="fight">FIGHT</a>
               </li>
               <li><a id="poison" href="#" class="fa" category="poison">POISON</a>
               </li>
-              <li><a id="ground" href="#" class="fa" category="ground">TIERRA</a>
+              <li><a id="ground" href="#" class="fa" category="ground">GROUND</a>
               </li>
               <li><a id="flying" href="#" class="fa" category="flying">FLYING</a>
               </li>
-              <li><a id="psychic" href="#" class="fa" category="psychic">PSIQUICO</a>
+              <li><a id="psychic" href="#" class="fa" category="psychic">PSYCHIC</a>
               </li>
-              <li><a id="bug" href="#" class="fa" category="bug">BICHO</a>
+              <li><a id="bug" href="#" class="fa" category="bug">BUG</a>
               </li>
-              <li><a id="rock" href="#" class="fa" category="rock">ROCA</a>
+              <li><a id="rock" href="#" class="fa" category="rock">ROCK</a>
               </li>
-              <li><a id="ghost" href="#" class="fa" category="ghost">FANTASMA</a>                
+              <li><a id="ghost" href="#" class="fa" category="ghost">GHOST</a>                
               </li>
-              <li><a id="ice" href="#" class="fa" category="ice">HIELO</a>                
+              <li><a id="ice" href="#" class="fa" category="ice">ICE</a>                
               </li>
               <li><a id="dragon" href="#" class="fa" category="dragon">DRAGON</a>
               </li>
-              <li><a id="dark" href="#" class="fa" category="dark">SINIESTRO</a>
+              <li><a id="dark" href="#" class="fa" category="dark">DARK</a>
               </li>
-              <li><a id="steel" href="#" class="fa" category="steel">ACERO</a>                
+              <li><a id="steel" href="#" class="fa" category="steel">STEEL</a>                
               </li>
-              <li><a id="fairy" href="#" class="fa" value="fairy">HADA</a>
+              <li><a id="fairy" href="#" class="fa" value="fairy">FAIRY</a>
               </li>
             </ul>
         </li>

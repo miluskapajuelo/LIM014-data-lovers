@@ -6,25 +6,6 @@ const lista = document.getElementById("lista");
 const modalMode = document.getElementById("modal-mode"); 
 const modalWindow = document.getElementById("modal-window");
 
-
-/* probando */
-const valor = document.getElementById("valor")
-valor.addEventListener("click", function(){
-let PokemonesFiltrados = data.pokemon.filter((data) => data.name == "venusaur");
-PokemonesFiltrados.forEach(function(elemento){
-  
-  if(elemento.evolution){ 
-
-    if(elemento.evolution["next-evolution"]){
-      let next = getNextEvol(elemento.evolution["next-evolution"]);
-      next.map(function (evolucion) {
-      console.log(evolucion.name)})}    
-    if(elemento.evolution["prev-evolution"]){
-      let prev = getPrevEvol(elemento.evolution["prev-evolution"]);
-     prev.map(function (evolucion1){
-      console.log(evolucion1.name)})}
-      }})})
-
 function getNextEvol(evol){
     let netevol = evol[0]["next-evolution"];
     const evolution = [];
@@ -42,9 +23,26 @@ function getPrevEvol(evol){
   }
   evolution.push(evol[0]);
   return evolution;
-  };
+  }
 
 
+/* ESPECIALATTACK
+  function especialAttack(evol){
+    for(let i=0; i<evol.length;i++){
+
+    }
+
+
+
+function getPrevEvol(evol){
+  let netevol = evol[0]["prev-evolution"];
+  const evolution = [];
+  if(netevol){
+    evolution.push(...getPrevEvol(netevol));
+  }
+  evolution.push(evol[0]);
+  return evolution;
+  } */
 /* FUNCIÓN DE APOYO */
 
 function mostrarCard(array) {
@@ -71,13 +69,34 @@ function mostrarCard(array) {
       
       let btnModal = node.querySelector(".capa");
       btnModal.addEventListener("click", mostrarModal);
-      
-
+      let next;
+      let prev;
       function mostrarModal() {
+      if(element.evolution){ 
+      if(element.evolutionNext){
+        next = getNextEvol(element.evolutionNext);
+        next.map(evolucion =>{return next})
+        for(let i=0;i<next.length;i++){
+          console.log(next[i])}}
+      
+      if(element.evolutionPrev){
+        prev = getPrevEvol(element.evolutionPrev)
+        prev.map(evolucion =>{return prev})
+        for(let i=0;i<prev.length;i++){
+          console.log(prev[i])}
+        }}
+/* 
+      if(element.especialAttack){
+        next = getNextEvol(element.evolutionNext);
+        next.map(evolucion =>{return next})
+        for(let i=0;i<next.length;i++){
+          console.log(next[i])}}
+      } */
+
+        
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
         if(element.type.length !== 1){
-          
         modalWindow.innerHTML = `<div id="div-img-modal">
             <img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
             </div> 
@@ -165,20 +184,20 @@ function mostrarCard(array) {
                     <th><img class="icon-small" src="./img/rayo.png"></th>
                     <th><img class="icon-small" src="./img/reloj.png"></th></tr></tbody>
 		                <tbody><tr>
-            		    <td>bug buzz</td>
-                    <td><img class="icon-small" src="images/imagen del primer icono"></td>
+            		    <td>${element.especialAttack[0].name}</td>
+                    <td><img class="icon-small" ></td>
                     <td>90</td>
                     <td>-50</td>
                     <td>3.7</td></tr></tbody>
 		                <tbody><tr>
                     <td>psychic</td>
-                    <td><img class="icon-small" src="images/psychic-icon.png"></td>
+                    <td><img class="icon-small" ></td>
                     <td>100</td>
                     <td>-100</td>
                     <td>2.8</td></tr></tbody>
                     <tbody><tr>
                     <td>signal beam</td>
-                    <td><img class="icon-small" src="images/bug-icon.png"></td>
+                    <td><img class="icon-small" ></td>
                     <td>75</td>
                     <td>-50</td>
                     <td>2.9</td></tr></tbody>
@@ -193,19 +212,19 @@ function mostrarCard(array) {
 	              </tbody>
                 <tbody><tr>
                     <td>confusion</td>
-                    <td><img class="icon-small" src="./images/psychic-icon.png"></td>
+                    <td><img class="icon-small" ></td>
                     <td>20</td>
                     <td>15</td>
                     <td>1.6</td></tr></tbody>
                 <tbody><tr>
                     <td>struggle bug</td>
-                    <td><img class="icon-small" src="./images/bug-icon.png"></td>
+                    <td><img class="icon-small" ></td>
                     <td>15</td>
                     <td>15</td>
                     <td>1.5</td></tr></tbody>
                 <tbody><tr>
                     <td>bug bite</td>
-                    <td><img class="icon-small" src="images/bug-icon.png"></td>
+                    <td><img class="icon-small"></td>
                     <td>5</td>
                     <td>6</td>
                     <td>0.5</td></tr></tbody>
@@ -236,6 +255,7 @@ function mostrarCard(array) {
            <td>${element.maxHp}</td></tr></tbody>
            </table>
            </div>
+           
           </section>`;
 
         }
@@ -288,6 +308,7 @@ const elegir = (evento) => {
   mostrarCard(a)
   let array = [];
   a.forEach(function(elemento){
+    
   array.push(parseInt(elemento.maxCp))
 })
   let sum = array.reduce((a, b) => a + b, 0);
@@ -344,7 +365,7 @@ entrar.addEventListener("click", () => {
   document.getElementById("firstscreen").classList.remove("display");
   document.getElementById("secondscreen").classList.add("display");
   document.getElementById("secondscreen").classList.remove("hide");
-  document.body.style.background = "#fff";
+  document.body.style.background = "url('./img/fondo6.png')";
 }); 
 
 /* Menú desplegable */
