@@ -48,27 +48,50 @@ function mostrarCard(array) {
       figura.appendChild(node3);
       figura.appendChild(animacion);
       animacion.appendChild(node5);
-
       
+      let next;
+      function evolucionNext(){
+        if(element.evolution){ 
+          let cade = "";
+          if(element.evolutionNext){
+            next = getNextEvol(element.evolutionNext);
+            next.forEach(elemento => cade += `<p>HOLA MUNDO ${elemento.name}</p>`)
+            }
+            return cade
+      }
+    }
+
+    let prev;
+    function evolucionPre(){
+      if(element.evolution){ 
+        let cade = "";
+        if(element.evolutionPrev){
+          prev = getPrevEvol(element.evolutionPrev);
+          prev.forEach(elemento => cade += `<p>HOLA MUNDO ${elemento.name}</p>`)
+          }
+          return cade
+    }
+  }
+
       let btnModal = node.querySelector(".capa");
       btnModal.addEventListener("click", mostrarModal);
-      let next;
-      let prev;
+      
       function mostrarModal() {
-      const modall =  modalWindow.querySelector("#pokemon-generacion-modal");
+    
 
-      if(element.evolution){ 
-      if(element.evolutionNext){
-        next = getNextEvol(element.evolutionNext);
-        next.forEach(elemento => console.log(elemento.name))
-        /* next.forEach(elemento =>{ modall.innerHTML= `<p>${elemento.name}</p>`}) */
-        }
-        
-      if(element.evolutionPrev){
-        prev = getPrevEvol(element.evolutionPrev)
-        prev.forEach(elemento => console.log(elemento.name))
-        }}
-
+        /* if(element.evolution){ 
+          if(element.evolutionNext){
+            next = getNextEvol(element.evolutionNext);
+            console.log(next)
+            next.forEach(elemento => 
+               modalWindow.querySelector(".olo").textContent= `<p>HOLA MUNDO ${elemento.name}</p>`  
+               /* console.log(elemento.name) )
+            } */
+            
+          /* if(element.evolutionPrev){
+            prev = getPrevEvol(element.evolutionPrev)
+            prev.forEach(elemento => console.log(elemento.name))
+            }} */
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
         
@@ -79,6 +102,7 @@ function mostrarCard(array) {
             
             <section id="body-modal" class="modal flex-wrap">
             <article id="NameModal" class="font f-medium f-green one-fraction"> 
+            <p class="nameP"></p>
             ${element.name}
             </article>
             <article id="pokemon-generacion-modal" class="font-g f-medium-g f-green-g one-fraction "> 
@@ -119,6 +143,8 @@ function mostrarCard(array) {
               <p class="titulo" >Weaknesses: </p>
               <p class="caract">${element.weaknesses}</P>
             </div>
+            </div>
+            <div class="olo">${evolucionNext()}${evolucionPre()}
             </div>
             <div>
             <a href="#" title="Close" class="modal-close">Close</a>
