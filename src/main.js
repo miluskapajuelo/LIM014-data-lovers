@@ -26,23 +26,6 @@ function getPrevEvol(evol){
   }
 
 
-/* ESPECIALATTACK
-  function especialAttack(evol){
-    for(let i=0; i<evol.length;i++){
-
-    }
-
-
-
-function getPrevEvol(evol){
-  let netevol = evol[0]["prev-evolution"];
-  const evolution = [];
-  if(netevol){
-    evolution.push(...getPrevEvol(netevol));
-  }
-  evolution.push(evol[0]);
-  return evolution;
-  } */
 /* FUNCIÓN DE APOYO */
 
 function mostrarCard(array) {
@@ -85,18 +68,12 @@ function mostrarCard(array) {
         for(let i=0;i<prev.length;i++){
           console.log(prev[i])}
         }}
-/* 
-      if(element.especialAttack){
-        next = getNextEvol(element.evolutionNext);
-        next.map(evolucion =>{return next})
-        for(let i=0;i<next.length;i++){
-          console.log(next[i])}}
-      } */
 
-        
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
+        
         if(element.type.length !== 1){
+         
         modalWindow.innerHTML = `<div id="div-img-modal">
             <img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
             </div> 
@@ -139,6 +116,9 @@ function mostrarCard(array) {
               <p class="caract">${element.weaknesses}</P>
             </div>
             </div>
+            <div>
+            <a href="#" title="Close" class="modal-close">Close</a>
+            </div>
             </section>`;
         }
         else{   /* actualizando filtros */
@@ -174,64 +154,6 @@ function mostrarCard(array) {
           </div> 
           </div>
           </section>
-          <section class="tablas">
-          <div id="move-and-attack" class="column-5 flex-wrap" style="display: flex;">
-                <span class="two-fraction f-green">special attacks</span>
-                <span class="two-fraction  f-green">quick move</span>
-                <table id="special-attacks-table" class="column-5 font1"><tbody><tr><th></th>
-                    <th><img class="icon-small" src="./img/TIPO.png"></th>
-                    <th><img class="icon-small" src="./img/puño.png"></th>
-                    <th><img class="icon-small" src="./img/rayo.png"></th>
-                    <th><img class="icon-small" src="./img/reloj.png"></th></tr></tbody>
-		                <tbody><tr>
-            		    <td>${element.especialAttack[0].name}</td>
-                    <td><img class="icon-small" ></td>
-                    <td>90</td>
-                    <td>-50</td>
-                    <td>3.7</td></tr></tbody>
-		                <tbody><tr>
-                    <td>psychic</td>
-                    <td><img class="icon-small" ></td>
-                    <td>100</td>
-                    <td>-100</td>
-                    <td>2.8</td></tr></tbody>
-                    <tbody><tr>
-                    <td>signal beam</td>
-                    <td><img class="icon-small" ></td>
-                    <td>75</td>
-                    <td>-50</td>
-                    <td>2.9</td></tr></tbody>
-             </table>
-
-             <table id="quick-move-table" class="column-5 font1">
-                <tbody><tr><th></th>
-                    <th><img class="icon-small" src="./img/TIPO.png"></th>
-                    <th><img class="icon-small" src="./img/puño.png"></th>
-                    <th><img class="icon-small" src="./img/rayo.png"></th>
-                    <th><img class="icon-small" src="./img/reloj.png"></th></tr>
-	              </tbody>
-                <tbody><tr>
-                    <td>confusion</td>
-                    <td><img class="icon-small" ></td>
-                    <td>20</td>
-                    <td>15</td>
-                    <td>1.6</td></tr></tbody>
-                <tbody><tr>
-                    <td>struggle bug</td>
-                    <td><img class="icon-small" ></td>
-                    <td>15</td>
-                    <td>15</td>
-                    <td>1.5</td></tr></tbody>
-                <tbody><tr>
-                    <td>bug bite</td>
-                    <td><img class="icon-small"></td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>0.5</td></tr></tbody>
-             </table>
-             
-                          
-           </div>
            <div id="move-and-attack" class="column-5 flex-wrap" style="display: flex;">
            <span class="two-fraction  f-green">Stats</span>
            <table id="stats-table" class="column-5 font1">
@@ -255,7 +177,10 @@ function mostrarCard(array) {
            <td>${element.maxHp}</td></tr></tbody>
            </table>
            </div>
-           
+           </div>
+           <div>
+           <a href="#" title="Close" class="modal-close" id="close">Close</a>
+          </div>
           </section>`;
 
         }
@@ -273,6 +198,8 @@ function mostrarCard(array) {
     lista.innerHTML = "<h1>no se ha encontrado pokemos</h1>";
   }
 } 
+
+
 
 /* FILTRO TIPO DE POKEMON */
 
@@ -338,13 +265,7 @@ ordera.addEventListener("change", (event) => {
   let a = funciones.sortData(data, valor);
   mostrarCard(a);
 });
-const ordera2 = document.querySelector("#selecta1");
-ordera2.addEventListener("change", (event) => {
-  lista.innerHTML = "";
-  let valor = event.target.value;
-  let a = funciones.sortData(data, valor);
-  mostrarCard(a);
-}); 
+
 
 /* BUSQUEDA POR TEXTO */
 const text = document.querySelector("#text");
@@ -365,7 +286,7 @@ entrar.addEventListener("click", () => {
   document.getElementById("firstscreen").classList.remove("display");
   document.getElementById("secondscreen").classList.add("display");
   document.getElementById("secondscreen").classList.remove("hide");
-  document.body.style.background = "url('./img/fondo6.png')";
+  document.body.style.background = "#fff";
 }); 
 
 /* Menú desplegable */

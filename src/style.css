@@ -232,14 +232,14 @@ img {
   margin-top: -18px;
 }
 .product-list{
- /*  margin-top:40px; */
+  margin-top: 40px;
   width: 100%;
   display: flex;
   justify-content: center;
   /* align-content: center; */
   height: 100%;
   flex-wrap: wrap;
-  padding: 60px;
+  padding: 30px;
   z-index: 20;
   overflow: scroll;
   background: rgb(21 10 41 / 62%);
@@ -344,15 +344,17 @@ figcaption {
   flex-wrap: wrap;
 
 }
-
+html{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
 .dropdown1{
-  width: 72px;
+  width: 120px;
   padding: 12px 1px 12px 8px;
   font-size: 16px;
   cursor: pointer;
   border: none;
   background: transparent;
-  color: rgb(16, 247, 247);
+  color:  #150a29;
 
 }
 .dropdown1:hover{
@@ -653,7 +655,7 @@ footer {
 
 #modal-mode{  
   width:100%; 
-	background: rgba(252, 252, 252, 0.779);
+	background: rgba(39, 38, 38, 0.779);
 	position:fixed;
 	top:0;
 	left:0; 
@@ -664,7 +666,7 @@ footer {
 }
 
 #modal-window{
-  background: rgb(2, 0, 0);
+  background: white;
   position: relative;
   top: 20%;
   width: 60%;
@@ -676,14 +678,16 @@ footer {
 
  #div-img-modal{
   z-index: 0;
-  width: 20vh;
-  height: 20vh;
+  width: 23vh;
   position: absolute;
-  top:-10vh;
-  background: rgb(0, 0, 0);
-  border-radius: 8em;
-  left: calc((100% - 130vh)/2);
-  margin-top: 10px
+  top: -10vh;
+  background: url(./img/fondoPokemon.png);
+  border-radius: 18em;
+  left: calc((90% - 130vh)/2);
+  margin-top: 10px;
+  height: 23vh;
+  background-size: cover;
+  background-repeat: round;
   }
   #img-pokemon-modal{
     position: relative;
@@ -701,7 +705,18 @@ footer {
     font-size: 28px;
     z-index: 99
   }
-  
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 3px;
+    width: 70px;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
   /* caracteristicas del modal */
   .nombrePoke{
@@ -897,15 +912,18 @@ img.icon-small{
   width: 100%;
   position: absolute;
   float: right;
- /*  height: 30%; */
-  align-content: center
+  /* height: 30%; */
+  align-content: center;
+  background: white;
+  height: 70px;
+  margin-top: 17px;
 }
 .pepo{
   margin: 5px;
-  color: rgb(253, 249, 7);
-  background-color: #247530;
+  color: white;
+  background-color: #150a29;
   border-radius: 8px;
-  width: 10%;
+  width: 8%;
   text-align: center;
   float: right;
   padding: 12px 1px 12px 8px;
