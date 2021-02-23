@@ -1,6 +1,6 @@
-import { example, anotherExample } from '../src/data/.js';
+import {BuscarTexto} from '../src/data.js';
 
-
+/* BUSCAR POKEMONES */
 describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');

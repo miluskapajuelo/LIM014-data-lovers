@@ -281,4 +281,3 @@ playPauseBTN.addEventListener("click", function playPause() {
     playPauseBTN.innerHTML = "Play &#9658;";
   }
 }); 
-
