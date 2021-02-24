@@ -688,6 +688,8 @@ footer {
   height: 23vh;
   background-size: cover;
   background-repeat: round;
+  margin-left: 38;
+  margin-top: ;
   }
   #img-pokemon-modal{
     position: relative;
