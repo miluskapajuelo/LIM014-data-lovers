@@ -939,5 +939,24 @@ img.icon-small{
   width: 100%;
 }
 
+  /* evoluciones */
+#pokemon-evolucion{
+  width: 80px;
+  height: 70px
+}
+.left-stat{
+  display: flex;
 
-  /* caracteristicas del modal */
+}
+.containerTable{
+  display: flex;
+  flex-direction: column;
+}
+.tableEvoluciones{
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: rgb(58, 8, 87);
+}
