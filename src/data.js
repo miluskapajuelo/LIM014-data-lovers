@@ -23,7 +23,8 @@ const funciones = {
         "evolution": pokemones.evolution,
         "evolutionNext": pokemones.evolution["next-evolution"],
         "evolutionPrev": pokemones.evolution["prev-evolution"],
-        "especialAttack": pokemones["special-attack"]
+        "especialAttack": pokemones["special-attack"],
+        
       });
     });
 

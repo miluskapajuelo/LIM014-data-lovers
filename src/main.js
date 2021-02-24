@@ -55,7 +55,12 @@ function mostrarCard(array) {
           let cade = "";
           if(element.evolutionNext){
             next = getNextEvol(element.evolutionNext);
-            next.forEach(elemento => cade += `<p>HOLA MUNDO ${elemento.name}</p>`)
+            next.forEach(elemento => cade +=  `<tr>
+            <td>Next-Evolution</td>
+            <td>${elemento.name}</td>
+            <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
+            <td>${elemento["candy-cost"]}</td>
+          </tr>`)
             }
             return cade
       }
@@ -67,7 +72,12 @@ function mostrarCard(array) {
         let cade = "";
         if(element.evolutionPrev){
           prev = getPrevEvol(element.evolutionPrev);
-          prev.forEach(elemento => cade += `<p>HOLA MUNDO ${elemento.name}</p>`)
+          prev.forEach(elemento => cade += `<tr>
+          <td>Pre-Evolution</td>
+          <td>${elemento.name}</td>
+          <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
+          <td>${elemento["candy-cost"]}</td>
+        </tr>`)
           }
           return cade
     }
@@ -143,8 +153,27 @@ function mostrarCard(array) {
               <p class="titulo" >Weaknesses: </p>
               <p class="caract">${element.weaknesses}</P>
             </div>
+            
+            <div class="containerTable">
+            <table class="tableEvoluciones">
+            <tr>
+              <td></td>
+              <td>Name</td>
+              <td>Me</td>
+              <td>Candy Cost</td>
+            </tr>
+            <tr>
+              <tr>${evolucionPre()}</tr>
+              <tr>
+              <td>ACTUAL</td>
+              <td>${element.name}</td>
+              <td><img src="${element.img}" alt="" id="pokemon-evolucion" class="image-modal"></td>
+              </tr>
+              <tr>${evolucionNext()}</tr>
+              </tr>
+            
+            </table>
             </div>
-            <div class="olo">${evolucionNext()}${evolucionPre()}
             </div>
             <div>
             <a href="#" title="Close" class="modal-close">Close</a>
