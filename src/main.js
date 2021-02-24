@@ -60,12 +60,11 @@ function mostrarCard(array) {
           let cade = "";
           if(element.evolutionNext){
             next = getNextEvol(element.evolutionNext);
-            next.forEach(elemento => cade +=  `<tr>
-            <td>Next-Evolution</td>
-            <td>${elemento.name}</td>
-            <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
-            <td>${elemento["candy-cost"]}</td>
-          </tr>`)
+            next.forEach(elemento => cade += `
+          <td>Next-Evolution</td>
+          <td>${elemento.name}</td>
+          <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
+          <td>${elemento["candy-cost"]}</td>`)
             }
             return cade
       }
@@ -77,12 +76,11 @@ function mostrarCard(array) {
         let cade = "";
         if(element.evolutionPrev){
           prev = getPrevEvol(element.evolutionPrev);
-          prev.forEach(elemento => cade += `<tr>
-          <td>Pre-Evolution</td>
-          <td>${elemento.name}</td>
-          <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
-          <td>${elemento["candy-cost"]}</td>
-        </tr>`)
+          prev.forEach(elemento => cade += `
+        <td>Pre-Evolution</td>
+        <td>${elemento.name}</td>
+        <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
+        <td>${elemento["candy-cost"]}</td>`)
           }
           return cade
     }
@@ -139,32 +137,50 @@ function mostrarCard(array) {
             <div class="box1">
                 <p class="titulo" >Resistant: </p>
                 <p class="caract">${element.resistant}</P>
+                <p class="titulo" >Weaknesses: </p>
+                <p class="caract">${element.weaknesses}</P>
             </div>
-            <div class="box1">
-              <p class="titulo" >Weaknesses: </p>
-              <p class="caract">${element.weaknesses}</P>
-            </div>
-            
-            <div class="containerTable">
-            <table class="tableEvoluciones">
-            <tr>
-              <td></td>
-              <td>Name</td>
-              <td>Me</td>
-              <td>Candy Cost</td>
-            </tr>
-            <tr>
-              <tr>${evolucionPre()}</tr>
-              <tr>
-              <td>ACTUAL</td>
-              <td>${element.name}</td>
-              <td><img src="${element.img}" alt="" id="pokemon-evolucion" class="image-modal"></td>
-              </tr>
-              <tr>${evolucionNext()}</tr>
-              </tr>
-            
-            </table>
-            </div>
+            <div id="move-and-attack" class="column-4 flex-wrap" style="display: flex;">
+                <table id="stats-table" class="column-4 font">
+                <tbody><tr><th>Stats table</th>
+                </tr></tbody>
+                <tbody><tr>
+                <td>base-attack</td>
+                <td>${element.baseAttack}</td></tr></tbody>
+		            <tbody><tr>
+                <td>base-defense</td>
+                <td>${element.baseDefense}</td></tr></tbody>
+                <tbody><tr>
+                <td>base-stamina</td>
+                <td>${element.baseStamina}</td></tr></tbody>
+	            	<tbody><tr>
+                <td>max-cp</td>
+                <td>${element.maxCp}</td></tr></tbody>
+		            <tbody><tr>
+                <td>max-hp</td>
+                <td>${element.maxHp}</td></tr></tbody>
+                </table>
+              </div>
+              <div id="move-and-attack" class="column-4 flex-wrap" style="display: flex;">
+                <table id="stats-table" class="column-4 font">
+                <tbody><tr><th>Evolution table</th>
+                </tr></tbody>
+                <tbody><tr>
+                ${evolucionPre()}
+                </tr></tbody>
+                <tbody><tr>
+                ${evolucionNext()}</tr></tbody>
+                <tbody><tr>
+                <td>base-stamina</td>
+                <td>${element.baseStamina}</td></tr></tbody>
+	            	<tbody><tr>
+                <td>max-cp</td>
+                <td>${element.maxCp}</td></tr></tbody>
+		            <tbody><tr>
+                <td>max-hp</td>
+                <td>${element.maxHp}</td></tr></tbody>
+                </table>
+              </div>
             </div>
             <div>
             <a href="#" title="Close" class="modal-close">Close</a>
@@ -187,14 +203,9 @@ function mostrarCard(array) {
   }
 } 
 
-/* FILTRO TIPO DE POKEMON */  
+/* VALORES ADICIONALES */
 
-const botones = document.querySelectorAll(".fa");
-const elegir = (evento) => {
-  lista.innerHTML = "";
-  let a = funciones.FilterData(newData, evento.target.id);
-
-  mostrarCard(a)
+  const ValoresAdicionales = (a) => {
   let array = [];
   a.forEach(function(elemento){
     
@@ -213,20 +224,32 @@ const elegir = (evento) => {
   PMin.innerHTML = `<p>MIN CP:</p><p>${min}</p>`;
   Pavg.innerHTML = `<p>PROM CP:</p><p>${average}</p>`;
 };
+  
 
+/* FILTRO TIPO DE POKEMON */  
+
+const botones = document.querySelectorAll(".fa");
+const elegir = (evento) => {
+  lista.innerHTML = "";
+  let a = funciones.FilterData(newData, evento.target.id);
+  mostrarCard(a)
+  ValoresAdicionales(a)
+  orderData(a)
+};
 botones.forEach((boton) => {
   boton.addEventListener("click", elegir);
 });
  
 /* ORDEN A-Z */
-
+const orderData = (data) => {
 const ordera = document.querySelector("#selecta");
 ordera.addEventListener("change", (event) => {
   lista.innerHTML = "";
   let valor = event.target.value;
-  let a = funciones.sortData(newData, valor);
-  mostrarCard(a);
-});
+  let a = funciones.sortData(data, valor);
+  mostrarCard(a)
+  ValoresAdicionales(a)
+})};
 
 
 /* BUSQUEDA POR TEXTO */
@@ -236,9 +259,12 @@ const filtrar = () => {
   const valorTexto = text.value.toLowerCase();
   let a = funciones.BuscarTexto(newData, valorTexto);
   mostrarCard(a);
+  ValoresAdicionales(a)
+  orderData(a)
 };
 text.addEventListener("keyup", filtrar);
-filtrar(); 
+filtrar()
+; 
 
 /* Ingresar a la segunda pantalla */
 const entrar = document.getElementById("entrar");

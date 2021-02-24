@@ -30,6 +30,7 @@ const funciones = {
   /* ORDENAR DATA */
   sortData: (data, sortOrder) => {
     if (sortOrder === "Ascendente") {
+      
       data.sort((a, b) => {
         if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
         if (b.name.toLowerCase() > a.name.toLowerCase()) return 1;
@@ -44,22 +45,18 @@ const funciones = {
         return 0;
       });
       return data
-    }else if (sortOrder === "Debilidad") {
+    }else if (sortOrder === "+CombatPower") {
       data.sort((a, b) => {
-        if (a.weaknesses < b.weaknesses) return -1;
-        if (b.weaknesses > a.weaknesses) return 1;
-        return 0;
+        return parseInt(b.maxCp) - parseInt(a.maxCp)
       });
       return data
       
-    } else if (sortOrder === "Resistencia") {
+    }  else if (sortOrder === "-CombatPower") {
       data.sort((a, b) => {
-        if (b.resistant > a.resistant) return -1;
-        if (a.resistant < b.resistant) return 1;
-        return 0;
+        return parseInt(a.maxCp) - parseInt(b.maxCp)
       });
       return data
-      
+       
 }}}
 export default funciones;
 /* Grafica: function(data1){
