@@ -1,11 +1,14 @@
 import funciones from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
+let newData = funciones.NewData(data.pokemon);
+
 const lista = document.getElementById("lista");
 
 const modalMode = document.getElementById("modal-mode"); 
 const modalWindow = document.getElementById("modal-window");
 
+/* DEFINIR SI EXISTE UNA EVOLUCIÓN SIGUIENTE O PREVIA */
 function getNextEvol(evol){
     let netevol = evol[0]["next-evolution"];
     const evolution = [];
@@ -49,6 +52,8 @@ function mostrarCard(array) {
       figura.appendChild(animacion);
       animacion.appendChild(node5);
       
+      /* FUNCIÓN DE EVOLUCIÓN DEL POKEMON */
+      /* FUNCIÓN POSTERIOR */
       let next;
       function evolucionNext(){
         if(element.evolution){ 
@@ -65,7 +70,7 @@ function mostrarCard(array) {
             return cade
       }
     }
-
+    /* FUNCIÓN ANTERIOR */
     let prev;
     function evolucionPre(){
       if(element.evolution){ 
@@ -82,26 +87,12 @@ function mostrarCard(array) {
           return cade
     }
   }
-
+      /* CLICK MOSTRAR MODAL */
       let btnModal = node.querySelector(".capa");
       btnModal.addEventListener("click", mostrarModal);
       
       function mostrarModal() {
     
-
-        /* if(element.evolution){ 
-          if(element.evolutionNext){
-            next = getNextEvol(element.evolutionNext);
-            console.log(next)
-            next.forEach(elemento => 
-               modalWindow.querySelector(".olo").textContent= `<p>HOLA MUNDO ${elemento.name}</p>`  
-               /* console.log(elemento.name) )
-            } */
-            
-          /* if(element.evolutionPrev){
-            prev = getPrevEvol(element.evolutionPrev)
-            prev.forEach(elemento => console.log(elemento.name))
-            }} */
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
         
@@ -181,7 +172,7 @@ function mostrarCard(array) {
             </section>`;
         
         
-        const btnCloseModal = modalWindow.querySelector("#img-pokemon-modal");
+        const btnCloseModal = modalWindow.querySelector(".modal-close");
 
         btnCloseModal.addEventListener("click", cerrarModal);
       }
@@ -192,42 +183,16 @@ function mostrarCard(array) {
       }
     });
   } else {
-    lista.innerHTML = "<h1>no se ha encontrado pokemos</h1>";
+    lista.innerHTML = "<h1>No se han encontrado pokemones</h1>";
   }
 } 
 
-
-
-/* FILTRO TIPO DE POKEMON */
-
-/* GRAFICO RADIAL */
-/* var marksCanvas = document.getElementById("marksChart");
-
-var marksData = {
-  labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
-  datasets: [{
-    label: "Student A",
-    backgroundColor: "rgba(200,0,0,0.2)",
-    data: [65, 75, 70, 80, 60, 80]
-  }, {
-    label: "Student B",
-    backgroundColor: "rgba(0,0,200,0.2)",
-    data: [54, 65, 60, 70, 70, 75]
-  }]
-};
-
-var radarChart = new Chart(marksCanvas, {
-  type: 'radar',
-  data: marksData
-}); 
-
-return radarChart */
-  
+/* FILTRO TIPO DE POKEMON */  
 
 const botones = document.querySelectorAll(".fa");
 const elegir = (evento) => {
   lista.innerHTML = "";
-  let a = funciones.FilterData(data, evento.target.id);
+  let a = funciones.FilterData(newData, evento.target.id);
 
   mostrarCard(a)
   let array = [];
@@ -259,7 +224,7 @@ const ordera = document.querySelector("#selecta");
 ordera.addEventListener("change", (event) => {
   lista.innerHTML = "";
   let valor = event.target.value;
-  let a = funciones.sortData(data, valor);
+  let a = funciones.sortData(newData, valor);
   mostrarCard(a);
 });
 
@@ -269,7 +234,7 @@ const text = document.querySelector("#text");
 const filtrar = () => {
   lista.innerHTML = "";
   const valorTexto = text.value.toLowerCase();
-  let a = funciones.BuscarTexto(data.pokemon, valorTexto);
+  let a = funciones.BuscarTexto(newData, valorTexto);
   mostrarCard(a);
 };
 text.addEventListener("keyup", filtrar);
@@ -310,3 +275,26 @@ playPauseBTN.addEventListener("click", function playPause() {
     playPauseBTN.innerHTML = "Play &#9658;";
   }
 }); 
+
+/* GRAFICO RADIAL */
+/* var marksCanvas = document.getElementById("marksChart");
+
+var marksData = {
+  labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
+  datasets: [{
+    label: "Student A",
+    backgroundColor: "rgba(200,0,0,0.2)",
+    data: [65, 75, 70, 80, 60, 80]
+  }, {
+    label: "Student B",
+    backgroundColor: "rgba(0,0,200,0.2)",
+    data: [54, 65, 60, 70, 70, 75]
+  }]
+};
+
+var radarChart = new Chart(marksCanvas, {
+  type: 'radar',
+  data: marksData
+}); 
+
+return radarChart */
