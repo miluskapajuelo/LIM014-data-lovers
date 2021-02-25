@@ -63,6 +63,7 @@
   h2{
     font-size:17px;;
     color:  #fdd008;
+    text-transform: capitalize;
   }
 
 body{
@@ -101,7 +102,7 @@ display: flex;
   position: absolute;
   clip-path: circle(0px at top left); 
   transition: clip-path ease-in-out 400ms;
-  background: rgb(245, 152, 12);
+  background: rgb(217 39 42);
   z-index: 30;
   margin-top: 40px;
  
@@ -170,7 +171,8 @@ display: flex;
   text-transform: uppercase;
   text-decoration: none;
   z-index: 300;
-  margin-left: 180px;}
+  margin-left: 180px;
+  text-align: center;}
 .menu{
   padding: 1em;
   position: absolute;
@@ -252,7 +254,7 @@ figure{
   z-index: 20;
 }
 
-.product-list figure .capa{
+.product-list figure .cap{
   position: absolute;
   top : 0;
   width: 100%;
@@ -267,7 +269,7 @@ figure{
   border-radius: 4px;
   z-index: 20;
 }
-.product-list figure:hover > .capa{
+.product-list figure:hover > .cap{
   opacity: 1;
   visibility: visible;
   z-index: 20;
@@ -277,13 +279,13 @@ figure{
   z-index: 20;
 }
 
-.product-list figure:hover > .capa h3{
+.product-list figure:hover > .cap h3{
   margin-top: 70px;
   margin-bottom: 15px;
   z-index: 20;
 
 }
-.product-list figure .capa h3{
+.product-list figure .cap h3{
   color: #fff;
   font-weight: 200;
   margin-bottom: 120px;
@@ -292,7 +294,7 @@ figure{
   z-index: 20;
   font-family:fantasy;
 }
-.product-list figure .capa p{
+.product-list figure .cap p{
   color: #fff;
   font-size: 15px;
   line-height: 1.3;
@@ -632,25 +634,19 @@ footer {
 }
 
 .f-green{
-  color: #fdd008; 
-}
-
-.f-black{
-  color: #333333;
-}
-.f-gray{
-  color: #464343;
+  color: #333333; 
 }
 .font{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: bolder;
+  
   text-transform: capitalize;
+  font-size: 14px;
 }
 .font1{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
   text-transform: capitalize;
   font-size: 12px;
   color: white;
+  
 }
 
 #modal-mode{  
@@ -698,7 +694,7 @@ footer {
   }
   #pokemon-name-modal{
     display: block;
-    color:  #fdd008;
+    color:  rgb(35 32 39);
     padding: .1rem 0;
     width: 100%;
     text-align: center;
@@ -722,7 +718,7 @@ footer {
   /* caracteristicas del modal */
   .nombrePoke{
     text-align: center;
-    color: #fcdd00;
+    color: rgb(35 32 39);
     width: auto;
     position: relative;
     top: 60px;
@@ -731,7 +727,7 @@ footer {
   } 
   .Characters{
     text-align: center;
-    color: #00cafc;
+    color: rgb(35 32 39);
     width: auto;
     position: relative;
     top: 60px;
@@ -790,7 +786,7 @@ footer {
 
 #pokemon-generacion-modal{
   display: block;
-  color: rgb(6, 241, 202);
+  color: rgb(35 32 39);
   padding: .1rem 0;
   width: 100%;
   text-align: center;
@@ -807,12 +803,7 @@ footer {
 .modal2{
   margin-top: 9px;}
   
-.flex-wrap2{
-  display: flex; 
-  flex-wrap: wrap; 
-  margin-left: 29px;
-  flex-direction: column;
-}
+
 .color-container2{ 
   background-color: transparent
 }
@@ -820,8 +811,7 @@ footer {
 .font2{
   font-weight: bolder;
   text-align: inherit;
-  text-transform: capitalize;
-  color: #35ce21;
+  text-transform: capitalize
 }
 .column-3{
   width: 39%;
@@ -852,21 +842,7 @@ footer {
   font-weight: inherit;
   transition: clip-path ease-in-out 400ms;
 }
-.box1 {
-  color:  #fdd008;
-  width: 220px;
-  padding: 20px;
-  border: 1px solid #3c6;
-  margin: 10px}
 
-.box{
-  flex-direction: column;
-}
-.titulo{
-  margin-bottom: 7px;
-  color: white;
-  font-size: 20px;
-}
 .caract{
   color: rgb(51 204 102);
   font-size: 14px;
@@ -879,7 +855,10 @@ img.icon-small{
   top: 1em;      
 }
 .column-4{  
-  width: 100%;  margin: 3px 0 3px 0;}
+  width: 70%;
+  justify-content: center}
+.column-5{  
+    justify-content: center}
 
 .fontTabla{
   font-family: 'Baloo Thambi 2', cursive;
@@ -898,11 +877,7 @@ img.icon-small{
  .f-blue{
   color: #04617e; 
 }
-.column-5{    
-  margin: 3px 1px;
-/*  width: 47%;  */  
-  margin: 3px;  
-}
+
 .tablas{
   display: flex;
 }
@@ -942,11 +917,13 @@ img.icon-small{
 
   /* evoluciones */
 #pokemon-evolucion{
-  width: 80px;
-  height: 70px
+  width: 50px;
+  height: 50px;
 }
 .left-stat{
   display: flex;
+  text-align-last: auto;
+  MARGIN: auto;
 
 }
 .containerTable{
@@ -960,4 +937,35 @@ img.icon-small{
   text-indent: initial;
   border-spacing: 2px;
   border-color: rgb(58, 8, 87);
+}
+/* resistant modal */
+.spaceElement{
+    border: solid;
+    margin-bottom: 2px,4px,45px,34px;
+    padding: 5px;
+    background: #232027;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+.spaceElementF{
+      display: flex;
+      flex-wrap: wrap;
+}
+.box1 {
+  width: 60%;
+  margin-top: 16px;}
+
+.titulo{
+  margin-bottom: 7px;
+  color: #232027;
+  font-size: 20px;
+}
+.SizeTable{
+  font-size: 20px;
+}
+.flex-wrap2{
+  display: flex; 
+  margin-top: 13px;
 }

@@ -25,7 +25,7 @@ const funciones = {
   FilterData: (data, tipo) => data.filter((element) => element.type == tipo),
   
   /*  FILTRAR NOMBRE POKEMON */
-  BuscarTexto: (data, valorTexto) => data.filter((elemento) => elemento.name.includes(valorTexto)),
+  FindTxt: (data, valorTexto) => data.filter((elemento) => elemento.name.includes(valorTexto)),
    
   /* ORDENAR DATA */
   sortData: (data, sortOrder) => {

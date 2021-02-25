@@ -1,95 +1,157 @@
 import funciones from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
-let newData = funciones.NewData(data.pokemon);
 
-const lista = document.getElementById("lista");
-
+const dashboard = document.getElementById("lista");
 const modalMode = document.getElementById("modal-mode"); 
 const modalWindow = document.getElementById("modal-window");
+let newData = funciones.NewData(data.pokemon);
 
-/* DEFINIR SI EXISTE UNA EVOLUCIÓN SIGUIENTE O PREVIA */
+
+/* ENTER TO THE SECOND SCREEN*/
+const enter = document.getElementById("enter");
+let textUser;
+enter.addEventListener("click", () => {
+  document.getElementById("firstscreen").classList.add("hide");
+  document.getElementById("firstscreen").classList.remove("display");
+  document.getElementById("secondscreen").classList.add("display");
+  document.getElementById("secondscreen").classList.remove("hide");
+  document.body.style.background = "#fff";
+
+  textUser = document.getElementById("textUser").value;
+  document.getElementById("UserName").innerHTML = "Bienvenida " + textUser;
+}); 
+
+
+
+
+/* MENU DROPDOWN */
+
+const menu = document.getElementById("menu");
+menu.addEventListener("click", function press2() {
+  let siteNav = document.getElementById("site-nav");
+  siteNav.classList.toggle("site-nav-open");
+  menu.classList.toggle("menu-open");
+}); 
+
+/* AUDIO POKEMON SONG */
+const audio = document.getElementById("audio");
+const playPauseBTN = document.getElementById("playPauseBTN");
+let count = 0;
+playPauseBTN.addEventListener("click", function playPause() {
+  if (count == 0) {
+    count = 1;
+    audio.play();
+    playPauseBTN.innerHTML = "Pause &#9208;";
+  } else {
+    count = 0;
+    audio.pause();
+    playPauseBTN.innerHTML = "Play &#9658;";
+  }
+}); 
+
+/* EXISTS PREV OR NEXT EVOLUTION */
 function getNextEvol(evol){
-    let netevol = evol[0]["next-evolution"];
+    let nextevol = evol[0]["next-evolution"];
     const evolution = [];
-    if(netevol){
-      evolution.push(...getNextEvol(netevol));
+    if(nextevol){
+      evolution.push(...getNextEvol(nextevol));
     }
     evolution.push(evol[0]);
     return evolution;
     }
 function getPrevEvol(evol){
-  let netevol = evol[0]["prev-evolution"];
+  let preevol = evol[0]["prev-evolution"];
   const evolution = [];
-  if(netevol){
-    evolution.push(...getPrevEvol(netevol));
+  if(preevol){
+    evolution.push(...getPrevEvol(preevol));
   }
   evolution.push(evol[0]);
   return evolution;
   }
 
 
-/* FUNCIÓN DE APOYO */
+/* FUNCTION TO CREATE ELEMENTS IN DASHBOARD */
 
 function mostrarCard(array) {
   if (array.length !== 0) {
     array.forEach(function (element) {
-      let node0 = document.createElement("figcaption");
-      let node = document.createElement("figure");
-      let node2 = document.createElement("img");
-      let node3 = document.createElement("figcaption");
-      let animacion = document.createElement("div");
-      let node5 = document.createElement("p");
-      animacion.className = "capa";
-      node5.innerText = element.about;
-      node2.src = element.img;
-      node0.innerHTML=`<p style="font-size: 13px;text-align: end"> CP: ${element.maxCp}</p>`;
-      node3.innerText= element.name;
-      let figura = document.getElementById("lista").appendChild(node);
-      figura.appendChild(node0);
-      figura.appendChild(node2);
-      figura.appendChild(node3);
-      figura.appendChild(animacion);
-      animacion.appendChild(node5);
+      let figcaptionCP = document.createElement("figcaption");
+      let figurePokemon = document.createElement("figure");
+      let imgPokemon = document.createElement("img");
+      let figcaptionName = document.createElement("figcaption");
+      let divPokemon = document.createElement("div");
+      let description = document.createElement("p");
+      divPokemon.className = "cap";
+      description.innerText = element.about;
+      imgPokemon.src = element.img;
+      figcaptionCP.innerHTML=`<p style="font-size: 13px;text-align: end"> CP: ${element.maxCp}</p>`;
+      figcaptionName.innerText= element.name;
+      let figura = document.getElementById("lista").appendChild(figurePokemon);
+      figura.appendChild(figcaptionCP);
+      figura.appendChild(imgPokemon);
+      figura.appendChild(figcaptionName);
+      figura.appendChild(divPokemon);
+      divPokemon.appendChild(description);
       
-      /* FUNCIÓN DE EVOLUCIÓN DEL POKEMON */
-      /* FUNCIÓN POSTERIOR */
+      /* POKEMON EVOLUTION (NEXT-PREV) */
+      /* NEXT EVOLUTION */
       let next;
       function evolucionNext(){
         if(element.evolution){ 
-          let cade = "";
+          let result = "";
           if(element.evolutionNext){
             next = getNextEvol(element.evolutionNext);
-            next.forEach(elemento => cade += `
+            next.forEach(elemento => result += `
           <td>Next-Evolution</td>
           <td>${elemento.name}</td>
           <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
           <td>${elemento["candy-cost"]}</td>`)
             }
-            return cade
+            return result
       }
     }
-    /* FUNCIÓN ANTERIOR */
+    /* PREV EVOLUTION */
     let prev;
     function evolucionPre(){
       if(element.evolution){ 
-        let cade = "";
+        let result = "";
         if(element.evolutionPrev){
           prev = getPrevEvol(element.evolutionPrev);
-          prev.forEach(elemento => cade += `
+          prev.forEach(elemento => result += `
         <td>Pre-Evolution</td>
         <td>${elemento.name}</td>
         <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
         <td>${elemento["candy-cost"]}</td>`)
           }
-          return cade
+          return result
     }
   }
-      /* CLICK MOSTRAR MODAL */
-      let btnModal = node.querySelector(".capa");
-      btnModal.addEventListener("click", mostrarModal);
+  /* TABLE RESISTANT */
+  
+  function resistant(){
+    let result = "";
+      if(element.resistant){
+        element.resistant.forEach(elemento => result += `
+        <p class="spaceElement">${elemento}</p>`)
+        }
+        return result
+  }
+  /* TABLE WEAKNESSES */
+  function weaknesses(){
+    let result = "";
+      if(element.weaknesses){
+        element.weaknesses.forEach(elemento => result += `
+        <p class="spaceElement">${elemento}</p>`)
+        }
+        return result
+  }
+
+      /* CLICK TO SHOW MODAL */
+      let btnModal = figurePokemon.querySelector(".cap");
+      btnModal.addEventListener("click", showModal);
       
-      function mostrarModal() {
+      function showModal() {
     
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
@@ -98,7 +160,6 @@ function mostrarCard(array) {
         modalWindow.innerHTML = 
         `<div id="div-img-modal"><img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
             </div> 
-            
             <section id="body-modal" class="modal flex-wrap">
             <article id="NameModal" class="font f-medium f-green one-fraction"> 
             <p class="nameP"></p>
@@ -135,16 +196,15 @@ function mostrarCard(array) {
             <section id="body-modal2" class="modal2 flex-wrap2">
             <div class="left-stat">
             <div class="box1">
-                <p class="titulo" >Resistant: </p>
-                <p class="caract">${element.resistant}</P>
+                <p class="titulo " >Resistant: </p>
+                <div class="spaceElementF ">${resistant()}</div>
                 <p class="titulo" >Weaknesses: </p>
-                <p class="caract">${element.weaknesses}</P>
+                <div class="spaceElementF">${weaknesses()}</div>
             </div>
-            <div id="move-and-attack" class="column-4 flex-wrap" style="display: flex;">
-                <table id="stats-table" class="column-4 font">
-                <tbody><tr><th>Stats table</th>
-                </tr></tbody>
-                <tbody><tr>
+            <div id="move-and-attack" class="column-4 flex-wrap2" style="display: flex;">
+                <table id="stats-table" class="column-4 font ">
+                <caption class="titulo">Stats Table</caption>
+                <tbody"><tr>
                 <td>base-attack</td>
                 <td>${element.baseAttack}</td></tr></tbody>
 		            <tbody><tr>
@@ -161,24 +221,27 @@ function mostrarCard(array) {
                 <td>${element.maxHp}</td></tr></tbody>
                 </table>
               </div>
-              <div id="move-and-attack" class="column-4 flex-wrap" style="display: flex;">
-                <table id="stats-table" class="column-4 font">
-                <tbody><tr><th>Evolution table</th>
+              <div id="move-and-attack" class="column-5 flex-wrap2" style="display: flex;">
+                <table id="stats-table" class="column-5 font">
+                <caption class="titulo">Evolution Table</caption>
+                <tbody><tr>
+                <td>Evolution</td>
+                <td>Name</td>
+                <td>Me</td>
+                <td>Candy-Cost</td>
                 </tr></tbody>
                 <tbody><tr>
                 ${evolucionPre()}
                 </tr></tbody>
                 <tbody><tr>
-                ${evolucionNext()}</tr></tbody>
+                <td>Now</td>
+                <td>${element.name}</td>
+                <td><img id="pokemon-evolucion" src="${element.img}"></td>
+                <td></td>
+                </tr></tbody>
                 <tbody><tr>
-                <td>base-stamina</td>
-                <td>${element.baseStamina}</td></tr></tbody>
-	            	<tbody><tr>
-                <td>max-cp</td>
-                <td>${element.maxCp}</td></tr></tbody>
-		            <tbody><tr>
-                <td>max-hp</td>
-                <td>${element.maxHp}</td></tr></tbody>
+                ${evolucionNext()}</tr></tbody>
+                
                 </table>
               </div>
             </div>
@@ -199,13 +262,13 @@ function mostrarCard(array) {
       }
     });
   } else {
-    lista.innerHTML = "<h1>No se han encontrado pokemones</h1>";
+    dashboard.innerHTML = "<h1>No se han encontrado pokemones</h1>";
   }
 } 
 
-/* VALORES ADICIONALES */
+/* ANOTHER VALUES */
 
-  const ValoresAdicionales = (a) => {
+  const anotherValues = (a) => {
   let array = [];
   a.forEach(function(elemento){
     
@@ -226,81 +289,45 @@ function mostrarCard(array) {
 };
   
 
-/* FILTRO TIPO DE POKEMON */  
+/* FILTER BY TYPE POKEMON */  
 
-const botones = document.querySelectorAll(".fa");
-const elegir = (evento) => {
-  lista.innerHTML = "";
-  let a = funciones.FilterData(newData, evento.target.id);
+const buttons = document.querySelectorAll(".fa");
+const choose = (event) => {
+  dashboard.innerHTML = "";
+  let a = funciones.FilterData(newData, event.target.id);
   mostrarCard(a)
-  ValoresAdicionales(a)
+  anotherValues(a)
   orderData(a)
 };
-botones.forEach((boton) => {
-  boton.addEventListener("click", elegir);
+buttons.forEach((button) => {
+  button.addEventListener("click", choose);
 });
  
-/* ORDEN A-Z */
+/* ORDER BY A-Z /Z-A/+CP/-CP */
 const orderData = (data) => {
-const ordera = document.querySelector("#selecta");
-ordera.addEventListener("change", (event) => {
-  lista.innerHTML = "";
+const choose = document.querySelector("#selecta");
+choose.addEventListener("change", (event) => {
+  dashboard.innerHTML = "";
   let valor = event.target.value;
   let a = funciones.sortData(data, valor);
   mostrarCard(a)
-  ValoresAdicionales(a)
+  anotherValues(a)
 })};
 
 
 /* BUSQUEDA POR TEXTO */
 const text = document.querySelector("#text");
-const filtrar = () => {
-  lista.innerHTML = "";
-  const valorTexto = text.value.toLowerCase();
-  let a = funciones.BuscarTexto(newData, valorTexto);
+const FilterDat = () => {
+  dashboard.innerHTML = "";
+  const TextValue = text.value.toLowerCase();
+  let a = funciones.FindTxt(newData, TextValue);
   mostrarCard(a);
-  ValoresAdicionales(a)
+  anotherValues(a)
   orderData(a)
 };
-text.addEventListener("keyup", filtrar);
-filtrar()
+text.addEventListener("keyup", FilterDat);
+FilterDat()
 ; 
-
-/* Ingresar a la segunda pantalla */
-const entrar = document.getElementById("entrar");
-
-entrar.addEventListener("click", () => {
-  document.getElementById("firstscreen").classList.add("hide");
-  document.getElementById("firstscreen").classList.remove("display");
-  document.getElementById("secondscreen").classList.add("display");
-  document.getElementById("secondscreen").classList.remove("hide");
-  document.body.style.background = "#fff";
-}); 
-
-/* Menú desplegable */
-
-const menu = document.getElementById("menu");
-menu.addEventListener("click", function press2() {
-  let siteNav = document.getElementById("site-nav");
-  siteNav.classList.toggle("site-nav-open");
-  menu.classList.toggle("menu-open");
-}); 
-
-//Audio de Pokemon
-const audio = document.getElementById("audio");
-const playPauseBTN = document.getElementById("playPauseBTN");
-let count = 0;
-playPauseBTN.addEventListener("click", function playPause() {
-  if (count == 0) {
-    count = 1;
-    audio.play();
-    playPauseBTN.innerHTML = "Pause &#9208;";
-  } else {
-    count = 0;
-    audio.pause();
-    playPauseBTN.innerHTML = "Play &#9658;";
-  }
-}); 
 
 /* GRAFICO RADIAL */
 /* var marksCanvas = document.getElementById("marksChart");
