@@ -24,7 +24,12 @@
     align-items: center;
     display: flex;
     height: 120px;
-  }
+    height: fit-content;
+    margin: 10px auto;
+    position: sticky;
+    top:0;
+    z-index: 999;
+    border-bottom: groove;}
  
   
 .mainContainer {
@@ -356,7 +361,7 @@ img {
   margin-top: -18px;
 }
 .product-list{
-  margin-top: 40px;
+  margin-top: 90px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -369,6 +374,7 @@ img {
   background: rgb(21 10 41 / 62%);
   border-radius: 13px;
   height: 700px;
+
 }
 figure{
   height: 190px;
@@ -656,15 +662,20 @@ nav ul li a{
   margin-left: 100px;
   background: red;}
 
-footer {
+.arroba {
+  background: #232027;
+  color: #faf4f4;
+  position: absolute;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #150a29;
-  color: white;
   text-align: space;
   align-content: end;
   display: flex;
+  
 }
 
 .right {
@@ -1098,4 +1109,22 @@ img.icon-small{
 .flex-wrap2{
   display: flex; 
   margin-top: 13px;
+}
+/* top10 */
+.chance{
+  align-items: flex-end;
+}
+.footerModal {
+  position: absolute;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #150a29;
+  color: white;
+  text-align: space;
+  align-content: end;
+  display: flex;
 }

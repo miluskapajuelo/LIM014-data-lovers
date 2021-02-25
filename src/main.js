@@ -23,8 +23,6 @@ enter.addEventListener("click", () => {
 }); 
 
 
-
-
 /* MENU DROPDOWN */
 
 const menu = document.getElementById("menu");
@@ -73,6 +71,17 @@ function getPrevEvol(evol){
 
 /* FUNCTION TO CREATE ELEMENTS IN DASHBOARD */
 
+       /* FILTER BY TOP 10 */  
+
+       const top = document.getElementById("top");
+       top.addEventListener("click",function(){
+         dashboard.innerHTML = "";
+         let a = funciones.top(newData)
+         mostrarCard(a)
+         anotherValues(a)
+         orderData(a)
+       });
+
 function mostrarCard(array) {
   if (array.length !== 0) {
     array.forEach(function (element) {
@@ -94,6 +103,8 @@ function mostrarCard(array) {
       figura.appendChild(divPokemon);
       divPokemon.appendChild(description);
       
+
+
       /* POKEMON EVOLUTION (NEXT-PREV) */
       /* NEXT EVOLUTION */
       let next;
@@ -127,6 +138,9 @@ function mostrarCard(array) {
           return result
     }
   }
+
+ 
+
   /* TABLE RESISTANT */
   
   function resistant(){
@@ -245,6 +259,8 @@ function mostrarCard(array) {
                 </table>
               </div>
             </div>
+            <footer class="footerModal"> <p class="chance">Spawn Chance: ${element.spawnChance}</p>
+            </footer>
             <div>
             <a href="#" title="Close" class="modal-close">Close</a>
             </div>
@@ -301,6 +317,8 @@ const choose = (event) => {
 buttons.forEach((button) => {
   button.addEventListener("click", choose);
 });
+
+
  
 /* ORDER BY A-Z /Z-A/+CP/-CP */
 const orderData = (data) => {
