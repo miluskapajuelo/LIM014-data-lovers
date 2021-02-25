@@ -37,7 +37,7 @@ The power that's inside<br>(The power inside)
         <form class="form">         
           <!-- <input class="text" type="text" placeholder="Write your name">  -->
 
-          <input type="text">
+          <input id="textUser"  type="text">
           <label class= "lbl-name">
               <span class="text-nomb">
                 Write your name
@@ -46,7 +46,7 @@ The power that's inside<br>(The power inside)
         </form>
 
         <div>
-          <input type="button" class="btn"  name="entrar" value="ENTER" id="entrar">
+          <input type="button" class="btn"  name="enter" value="ENTER" id="enter">
 
           <a href="#" class="btn-neon">
           <span id="span1"></span>
@@ -55,8 +55,7 @@ The power that's inside<br>(The power inside)
           <span id="span4"></span>
           +INFO
            </a>
-
-        </div>
+           </div>
       </section>
 
     </main>
@@ -88,7 +87,7 @@ The power that's inside<br>(The power inside)
       <input type="text" class="text1" id="text" placeholder="Search Pokemon"> 
       <img class="icon" alt="lupa" src="./img/lupa.svg"> 
     </div>
-      <h2 class="te1 jugar" >Welcolme Pamela</h2>
+      <h2 class="te1 jugar" id="UserName"></h2>
   <!--     <input type="button" id="pruebaRadial" value="radial">
       <canvas id="marksChart" width="600" height="400"></canvas> -->
     </header>
@@ -147,11 +146,11 @@ The power that's inside<br>(The power inside)
     <div class="portada2">
       <div class="portadaCen">
     <select id="selecta" class="dropdown1">
-      <option class="selectora" value="0" selected>ORDER BY:</option>
+      <option  selected>ORDER BY:</option>
       <option class="selectora" value="Ascendente" >A/Z</option>
       <option class="selectora" value="Descendente">Z/A</option>
-      <option class="selectora" value="Debilidad">Weeknesses</option>
-      <option class="selectora" value="Resistencia">Resistant</option>
+      <option class="selectora" value="+CombatPower">+CombatPower</option>
+      <option class="selectora" value="-CombatPower">-CombatPower</option>
     </select>
   </div>
 </div>
