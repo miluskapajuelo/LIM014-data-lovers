@@ -113,11 +113,11 @@ function mostrarCard(array) {
           let result = "";
           if(element.evolutionNext){
             next = getNextEvol(element.evolutionNext);
-            next.forEach(elemento => result += `
+            next.forEach(elemento => result += `<tr class= "tablePa">
           <td>Next-Evolution</td>
           <td>${elemento.name}</td>
           <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
-          <td>${elemento["candy-cost"]}</td>`)
+          <td>${elemento["candy-cost"]}</td></tr>`)
             }
             return result
       }
@@ -129,11 +129,11 @@ function mostrarCard(array) {
         let result = "";
         if(element.evolutionPrev){
           prev = getPrevEvol(element.evolutionPrev);
-          prev.forEach(elemento => result += `
+          prev.forEach(elemento => result += `<tr class= "tablePa">
         <td>Pre-Evolution</td>
         <td>${elemento.name}</td>
         <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
-        <td>${elemento["candy-cost"]}</td>`)
+        <td>${elemento["candy-cost"]}</td></tr>`)
           }
           return result
     }
@@ -244,17 +244,17 @@ function mostrarCard(array) {
                 <td>Me</td>
                 <td>Candy-Cost</td>
                 </tr></tbody>
-                <tbody><tr>
+                <tbody>
                 ${evolucionPre()}
-                </tr></tbody>
+                </tbody>
                 <tbody><tr>
                 <td>Now</td>
                 <td>${element.name}</td>
                 <td><img id="pokemon-evolucion" src="${element.img}"></td>
                 <td></td>
                 </tr></tbody>
-                <tbody><tr>
-                ${evolucionNext()}</tr></tbody>
+                <tbody>
+                ${evolucionNext()}</tbody>
                 
                 </table>
               </div>
