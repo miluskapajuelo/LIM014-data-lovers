@@ -187,23 +187,17 @@ function mostrarCard(array) {
   }
 } 
 
-/* FILTRO TIPO DE POKEMON */  
+let datosAdicionales = (a) => a.map(element => {
 
-const botones = document.querySelectorAll(".fa");
-const elegir = (evento) => {
-  lista.innerHTML = "";
-  let a = funciones.FilterData(newData, evento.target.id);
+ let maxCp = parseInt(element.maxCp)
 
-  mostrarCard(a)
-  let array = [];
-  a.forEach(function(elemento){
-    
-  array.push(parseInt(elemento.maxCp))
-})
-  let sum = array.reduce((a, b) => a + b, 0);
-  let avg = sum / array.length;
-  let max = Math.max(...array);
-  let min = Math.min(...array);
+  console.log(maxCp)
+
+
+  let sum = maxCp.reduce((a, b) => a + b, 0);
+  let avg = sum / maxCp.length;
+  let max = Math.max(...maxCp);
+  let min = Math.min(...maxCp);
   let average = avg.toFixed(2);
 
   const PMax = document.getElementById("max");
@@ -212,6 +206,18 @@ const elegir = (evento) => {
   PMax.innerHTML = `<p>MAX CP:</p><p>${max}</p>`;
   PMin.innerHTML = `<p>MIN CP:</p><p>${min}</p>`;
   Pavg.innerHTML = `<p>PROM CP:</p><p>${average}</p>`;
+})
+
+
+/* FILTRO TIPO DE POKEMON */  
+
+const botones = document.querySelectorAll(".fa");
+const elegir = (evento) => {
+  lista.innerHTML = "";
+  let a = funciones.FilterData(newData, evento.target.id);
+
+  mostrarCard(a);
+  datosAdicionales(a);
 };
 
 botones.forEach((boton) => {

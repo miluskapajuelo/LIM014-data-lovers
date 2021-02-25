@@ -22,21 +22,43 @@
         <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
     </div>
     <main class="mainContainer">
+      <div class="mainInfo">
       <img src="./img/pantalla.gif" class="gif">
+      
       <p> "I wanna be the very best<br>Like no one ever was<br>To catch them is my real test<br>To train them is my cause<br>
 (Ooh ooh ooh!)<br><br>I will travel across the land<br>Searching far and wide<br>Each pokémon to understand<br>
 The power that's inside<br>(The power inside)
              "</p>
-      <section class="form">
+      </div>
+
+      <section class="formIzquierda">
         <img src="./img/logo.png" class="logo1">
-        <div">
-          <input class="text" type="text" placeholder="Write your name">
-        </div>
+
+        <form class="form">         
+          <!-- <input class="text" type="text" placeholder="Write your name">  -->
+
+          <input type="text" required>
+          <label class= "lbl-name">
+              <span class="text-nomb">
+                Write your name
+              </span>
+          </label>
+        </form>
+
         <div>
           <input type="button" class="btn"  name="entrar" value="ENTER" id="entrar">
-          <input type="button"  class="btn"name="info" value="+INFO" id="info">
+
+          <a href="#" class="btn-neon">
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+          <span id="span4"></span>
+          +INFO
+           </a>
+
         </div>
       </section>
+
     </main>
         <footer class="footer">
         <article class="right">
