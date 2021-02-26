@@ -3,22 +3,19 @@
 ## Índice
 
 * [1. Descripción del producto  digital](#1-descripción-del-producto_digital)
-## Análisis UX
-## HISTORIA DEL USUARIO 1 (H.U.1):
-## HISTORIA DEL USUARIO 2 (H.U.2):
-## HISTORIA DEL USUARIO 3 (H.U.3):
-## HISTORIA DEL USUARIO 4 (H.U.4):
+ - Análisis UX
 * [2. Objetivos de la página](#2-objetivos-de-la-página)
 * [3. Historias de usuario](#3-historias-de-usuario)
+- HISTORIA DEL USUARIO 1 (H.U.1)
+- HISTORIA DEL USUARIO 2 (H.U.2)
+- HISTORIA DEL USUARIO 3 (H.U.3)
+- HISTORIA DEL USUARIO 4 (H.U.4)
 * [4. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Hacker edition](#6-hacker-edition)
 * [7. Consideraciones técnicas](#7-consideraciones-técnicas)
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
 * [9. Checklist](#9-checklist)
-
-
-
 
 ***
 
