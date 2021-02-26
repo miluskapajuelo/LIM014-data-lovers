@@ -21,65 +21,72 @@
           &nbsp;
         <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
     </div>
+
     <main class="mainContainer">
-      <div class="mainInfo">
-      <img src="./img/pantalla.gif" class="gif">
-      
-      <p> "I wanna be the very best<br>Like no one ever was<br>To catch them is my real test<br>To train them is my cause<br>
-(Ooh ooh ooh!)<br><br>I will travel across the land<br>Searching far and wide<br>Each pokémon to understand<br>
-The power that's inside<br>(The power inside)
-             "</p>
-      </div>
-
-      <section class="formIzquierda">
+      <section class="mainLogo">
         <img src="./img/logo.png" class="logo1">
+      </section>
+      <div class="mainInfo">
+        <p class="frase"> 
+          "I wanna be the very best<br>Like no one ever was<br>To catch them is my real test<br>To train them is my cause<br>
+          (Ooh ooh ooh!)<br><br>I will travel across the land<br>Searching far and wide<br>Each pokémon to understand<br>
+          The power that's inside<br>(The power inside)""
+        </p>
 
+ 
         <form class="form">         
-          <!-- <input class="text" type="text" placeholder="Write your name">  -->
-
-          <input id="textUser"  type="text">
+          <input type="text" required>
           <label class= "lbl-name">
               <span class="text-nomb">
-                Write your name
+                Name
               </span>
           </label>
         </form>
 
-        <div>
-          <input type="button" class="btn"  name="enter" value="ENTER" id="enter">
-
+      <div class="botones">
+          <a href="#" class="btn-neonenter">
+            <span id="span1"></span>
+              <span id="span2"></span>
+              <span id="span3"></span>
+              <span id="span4"></span>
+              ENTER
+          </a>
           <a href="#" class="btn-neon">
-          <span id="span1"></span>
-          <span id="span2"></span>
-          <span id="span3"></span>
-          <span id="span4"></span>
-          +INFO
-           </a>
-           </div>
-      </section>
-
+              <span id="span1"></span>
+              <span id="span2"></span>
+              <span id="span3"></span>
+              <span id="span4"></span>
+              +INFO
+          </a>
+      </div>
+      </div>
     </main>
-        <footer class="footer">
-        <article class="right">
+
+      <footer class="footer">
+        <div class="right">
           <p class="arroba" style="vertical-align: inherit" >
           @ 2021 &nbsp| Todos los Derechos Reservados
           </p>
-        </article>
-        <article id="left">
-          <a><img src="./img/shareLogo.webp" id="compartir" class="animated wobble">
+        </div>
+        
+        <div class="left">
+          <a><img src="./img/share.jpg" id="compartir" class="animated wobble">
           </a>
           <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
-            <img src="./img/fbLogo.webp" class="imgRedes" >
+            <img src="./img/fb.png" class="imgRedes" >
           </a>
           <a href="https://twitter.com/pokemongoapp?lang=es" class="nav-link" target="_blank">
-            <img src="./img/twLogo.webp" class="imgRedes">
+            <img src="./img/tw.png" class="imgRedes">
           </a>
           <a href="https://www.instagram.com/pokemongoapp/" class="nav-link" target="_blank">
-            <img src="./img/igLogo.webp" class="imgRedes">
+            <img src="./img/ig.png" class="imgRedes">
           </a>
-        </article>
+        </div>
       </footer>
+
     </section>
+
+
     <section id="secondscreen" class="hide">
     <header class="header">
       <img src="./img/logo.png" class="img">
