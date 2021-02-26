@@ -30,21 +30,45 @@
 /*El main de toda la portada*/
 .mainContainer {
   width: 100%;
+  height: 474px;
   display: flex;
-  align-items: space-between ;
-  flex-direction: row-reverse;
-  height: 630px;
   justify-content: space-between;
-  position: relative;
+  align-items: center;
+
 
 }
+.mainInfo {
+
+  display: block;
+  height: 300px;
+  position: relative;
+  margin-top: 100px;
+  margin-right: 50px;
+}
+.frase {
+  margin-bottom: 30px;
+}
+
+
+/*logo del pokemon*/
+
+.mainLogo{
+  display: flex;
+  align-items: center ;
+  flex-direction: column;
+  height: 250px;
+  justify-content: center;
+  margin: 10px;
+  padding: 50px;
+}
+
 
 /*Inicio de boton neon*/
 .btn-neon{
   position: relative;
   display: inline-block;
   padding: 15px 30px;
-  color: #fff; 
+  color: rgb(30, 4, 71); 
   letter-spacing: 2px;
   font: 24px;
   text-decoration: none;
@@ -53,9 +77,9 @@
 }
 
 .btn-neon:hover{
-  background: #59e209;
-  box-shadow: 0 0 10px #59e209, 0 0 40px
-  #59e209, 0 0 80px #59e209;
+  background: rgb(255, 230, 0);
+  box-shadow: 0 0 10px rgb(255, 230, 0), 0 0 40px
+  rgb(255, 230, 0), 0 0 80px rgb(255, 230, 0);
   transition-delay: 1s;
 }
 
@@ -70,7 +94,7 @@
   width: 100%;
   height: 100%;
   height: 2px;
-  background: linear-gradient(90deg,transparent,#59e209);
+  background: linear-gradient(90deg,transparent,rgb(255, 230, 0));
 }
 
 .btn-neon:hover #span1{
@@ -78,42 +102,150 @@
   transition: 1s;
 }
 
+#span3{
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,rgb(255, 230, 0));
+}
+
+.btn-neon:hover #span3{
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+#span2{
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,rgb(255, 230, 0));
+}
+
+.btn-neon:hover #span2{
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+#span4{
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,rgb(255, 230, 0));
+}
+
+.btn-neon:hover #span2{
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.755s;
+}
 
 /*Fin de boton neon*/
 
+/*Inicio de boton neon enter */
 
-
-
-.formIzquierda{
-  display: flex;
-  align-items: center ;
-  flex-direction: column;
-  height: 630px;
-  justify-content: center;
-  margin: 10px;
-  padding: 50px;
+.btn-neonenter{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: rgb(30, 4, 71); 
+  letter-spacing: 2px;
+  font: 24px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
 }
 
-/*Inicio del input*/
+.btn-neonenter:hover{
+  background: rgb(255, 230, 0);
+  box-shadow: 0 0 10px rgb(255, 230, 0), 0 0 40px
+  rgb(255, 230, 0), 0 0 80px rgb(255, 230, 0);
+  transition-delay: 1s;
+}
+
+.btn-neonenter span{
+  position: absolute;
+  display: block;
+}
+
+#span1{
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,rgb(255, 230, 0));
+}
+
+.btn-neonenter:hover #span1{
+  left: 100%;
+  transition: 1s;
+}
+
+#span3{
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,rgb(255, 230, 0));
+}
+
+.btn-neonenter:hover #span3{
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+#span2{
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,rgb(255, 230, 0));
+}
+
+.btn-neonenter:hover #span2{
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+#span4{
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,rgb(255, 230, 0));
+}
+
+.btn-neonenter:hover #span2{
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.755s;
+}
+
+/*Inicio del input */
 
 .form{
-  margin: 40px;
-  padding: 50px;
-  width: 100%;
-  height: 50px;
+
+  padding: 10px;
   max-width: 400px;
   position: relative;
   overflow: hidden;
 }
 
 .form input{
-  width: 100%;
-  height: 100%;
+ 
   background: none;
-  color: #00cafc;
-  padding-top: 20px;
+  color: #10147d;
   border: none;
-  outline: 0px;
+    outline: 0px;
+    margin-bottom: 10px;
+    margin: 0;
 }
 
 .form .lbl-name{
@@ -123,10 +255,9 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 2px solid #35ce21;
+  border-bottom: 2px solid #fcdd00;
 }
 
-/*ANIMACIÓN */
 .form .lbl-name::after{
   content: '';
   position: absolute;
@@ -159,7 +290,9 @@
   transform: translateX(0%);
 }
 
-/* Fin del input para el nombre*/
+
+
+/*Fin del input para el nombre*/
 
 .input-group {
   display: flex;
@@ -191,7 +324,7 @@
   }
 
 body{
-  background: url(./img/fondo0.png) no-repeat;
+  background: url(./img/fondo0.png) center fixed no-repeat;
   background-attachment: fixed;
   background-size: cover;
   line-height: 1;
@@ -199,6 +332,7 @@ body{
   color: #333;
   width: 100%;
   opacity:inherit;
+  background-position: 	bottom ;
 }
 .gif {
   height: 326.7px;
@@ -442,27 +576,6 @@ figcaption {
 }
 
 
-/*
-.text {
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 50%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  margin-top: 17px;
-  border-color: rgb(11, 170, 143);
-}
-
-.text:hover{
-  border-collapse: collapse;
-  color: rgb(11, 170, 143,0.5);
-  cursor:text;
-}
-*/
-
-
 
 .portada2{
   justify-content:space-around;
@@ -499,7 +612,7 @@ html{
 
  @media(min-width:700px){ 
   body{
-    background: url(./img/fondo0.png);
+    background: url(./img/fondo0.png) center fixed no-repeat;
     background-attachment: fixed;
     background-size: cover;
     line-height: 1;
@@ -634,67 +747,45 @@ nav ul li a{
   margin-left: 140px;
 }
 
-/*
-
-.text {
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 50%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  margin-top: 17px;
-  border-color: rgb(11, 170, 143);
-}
-.text:hover{
-  border-collapse: collapse;
-  color: rgb(11, 170, 143,0.5);
-  cursor:text;
-}
-*/
 
 #btn{
   margin-left: 100px;
   background: red;}
 
+/* Para el footer */
+
 footer {
-  left: 0;
-  bottom: 0;
   width: 100%;
   background-color: #150a29;
-  color: white;
-  text-align: space;
-  align-content: end;
+  color: #fdd008;
   display: flex;
+  justify-content: space-between;
 }
 
-.right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.footer .right {
+ margin-left: 10px;
 }
 
 .right:hover {
-  text-shadow: 0.0625rem 0.0625rem 0.375rem #07cbe9;
+  text-shadow: 0.0625rem 0.0625rem 0.375rem #fdd008;
 }
 
-#left {
-  width: min-content;
-  display: flex;
-  text-align: right;
+.footer .left {
+ margin-right: 10px;
 }
 
-#left a:link,
-#left a img {
-  width: 25px;
-  height: 25px;
+.left a:link,
+.left a img {
+  
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 .imgRedes:hover {
-  border-radius: 50%;
+  border-radius: 0%;
   box-shadow: inset 0 0 1.25rem #feb412, 0 0 1.25rem #feb412;
 }
 
@@ -705,7 +796,11 @@ footer {
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-    .play {
+
+/*Fin del footer */
+
+
+  .play {
   padding: 8px 10px;
   font-size: 13px;
   line-height: 7px;
