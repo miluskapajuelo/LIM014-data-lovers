@@ -20,6 +20,7 @@ const funciones = {
     "evolutionNext": pokemones.evolution["next-evolution"],
     "evolutionPrev": pokemones.evolution["prev-evolution"],
     "especialAttack": pokemones["special-attack"],  
+    "spawnChance" : pokemones["spawn-chance"]
   })),
   /*  FILTRAR POR TIPO POKEMON */
   FilterData: (data, tipo) => data.filter((element) => element.type == tipo),
@@ -57,7 +58,13 @@ const funciones = {
       });
       return data
        
-}}}
+}},
+    top: (data) =>{
+        data.sort((a, b) => {
+          return parseFloat(b.spawnChance) - parseFloat(a.spawnChance)
+        }); 
+        return data.slice(0,10)} 
+}
 export default funciones;
 /* Grafica: function(data1){
     let newArray = [];

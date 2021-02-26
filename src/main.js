@@ -23,8 +23,6 @@ enter.addEventListener("click", () => {
 }); 
 
 
-
-
 /* MENU DROPDOWN */
 
 const menu = document.getElementById("menu");
@@ -73,6 +71,17 @@ function getPrevEvol(evol){
 
 /* FUNCTION TO CREATE ELEMENTS IN DASHBOARD */
 
+       /* FILTER BY TOP 10 */  
+
+       const top = document.getElementById("top");
+       top.addEventListener("click",function(){
+         dashboard.innerHTML = "";
+         let a = funciones.top(newData)
+         mostrarCard(a)
+         anotherValues(a)
+         orderData(a)
+       });
+
 function mostrarCard(array) {
   if (array.length !== 0) {
     array.forEach(function (element) {
@@ -94,6 +103,8 @@ function mostrarCard(array) {
       figura.appendChild(divPokemon);
       divPokemon.appendChild(description);
       
+
+
       /* POKEMON EVOLUTION (NEXT-PREV) */
       /* NEXT EVOLUTION */
       let next;
@@ -102,11 +113,11 @@ function mostrarCard(array) {
           let result = "";
           if(element.evolutionNext){
             next = getNextEvol(element.evolutionNext);
-            next.forEach(elemento => result += `
+            next.forEach(elemento => result += `<tr class= "tablePa">
           <td>Next-Evolution</td>
           <td>${elemento.name}</td>
           <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
-          <td>${elemento["candy-cost"]}</td>`)
+          <td>${elemento["candy-cost"]}</td></tr>`)
             }
             return result
       }
@@ -118,15 +129,18 @@ function mostrarCard(array) {
         let result = "";
         if(element.evolutionPrev){
           prev = getPrevEvol(element.evolutionPrev);
-          prev.forEach(elemento => result += `
+          prev.forEach(elemento => result += `<tr class= "tablePa">
         <td>Pre-Evolution</td>
         <td>${elemento.name}</td>
         <td><img id="pokemon-evolucion" src="https://www.serebii.net/pokemongo/pokemon/${elemento.num}.png"></td>
-        <td>${elemento["candy-cost"]}</td>`)
+        <td>${elemento["candy-cost"]}</td></tr>`)
           }
           return result
     }
   }
+
+ 
+
   /* TABLE RESISTANT */
   
   function resistant(){
@@ -230,21 +244,23 @@ function mostrarCard(array) {
                 <td>Me</td>
                 <td>Candy-Cost</td>
                 </tr></tbody>
-                <tbody><tr>
+                <tbody>
                 ${evolucionPre()}
-                </tr></tbody>
+                </tbody>
                 <tbody><tr>
                 <td>Now</td>
                 <td>${element.name}</td>
                 <td><img id="pokemon-evolucion" src="${element.img}"></td>
                 <td></td>
                 </tr></tbody>
-                <tbody><tr>
-                ${evolucionNext()}</tr></tbody>
+                <tbody>
+                ${evolucionNext()}</tbody>
                 
                 </table>
               </div>
             </div>
+            <footer class="footerModal"> <p class="chance">Spawn Chance: ${element.spawnChance}</p>
+            </footer>
             <div>
             <a href="#" title="Close" class="modal-close">Close</a>
             </div>
@@ -301,6 +317,8 @@ const choose = (event) => {
 buttons.forEach((button) => {
   button.addEventListener("click", choose);
 });
+
+
  
 /* ORDER BY A-Z /Z-A/+CP/-CP */
 const orderData = (data) => {
