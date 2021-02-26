@@ -1,7 +1,7 @@
-import {BuscarTexto} from '../src/data.js';
+import {} from '../src/data.js';
 
 /* BUSCAR POKEMONES */
-describe('example', () => {
+/* describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
@@ -20,4 +20,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+}); */
