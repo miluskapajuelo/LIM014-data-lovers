@@ -1,23 +1,48 @@
-import {BuscarTexto} from '../src/data.js';
+import {} from '../src/data.js';
 
 /* BUSCAR POKEMONES */
-describe('example', () => {
+/* describe('funciones', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof example).toBe('object');
+  });
+ 
+
+describe('funciones.FilterData', () => {
+  it('is a function', () => {
+    expect(typeof funciones.FilterData(data, valorTexto)).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `It should return "grass"`', () => {
+    expect(funciones.FilterData([{
+      "num": "001",
+      "name": "bulbasaur",
+      "generation": {
+        "num": "generation i",
+        "name": "kanto"
+      },
+      "pokemon-rarity": "normal",
+      "type": [
+        "grass",
+    ]}],"grass")).toBe('true');
   });
 });
 
-
-describe('anotherExample', () => {
+describe('funciones.sortData', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof funciones.sortData(data, sortOrder)).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `It should return "grass"`', () => {
+    expect(funciones.FilterData([{
+      "num": "001",
+      "name": "bulbasaur",
+      "generation": {
+        "num": "generation i",
+        "name": "kanto"
+      },
+      "pokemon-rarity": "normal",
+      "type": [
+        "grass",
+    ]}])).toBe('grass');
   });
-});
+});  */
