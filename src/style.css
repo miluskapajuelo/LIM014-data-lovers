@@ -539,12 +539,13 @@ html{
     min-width: 54px;
     text-align: center;
     cursor: pointer;
-    background: linear-gradient(to right bottom, #739c5c, transparent);
+    background: linear-gradient(to right bottom, #232027, rgb(2 129 8));
     color: #fff;
     border-radius: 5px;
     border: 0px;
     height: 30px;
     margin-top: 13px;
+    margin-right: 14px;
   }
 /* footer */
   
