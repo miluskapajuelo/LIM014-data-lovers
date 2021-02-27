@@ -14,7 +14,7 @@
   <section id="firstscreen" class="display" >
     <div class="audio">
       <audio id="audio2">
-        <source=".img/music.mp3" type="audio/mp3">
+        <source=".img/music.mp3" id="audio" type="audio/mp3">
         </audio>
       <button id="playPauseBTN" class="play"> Play &#9658; </button>
           &nbsp;
@@ -23,24 +23,16 @@
     </div>
 
     <main class="mainContainer">
-      <p class="frase"> 
-        "I wanna be the very best like no one ever was to catch them is my real test<br>To train them is my cause
-        (Ooh ooh ooh!) .I will travel across the land<br>Searching far and wide each pokémon to understand
-        The power that's inside<br>(The power inside)""
-      </p>
       <section class="mainLogo">
         <img src="./img/logo.png" class="logo1">
       </section>
       <div class="mainInfo">
         
-        <form class="form">         
-          <input id="textUser" type="text" required>
-          <label class= "lbl-name">
-              <span class="text-nomb">
-                Name
-              </span>
-          </label>
-        </form>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Name" name="name" id="textUser"  required />
+          <label for="name" class="form__label">Name</label>
+        </div>
+
       <br>
       <br>
       <div class="botones" id="enter">
@@ -63,13 +55,13 @@
     </main>
         <footer class="arroba">
         <div class="right">
-          <p class="arroba" style="vertical-align: inherit" >
+          <p  style="vertical-align: inherit" >
           @ 2021 &nbsp| Todos los Derechos Reservados
           </p>
         </div>
         
         <div class="left">
-          <a><img src="./img/share.jpg" id="compartir" class="animated wobble">
+          <a><img src="./img/share.png" id="compartir" class="animated wobble">
           </a>
           <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
             <img src="./img/fb.png" class="imgRedes" >
@@ -163,9 +155,9 @@
   </div>
 </div>
   <div id="DatosExt">
-    <p id="avg" class="pepo"></p>
-    <p id="min" class="pepo"></p>
-    <p id="max" class="pepo"></p>
+    <p id="avg" class="AdItem"></p>
+    <p id="min" class="AdItem"></p>
+    <p id="max" class="AdItem"></p>
    
     
   </div>
@@ -190,7 +182,7 @@
 </div>
  
   
-  <footer class="arroba1">
+  <footer class="arroba">
     @ 2021 &nbsp| Todos los Derechos Reservados
   </footer>
 </section>
