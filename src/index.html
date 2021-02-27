@@ -13,24 +13,18 @@
   
   <section id="firstscreen" class="display" >
     <div class="audio">
-      <audio id="audio2">
-        <source=".img/music.mp3" id="audio" type="audio/mp3">
-        </audio>
-      <button id="playPauseBTN" class="play"> Play &#9658; </button>
+      <audio id="audio2" src="./img/music.mp3" type="audio/mp3"></audio>
+      <button id="playPauseBTN" class="play"> Play Song &#9658; </button>
           &nbsp;
           &nbsp;
-        <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
     </div>
 
     <main class="mainContainer">
       <section class="mainLogo">
-        <img src="./img/logo.png" class="logo1">
+        <img src="./img/logo.png " class="logo1">
       </section>
       <div class="mainInfo">
-        <p class="apertura" style="vertical-align: inherit"> "Bienvenido entrenador Pokemon"</p>
-
-
-
+        
         <div class="form__group field">
           <input type="input" class="form__field" placeholder="Name" name="name" id="textUser"  required />
           <label for="name" class="form__label">Name</label>
@@ -39,12 +33,20 @@
       <br>
       <br>
       <div class="botones" id="enter">
-          <a href="#" class="btn-neon">
-            <span id="span1"></span>
-              <span id="span2"></span>
-              <span id="span3"></span>
-              <span id="span4"></span>
+          <a  class="btn-neon">
+            <span class="span1"></span>
+              <span class="span2"></span>
+              <span class="span3"></span>
+              <span class="span4"></span>
               ENTER
+          </a>
+          <a href="https://www.pokemon.com/el/jcc-pokemon/jugar-en-linea/" class="btn-neon">
+              <span class="span1"></span>
+              <span class="span2"></span>
+              <span class="span3"></span>
+              <span class="span4"></span>
+              +INFO
+          </a>
       </div>
       </div>
     </main>
@@ -70,7 +72,7 @@
         </div>
       </footer>
 
-    </section>
+  </section>
 
 
     <section id="secondscreen" class="hide">
@@ -84,6 +86,7 @@
   <!--     <input type="button" id="pruebaRadial" value="radial">
       <canvas id="marksChart" width="600" height="400"></canvas> -->
     </header>
+    <body>
         <div class="labels-sort flex space-around">
           <nav id="site-nav" class="site-nav" name="formulario1">
             <ul class="site-nav2"> 
@@ -168,22 +171,16 @@
  </div>
 <div id="body-Modal">
 <div id="modal-mode" class="hide">     
-  
   <div id="modal-window" class="hide">
-  
-         
-
         </div>
 </div>
- 
-  
+</div> 
+</body>
   <footer class="arroba">
     @ 2021 &nbsp| Todos los Derechos Reservados
   </footer>
 </section>
 <script type="module" src="main.js"></script>
 <script type="module" src="data.js"></script>
-
-
-</body>
+   
 </html>

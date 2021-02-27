@@ -76,8 +76,6 @@ export default funciones;
         maxCp: pokemones.stats["max-cp"],
         maxHp: pokemones.stats["max-hp"],
       });})
-
-
       let chart = new Chart(ctx, {
         type: 'radar',
         data: {
@@ -98,6 +96,4 @@ export default funciones;
           
       })
       return chart}
-
        */
-    
