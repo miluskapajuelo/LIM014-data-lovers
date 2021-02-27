@@ -33,7 +33,7 @@ menu.addEventListener("click", function press2() {
 }); 
 
 /* AUDIO POKEMON SONG */
-const audio = document.getElementById("audio");
+const audio = document.getElementById("audio2");
 const playPauseBTN = document.getElementById("playPauseBTN");
 let count = 0;
 playPauseBTN.addEventListener("click", function playPause() {
@@ -348,7 +348,6 @@ FilterDat()
 
 /* GRAFICO RADIAL */
 /* var marksCanvas = document.getElementById("marksChart");
-
 var marksData = {
   labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
   datasets: [{
@@ -361,10 +360,8 @@ var marksData = {
     data: [54, 65, 60, 70, 70, 75]
   }]
 };
-
 var radarChart = new Chart(marksCanvas, {
   type: 'radar',
   data: marksData
 }); 
-
 return radarChart */

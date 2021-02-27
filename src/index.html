@@ -13,63 +13,45 @@
   
   <section id="firstscreen" class="display" >
     <div class="audio">
-      <audio id="audio2">
-        <source=".img/music.mp3" type="audio/mp3">
-        </audio>
-      <button id="playPauseBTN" class="play"> Play &#9658; </button>
+      <audio id="audio2" src="./img/music.mp3" type="audio/mp3"></audio>
+      <button id="playPauseBTN" class="play"> Play Song &#9658; </button>
           &nbsp;
           &nbsp;
-        <button id="playPauseBTN2" class="play"> Stop &#9611; </button>
     </div>
 
     <main class="mainContainer">
-      <p class="frase"> 
-        "I wanna be the very best like no one ever was to catch them is my real test<br>To train them is my cause
-        (Ooh ooh ooh!) .I will travel across the land<br>Searching far and wide each pokémon to understand
-        The power that's inside<br>(The power inside)""
-      </p>
       <section class="mainLogo">
-        <img src="./img/logo.png" class="logo1">
+        <img src="./img/logo.png " class="logo1">
       </section>
       <div class="mainInfo">
-        
-        <form class="form">         
-          <input id="textUser" type="text" required>
-          <label class= "lbl-name">
-              <span class="text-nomb">
-                Name
-              </span>
-          </label>
-        </form>
+        <p style="vertical-align: inherit" class="apertura" >BIENVENIDO MAESTRO POKEMON</p>
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Name" name="name" id="textUser"  required />
+          <label for="name" class="form__label">Name</label>
+        </div>
+
       <br>
       <br>
       <div class="botones" id="enter">
-          <a href="#" class="btn-neon">
-            <span id="span1"></span>
-              <span id="span2"></span>
-              <span id="span3"></span>
-              <span id="span4"></span>
+          <a  class="btn-neon">
+            <span class="span1"></span>
+              <span class="span2"></span>
+              <span class="span3"></span>
+              <span class="span4"></span>
               ENTER
-          </a>
-          <a href="#" class="btn-neon">
-              <span id="span1"></span>
-              <span id="span2"></span>
-              <span id="span3"></span>
-              <span id="span4"></span>
-              +INFO
           </a>
       </div>
       </div>
     </main>
         <footer class="arroba">
         <div class="right">
-          <p class="arroba" style="vertical-align: inherit" >
+          <p  style="vertical-align: inherit" >
           @ 2021 &nbsp| Todos los Derechos Reservados
           </p>
         </div>
         
         <div class="left">
-          <a><img src="./img/share.jpg" id="compartir" class="animated wobble">
+          <a><img src="./img/share.png" id="compartir" class="animated wobble">
           </a>
           <a href="https://www.facebook.com/PokemonGO/" class="nav-link" target="_blank">
             <img src="./img/fb.png" class="imgRedes" >
@@ -83,7 +65,7 @@
         </div>
       </footer>
 
-    </section>
+  </section>
 
 
     <section id="secondscreen" class="hide">
@@ -97,6 +79,7 @@
   <!--     <input type="button" id="pruebaRadial" value="radial">
       <canvas id="marksChart" width="600" height="400"></canvas> -->
     </header>
+    <body>
         <div class="labels-sort flex space-around">
           <nav id="site-nav" class="site-nav" name="formulario1">
             <ul class="site-nav2"> 
@@ -163,9 +146,9 @@
   </div>
 </div>
   <div id="DatosExt">
-    <p id="avg" class="pepo"></p>
-    <p id="min" class="pepo"></p>
-    <p id="max" class="pepo"></p>
+    <p id="avg" class="AdItem"></p>
+    <p id="min" class="AdItem"></p>
+    <p id="max" class="AdItem"></p>
    
     
   </div>
@@ -181,22 +164,16 @@
  </div>
 <div id="body-Modal">
 <div id="modal-mode" class="hide">     
-  
   <div id="modal-window" class="hide">
-  
-         Holaaaaaaaaaaaaaaa
-
         </div>
 </div>
- 
-  
-  <footer class="arroba1">
+</div> 
+</body>
+  <footer class="arroba">
     @ 2021 &nbsp| Todos los Derechos Reservados
   </footer>
 </section>
 <script type="module" src="main.js"></script>
 <script type="module" src="data.js"></script>
-
-
-</body>
+   
 </html>
