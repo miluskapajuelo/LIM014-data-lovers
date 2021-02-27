@@ -1,8 +1,6 @@
 import {funciones} from '../src/data.js';
 
 /* BUSCAR POKEMONES */
-/*  */
-
   describe('funciones', () => {
 
     // Prueba 1 : ¿Es función?

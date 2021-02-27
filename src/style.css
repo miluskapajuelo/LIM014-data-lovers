@@ -57,10 +57,10 @@
   font-family: inherit;
  /*  width: 100%; */
   border: 0;
-  border-bottom: 2px solid #232027;
+  border-bottom: 2px solid #fdd008;
   outline: 0;
   font-size: 1.3rem;
-  color:rgb(30, 4, 71);
+  color:#fdd008;
   font-weight: bold;
   padding: 7px 0;
   background: transparent;
@@ -84,7 +84,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: #232027;
+  color: #fdd008;
 }
 
 .form__field:focus 
@@ -130,6 +130,7 @@
   overflow: hidden;
   transition: 0.2s;
   cursor: pointer;
+  background: #feb412
 }
 
 .btn-neon:hover{
@@ -621,7 +622,57 @@ html{
 .mainInfo {
   margin-top: 200px;}
 
+.left-stat{
+  flex-direction: column;
+  }
+  #modal-window{
+    background: white;
+    position: relative;
+    top: 20%;
+    width: 60%;
+    height: 67%;
+    border-radius: 15px;
+    margin: auto;
+    z-index: 1;
+    overflow-y: scroll
+   }
+   .box1 {
+    margin-top: 16px;}
+
+    .footerModal {
+      position: absolute;
+      height: 30px;
+      justify-content: flex-end;
+      align-items: center;
+      left: 0;
+      width: 100%;
+      color: rgb(38 126 50);
+      text-align: space;
+      align-content: end;
+      display: flex;
+      border-radius: 10px;
+      }
+
  @media(min-width:700px){ 
+  .left-stat{
+    display: flex;
+    text-align-last: auto;
+    MARGIN: auto;
+    flex-direction: row;
+  }
+  .footerModal {
+    background-color: #150a29;
+    margin-left: 1px;;
+    color: white;
+    bottom: 0;
+    justify-content: center;
+    }
+ 
+#modal-window{
+  overflow-y: unset;
+ }
+ .box1 {
+  width: 60%;}
   body{
     background-position: center
   }
@@ -632,10 +683,25 @@ html{
     flex-direction: row;
     justify-content: space-around;
     }
+  
+.form__field {
+  border-bottom: 2px solid  rgb(30, 4, 71);
+  color:rgb(30, 4, 71);
+  }
+
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: rgb(30, 4, 71);
+}
 
   h2{
     font-size:27px;;
-    color: rgb(255, 230, 0);
+    color: #fdd008;
   }
   .portada2{
     justify-content:flex-end;
@@ -834,18 +900,9 @@ nav ul li a{
   align-content: center; 
   height: 100%;
   margin: auto;
+  
 }
 
-#modal-window{
-  background: white;
-  position: relative;
-  top: 20%;
-  width: 60%;
-  height: 67%;
-  border-radius: 15px;
-  margin: auto;
-  z-index: 1;
- }
 
  #div-img-modal{
   z-index: 0;
@@ -947,7 +1004,7 @@ nav ul li a{
 
 
 .f-medium{
-  font-size: 1.5em;;
+  font-size: 2.5em;;
 }
 
 .font-g{
@@ -1077,12 +1134,7 @@ font-weight: bold;
   width: 50px;
   height: 50px;
 }
-.left-stat{
-  display: flex;
-  text-align-last: auto;
-  MARGIN: auto;
 
-}
 .containerTable{
   display: flex;
   flex-direction: column;
@@ -1114,9 +1166,7 @@ font-weight: bold;
       display: flex;
       flex-wrap: wrap;
 }
-.box1 {
-  width: 60%;
-  margin-top: 16px;}
+
 
 .titulo{
   margin-bottom: 7px;
@@ -1134,17 +1184,3 @@ font-weight: bold;
 .chance{
   align-items: flex-end;
 }
-.footerModal {
-  position: absolute;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #150a29;
-  color: white;
-  text-align: space;
-  align-content: end;
-  display: flex;
-  }
