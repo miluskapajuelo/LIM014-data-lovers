@@ -33,7 +33,7 @@ menu.addEventListener("click", function press2() {
 }); 
 
 /* AUDIO POKEMON SONG */
-const audio = document.getElementById("audio");
+const audio = document.getElementById("audio2");
 const playPauseBTN = document.getElementById("playPauseBTN");
 let count = 0;
 playPauseBTN.addEventListener("click", function playPause() {

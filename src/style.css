@@ -40,7 +40,8 @@
   display: flex;
   align-items: center;
   position: relative;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
@@ -128,6 +129,7 @@
   text-decoration: none;
   overflow: hidden;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .btn-neon:hover{
@@ -302,7 +304,7 @@ display: flex;
   }
 
 .hola{
-  color: rgb(30, 4, 71,0.5);
+  color: white;
   display: block;
   padding: 2em 7em;
   text-transform: uppercase;
@@ -313,7 +315,7 @@ display: flex;
 } 
 
 .tipo li a:hover{
-  background: rgb(245, 152, 12,0.5);
+  background: white;
   color: rgb(30, 4, 71);
   z-index: 300;
 }
@@ -328,7 +330,7 @@ display: flex;
   z-index: 300;
 }
 .fa{
-  color: rgb(245, 152, 12,0.5);
+  color:white;
   background: rgb(30, 4, 71);
   display: block;
   padding: 2em 6em;
@@ -515,7 +517,10 @@ html{
 .portadaCen{
   margin-right:260px ;
   position: absolute;
-    margin-top: 190px;
+  margin-top: 190px;
+  display: flex;
+  justify-content: flex-end;     
+  width: 400px;
 }
 
 /* audio pokemon */
@@ -592,11 +597,41 @@ html{
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
+#DatosExt{
+  flex-direction: row;
+  position: absolute;
+  align-content: center;
+  background: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.AdItem{
+  margin: 5px;
+  color: white;
+  background-color: #150a29;
+
+  padding: 12px 8px 12px 8px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+
+}
+.mainInfo {
+  margin-top: 200px;}
 
  @media(min-width:700px){ 
   body{
     background-position: center
   }
+  /* pantalla principal */
+  .mainInfo {
+    margin-top: 0px;}
+  .mainContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    }
 
   h2{
     font-size:27px;;
@@ -610,6 +645,22 @@ html{
     padding: 1em 0;
     float: right;
       }
+
+  /* botones muestran datos estadisticos */
+  #DatosExt{
+    flex-direction: column;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;}
+
+
+.portadaCen{
+display: block;
+  
+}
+
 .dropdown2{
   margin-right: 320px
 }
@@ -724,10 +775,6 @@ nav ul li a{
   margin-left: 140px;
 }
 
-
-#btn{
-  margin-left: 100px;
-  background: red;}
 
 .btn {
   padding: 10px 20px;
@@ -1010,30 +1057,14 @@ img.icon-small{
 }
 
 /* botones muestran datos estadisticos */
-#DatosExt{
-  flex-direction: column;
-    width: 100%;
-    position: absolute;
-    align-content: center;
-    background: white;
-    height: 70px;
-    display: flex;
-    align-items: flex-end;
-}
-.AdItem{
-  margin: 5px;
-  color: white;
-  background-color: #150a29;
-  border-radius: 8px;
-  width: 8%;
-  padding: 12px 1px 12px 8px;
-  font-size: 13px;
-  font-weight: bold;
-  margin-right: 20px;
-  text-align: center;
- 
-}
 
+
+.AdItem{
+font-weight: bold;
+    text-align: center;
+    /* width: 10px; */
+    width: 90px;
+}
 /* otros */
 
 .relleno{
