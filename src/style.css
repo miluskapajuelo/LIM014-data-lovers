@@ -751,7 +751,7 @@ nav ul li a{
 
 .counter{
   color: #333;
-} 
+} }
 
 /*Pantalla Modal*/
 
@@ -1034,8 +1034,6 @@ img.icon-small{
  
 }
 
-
-
 /* otros */
 
 .relleno{
@@ -1118,4 +1116,4 @@ img.icon-small{
   text-align: space;
   align-content: end;
   display: flex;
-}
+  }
