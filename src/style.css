@@ -46,6 +46,7 @@ header{
   font-weight: bolder;
   margin-bottom: 100px;
   font-size: 18px;
+  color:#fdd008 ;
 }
 .apertura:hover {
   text-shadow: 0.0625rem 0.0625rem 0.375rem #fdd008;
@@ -653,6 +654,10 @@ color: #35ce21;
       }
 
  @media(min-width:700px){ 
+  .apertura {
+    text-shadow: 0.0625rem 0.0625rem 0.375rem #fdd008;
+    color:#150a29 ;
+  }
   .flex-wrap2{
     display: flex; 
     margin-top: 13px;}
