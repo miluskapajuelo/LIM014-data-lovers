@@ -12,10 +12,21 @@ import {funciones} from '../src/data.js';
 });
   // Prueba 1 : ¿Es función?
 describe('funciones.FilterData', () => {
-  // Prueba 1 : ¿Es función?
+
+// Prueba 1 : ¿Es función?
   it('is a function', () => {
     expect(typeof funciones.FilterData).toBe('function');
   });
+
+// Prueba 2: retorna la lista de pokemones que empiezan con pi
+  it('retorna una lista de pokemones con nombre que coincida con "pi"', () => {
+    const result = dinamicSearchPokemon('bul');
+    for (let i = 0; i < result.length; i += 1) {
+      expect(result[i].name).toContain('bul');
+    }
+  });
+
+
 
   // Prueba 2 :Filtrar data
   it('returns `It should return "grass"`', () => {
@@ -61,6 +72,7 @@ describe('funciones.sortData', () => {
       name: 'D',
     }
   ];
+
   const result = [{
       name: 'A',
     },
@@ -77,3 +89,20 @@ describe('funciones.sortData', () => {
     expect(funciones.sortData(data,order)).toBe(result);
   })
 });
+
+
+
+
+/* ¿ Se podrá saber sua es la preevolución de Ivisour ? */
+
+function getNextEvol(){
+  let nextevol = evol[0]["next-evolution"];
+  const evolution = [];
+  if(nextevol){
+    evolution.push(...getNextEvol(nextevol));
+  }
+  evolution.push(evol[0]);
+  return evolution;
+}
+
+
