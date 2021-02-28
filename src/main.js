@@ -19,7 +19,7 @@ enter.addEventListener("click", () => {
   document.body.style.background = "#fff";
 
   textUser = document.getElementById("textUser").value;
-  document.getElementById("UserName").innerHTML = "Bienvenida " + textUser;
+  document.getElementById("UserName").innerHTML = "Welcome " + textUser + " !";
 }); 
 
 
