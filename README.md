@@ -85,7 +85,7 @@ HISTORIA DEL USUARIO 1 (H.U.1):
 3. El testing de la primera historia fue aprobada por los usuarios.
 
 ## Prototipado BAJA FIDELIDAD 
-[MIRA EL 👉 FIGMA](https://www.figma.com/file/R21AYiHTe90bbNRjOvcbRr/Pokemon-GO-(Propuesta)-_feedback-web?node-id=0%3A1)
+[MIRA EL 👉 FIGMA]
 <br>
 
 ![p1](https://user-images.githubusercontent.com/60514118/109513930-93892b00-7a73-11eb-8d25-afb01dc180cf.JPG)
