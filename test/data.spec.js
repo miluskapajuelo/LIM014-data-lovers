@@ -1,11 +1,11 @@
-import {funciones} from '../src/data.js';
+import funciones from '../src/data.js';
 
 /* BUSCAR POKEMONES */
-  describe('funciones', () => {
+describe('funciones', () => {
 
     // Prueba 1 : ¿Es función?
   it('is a function', () => {
-    expect(typeof example).toBe('object');
+    expect(typeof funciones).toBe('object');
   });
 });
   // Prueba 2 : ¿Es función?
@@ -16,143 +16,214 @@ describe('funciones.FilterData', () => {
   });
 
   // Prueba 2 :Filtrar data
-  it('returns `It should return "grass"`', () => {
+  it('It should return "grass"', () => {
 
     const data = [{
-      "num": "001",
-      "name": "bulbasaur",
-      "generation": {
-        "num": "generation i",
-        "name": "kanto"
-      },
-      "pokemon-rarity": "normal",
-      "type": [
+      type: [
         "grass",
-    ]}]
+    ]},
+    {
+      type: [
+      "electric",
+    ]},
+     {
+      type: [
+    "fire",
+    ]}];
 
-    const result = true;
+    const result = [{"type": ["grass"]}];
     const type = "grass"
 
-    expect(funciones.FilterData(data,type)).toBe(result);
+    expect(funciones.FilterData(data,type)).toStrictEqual(result);
   });
 
 
 });
 
-/* describe('funciones.sortData', () => {
+ describe('funciones.sortData', () => {
   // Prueba 1 : ¿Es función?
   it('is a function', () => {
     expect(typeof funciones.sortData).toBe('function');
   });
 
   // Prueba 2 : Ordenar Data
-  it('returns `It should return "grass"`', () => {
+  it('It should return "Charmander,Ivysaur,Pikachu"', () => {
 
    
     const data = [{
-      name: 'A',
+      name: 'Ivysaur',
     },
     {
-      name: 'Z',
+      name: 'Charmander',
     },
     {
-      name: 'D',
+      name: 'Pikachu',
     }
   ];
   const result = [{
-      name: 'A',
+      name: 'Charmander',
     },
     {
-      name: 'D',
+      name: 'Ivysaur',
     },
     {
-      name: 'Z',
+      name: 'Pikachu',
     }
   ];
 
     const order = "Ascendente";
 
-    expect(funciones.sortData(data,order)).toBe(result);
+    expect(funciones.sortData(data,order)).toStrictEqual(result);
+  })
+
+  // Prueba 3 : Ordenar Data
+  it('It should return "Pikachu,Ivysaur, Charmander"', () => {
+
+   
+    const data = [{
+      name: 'Ivysaur',
+    },
+    {
+      name: 'Charmander',
+    },
+    {
+      name: 'Pikachu',
+    }
+  ];
+  const result = [{
+      name: 'Pikachu',
+    },
+    {
+      name: 'Ivysaur',
+    },
+    {
+      name: 'Charmander',
+    }
+  ];
+
+    const order = "Descendente";
+
+    expect(funciones.sortData(data,order)).toStrictEqual(result);
+  });
+
+   // Prueba 4 : Ordenar Data
+   it('It should return "1119,1100,990"', () => {
+
+   
+    const data = [{
+      maxCp: "1100",
+      },
+    {
+      maxCp: "1119",
+      },
+      {
+      maxCp: "990",
+      }];
+
+  const result = [{
+    maxCp: "1119",
+    },
+  {
+    maxCp: "1100",
+    },
+    {
+    maxCp: "990",
+    }]
+
+    const order = "+CombatPower";
+
+    expect(funciones.sortData(data,order)).toStrictEqual(result);
+  });
+   // Prueba 5 : Ordenar Data
+   it('It should return "990,1100,1119"', () => {
+
+   
+    const data = [{
+      maxCp: "1100",
+      },
+      {
+      maxCp: "1119",
+      },
+      {
+      maxCp: "990",
+      }];
+
+    const result = [{
+    maxCp: "990",
+     },
+    {
+    maxCp: "1100",
+      },
+      {
+    maxCp: "1119",
+      }]
+
+    const order = "-CombatPower";
+
+    expect(funciones.sortData(data,order)).toStrictEqual(result);
   })
 });
 
- // Prueba 3 : ¿Es función?
- describe('funciones.NewData', () => {
-  // Prueba 2 : ¿Es función?
+describe('funciones.computeStats', () => {
+  // Prueba 6 : ¿Es función?
   it('is a function', () => {
-    expect(typeof funciones.NewData).toBe('function');
+    expect(typeof funciones.computeStats).toBe('function');
   });
 
-  // Prueba 2 :Filtrar data
-  it('returns `It should return "grass"`', () => {
+  // Prueba 6 :Stadistic data
+  it('It should return "[20,100]"', () => {
 
     const data = [{
-        
-      "num": "001",
-          "name": "bulbasaur",
-          "generation": {
-            "num": "generation i",
-            "name": "kanto"
-          },
-          "about": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
-          "img": "https://www.serebii.net/pokemongo/pokemon/001.png",
-          "size": {
-            "height": "0.71 m",
-            "weight": "6.9 kg"
-          },
-          "type": [
-            "grass",
-            "poison"
-          ],
+      maxCp: [
+        "20",
+    ]},
+    {
+      maxCp: [
+      "100",
+    ]},
+     ];
 
-          "spawn-chance": "0.69",
-          "stats": {
-            "base-attack": "118",
-            "base-defense": "111",
-            "base-stamina": "128",
-            "max-cp": "1115",
-            "max-hp": "113"
-          },
-          "resistant": [
-            "water",
-            "electric",
-            "grass",
-            "fighting",
-            "fairy"
-          ],
-          "weaknesses": [
-            "fire",
-            "ice",
-            "flying",
-            "psychic"
-          ],
-          "evolution": {
-            "candy": "bulbasaur candy",
-            "next-evolution": [{
-              "num": "002",
-              "name": "ivysaur",
-              "candy-cost": "25",
-              "next-evolution": [{
-                "num": "003",
-                "name": "venusaur",
-                "candy-cost": "100"
-              }]
-            }]
-          }
-        },
-    ]});
+    const result = [20,100];
 
-    const result = [{
-      "num": "001",
-      "name": "bulbasaur",
-      "generation": {
-        "num": "generation i",
-        "name": "kanto"
-      },
-      "pokemon-rarity": "normal",
-      "type": [
-        "grass",
-    ]}]
+    expect(funciones.computeStats(data)).toStrictEqual(result);
+  })})
 
-    expect(funciones.FilterData(data,type)).toBe(result);
-  }) */
+  describe('funciones.top', () => {
+    // Prueba 7 : ¿Es función?
+    it('is a function', () => {
+      expect(typeof funciones.top).toBe('function');
+    });
+  
+    // Prueba 7 :Top 10
+    it('It should return "[20,100]"', () => {
+  
+      const data = [{
+        spawnChance: [
+          "3.12",
+      ]},
+      {
+        spawnChance: [
+        "0.23",
+      ]},
+      {
+        spawnChance: [
+        "2.57",
+      ]},
+       ];
+  
+      const result = [{
+        spawnChance: [
+          "3.12",
+      ]},
+      {
+        spawnChance: [
+        "2.57",
+      ]},
+      {
+        spawnChance: [
+        "0.23",
+      ]},
+       ];
+      const number = 3;
+      expect(funciones.top(data,number)).toStrictEqual(result);
+    })})

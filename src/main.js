@@ -76,7 +76,7 @@ function getPrevEvol(evol){
        const top = document.getElementById("top");
        top.addEventListener("click",function(){
          dashboard.innerHTML = "";
-         let a = funciones.top(newData)
+         let a = funciones.top(newData,10)
          mostrarCard(a)
          anotherValues(a)
          orderData(a)
@@ -285,11 +285,7 @@ function mostrarCard(array) {
 /* ANOTHER VALUES */
 
   const anotherValues = (a) => {
-  let array = [];
-  a.forEach(function(elemento){
-    
-  array.push(parseInt(elemento.maxCp))
-})
+  let array = funciones.computeStats(a);
   let sum = array.reduce((a, b) => a + b, 0);
   let avg = sum / array.length;
   let max = Math.max(...array);
