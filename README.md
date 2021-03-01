@@ -64,7 +64,7 @@ Las historias de usuario se trabajaron con la herramienta trello en el siguiente
 HISTORIA DEL USUARIO 1 (H.U.1): 
 ```
 
-**HU1**: Pantalla de inicio : COMO jugador@ de **Pokemon** DESEO leer una breve descripción del juego e ingresar mi nombre, PARA sentir la experiencia más personalizada y tener una idea general de que trata el juego.
+**HU1**: Pantalla de inicio : COMO jugador@ de **Pokemon** DESEO ingresar mi nombre, PARA sentir la experiencia más personalizada y luego poder visualizar a los Pokemones.
 
 **Criterios de aceptación:** 💡
 <br>
@@ -80,14 +80,12 @@ HISTORIA DEL USUARIO 1 (H.U.1):
 
 **Testing con usuarios** :
 
-1. Al inicio no entendían (como figura en la primera HU) que era Pokemon.
-2. Resaltaron que querian que fuera más personalizado (por lo que hicimos un input de 'ingrese su nombre') 
-3. Resaltaron que se les hacia mas fácil agregar un botón que los dirija a ver a todos los pokemones, por lo cual 
-se optó por poner un botón de **Enter** que cumpla esta funcionalidad.
-4. El testing de la primera historia fue aprobada por los usuarios.
+1. Resaltaron que querian que fuera más personalizado (por lo que hicimos un input de 'ingrese su nombre') 
+2. Resaltaron que el botón **Enter** sea mas grande y no tenga un fondo transparente.
+3. El testing de la primera historia fue aprobada por los usuarios.
 
 ## Prototipado BAJA FIDELIDAD 
-![](./src/assets/HU/int1BFmofidicada.jpeg) <!-- Aqui agregar imagen de baja fifelifdad -->
+![hu1](https://user-images.githubusercontent.com/60514118/109509772-3f7c4780-7a6f-11eb-9422-cc011b07813c.JPG) <!-- Aqui agregar imagen de baja fifelifdad -->
 
 ## Prototipado ALTA FIDELIDAD 
 [MIRA EL 👉 FIGMA](LINK DE FIGMA)
