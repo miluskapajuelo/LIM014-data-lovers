@@ -102,9 +102,9 @@ HISTORIA DEL USUARIO 2 (H.U.2):
 
 **Criterios de aceptación:** 💡
 <br>
- - Como jugador quiero que se muestren los tipos de liga (rango de CP-poder de combate) para saber qué pokemones están habilitados a participar.<br>
+
  - Como usuario quiero que se muestren los atributos como (ataque, defensa, histamina) para saber qué tan fuerte es mi pokemón.<br>
- - Como usuario quiero que me muestren filtros de resistencia y debilidad para seleccionar el mejor contrincante.<br>
+ - Como jugador@ quiero ordenar a los pokemones por CP para saber cuales son los pokemones más fuertes.<br>
 
 **Definición de terminado:** ✔ 
 <br>
@@ -115,18 +115,17 @@ HISTORIA DEL USUARIO 2 (H.U.2):
 -Desplejar en Github pages.<br>
 
 ## Prototipado BAJA FIDELIDAD 
-![]( ) <!-- Aqui agregar imagen de baja fifelifdad -->
+![HU2](https://user-images.githubusercontent.com/60514118/109264497-13dd3100-77d3-11eb-84f4-842bd516a5c4.JPG)
 
 ## Prototipado ALTA FIDELIDAD 
-[MIRA EL 👉 FIGMA](LINK DE FIGMA)
-![HU2](https://user-images.githubusercontent.com/60514118/109264497-13dd3100-77d3-11eb-84f4-842bd516a5c4.JPG)
+![HU2](https://user-images.githubusercontent.com/60514118/109511441-06dd6d80-7a71-11eb-9e37-c2f29c560b2d.JPG)
 
 
 **********************************
 ```js
 HISTORIA DEL USUARIO 3 (H.U.3): 
 ```
-**HU2**: Como jugador@ de **Pokemon** deseo saber la cantidad de caramelos le faltan a mi **Pokemon** para que evolucione.
+**HU3**: Como jugador@ de **Pokemon** deseo saber la cantidad de caramelos le faltan a mi **Pokemon** para que evolucione.
 
 **Criterios de aceptación:** 💡
 <br>
@@ -147,6 +146,14 @@ HISTORIA DEL USUARIO 3 (H.U.3):
 ## Prototipado ALTA FIDELIDAD 
 [MIRA EL 👉 FIGMA](LINK DE FIGMA)
 ![modal](https://user-images.githubusercontent.com/60514118/109265233-33288e00-77d4-11eb-87bb-a019e4a296a1.JPG)
+
+
+
+ - Como usuario quiero que me muestren filtros de resistencia y debilidad para seleccionar el mejor contrincante.<br>
+
+
+
+
 
 **********************************
 ```js
