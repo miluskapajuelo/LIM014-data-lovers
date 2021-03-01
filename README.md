@@ -165,12 +165,10 @@ HISTORIA DEL USUARIO 4 (H.U.4):
 -Desplejar en Github pages.<br>
 
 ## Prototipado BAJA FIDELIDAD 
-![]( ) <!-- Aqui agregar imagen de baja fifelifdad -->
-
-## Prototipado ALTA FIDELIDAD 
-[MIRA EL 👉 FIGMA](LINK DE FIGMA)
 ![HU2](https://user-images.githubusercontent.com/60514118/109264497-13dd3100-77d3-11eb-84f4-842bd516a5c4.JPG)
 
+## Prototipado ALTA FIDELIDAD 
+![10alta](https://user-images.githubusercontent.com/60514118/109513483-283f5900-7a73-11eb-951e-ed014264bb2d.JPG)
 
 ## 4. Objetivos de aprendizaje 
 
