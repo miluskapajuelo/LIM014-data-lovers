@@ -10,7 +10,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+#firstscreen{
+  background-color: rgba(0, 0, 0, 0.11);
+}
 header .img{
   height: 90px;
   width: 140px;
@@ -47,6 +49,7 @@ header{
   margin-bottom: 100px;
   font-size: 18px;
   color:#fdd008 ;
+
 }
 .apertura:hover {
   text-shadow: 0.0625rem 0.0625rem 0.375rem #fdd008;
@@ -657,6 +660,8 @@ color: #35ce21;
   .apertura {
     text-shadow: 0.0625rem 0.0625rem 0.375rem #fdd008;
     color:#150a29 ;
+    justify-content: center;
+    display: flex;
   }
   .flex-wrap2{
     display: flex; 

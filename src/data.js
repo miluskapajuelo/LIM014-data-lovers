@@ -59,13 +59,19 @@ const funciones = {
       return data
        
 }},
-    top: (data) =>{
+  top: (data, number) =>{
         data.sort((a, b) => {
           return parseFloat(b.spawnChance) - parseFloat(a.spawnChance)
         }); 
-        return data.slice(0,10)} 
-}
+        return data.slice(0,number)} ,
+
+  computeStats: (data) =>{
+    let array = data.map(elemento => parseInt(elemento.maxCp))
+    return array
+  }
+};
 export default funciones;
+
 /* Grafica: function(data1){
     let newArray = [];
     data1.pokemon.forEach(function (pokemones) {
