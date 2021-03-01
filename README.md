@@ -141,19 +141,10 @@ HISTORIA DEL USUARIO 3 (H.U.3):
 -Desplejar en Github pages.<br>
 
 ## Prototipado BAJA FIDELIDAD 
-![]( ) <!-- Aqui agregar imagen de baja fifelifdad -->
+![baja](https://user-images.githubusercontent.com/60514118/109512994-aa7b4d80-7a72-11eb-85c9-145d67cfc1d1.JPG)
 
 ## Prototipado ALTA FIDELIDAD 
-[MIRA EL 👉 FIGMA](LINK DE FIGMA)
-![modal](https://user-images.githubusercontent.com/60514118/109265233-33288e00-77d4-11eb-87bb-a019e4a296a1.JPG)
-
-
-
- - Como usuario quiero que me muestren filtros de resistencia y debilidad para seleccionar el mejor contrincante.<br>
-
-
-
-
+![modal](https://user-images.githubusercontent.com/60514118/109512756-6d16c000-7a72-11eb-9c3b-14466129f76e.JPG)
 
 **********************************
 ```js
