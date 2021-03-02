@@ -19,12 +19,15 @@
 
 ***
 
+
+
 ## 1. Descripción del producto digital 👩‍💻💻
 
 ## Análisis UX: ✏️
 Es una página web que permite al usuario (novatos y experimentados), mostrar todos los pokemones, filtrar y ordenar la lista de **Pokemon** para seleccionar uno en específico  o por ligas, habilidades especiales y ver sus estadísticas generales (more stats) y principales (ataque, defensa), ello con el objetivo de tener una mayor información de cual usar para combatir una lucha **Pokemón**.
 [Planning 👉Trello](https://trello.com/b/GhE9iODV/proyectolaboratoriadatalovers)
 
+ 
 `¿Quienes son los principales usuarios del producto?`
 <br>
 Todos aquellos a los cuales les guste el juego de Pokemon, no hay una población en edades referenciales, dado que a cualquier
@@ -55,6 +58,9 @@ A la hora de planear una estrategia de juego, para conocer mejor a su campeón y
 
 Visualizar la data,filtrarla, ordenarla y hacer algún cálculo agregado(Con cálculo agregado) nos referimos a distintos cálculos que puedes hacer con la data para mostrar información aún más relevante para los usuarios (promedio, el valor máximo o mínimo, etc).
 
+[Página  👉 terminada](https://pamelapaolacb.github.io/LIM014-data-lovers/src)
+
+
 ## 3. Historias de usuario 👨‍🦱👩‍🦰💻
 
 Las historias de usuario se trabajaron con la herramienta trello en el siguiente [link](https://docs.google.com/spreadsheets/d/1GsK5vld-C2ez0haIdeOaHLzAGcNznEmK/edit#gid=1442775653) donde se puede visualizar 4 historias de usuario que donde cada una consiste con criterios de aceptación, definición de terminado y pequeñas tareas en las cuales fueron subdivididas.
@@ -64,7 +70,7 @@ Las historias de usuario se trabajaron con la herramienta trello en el siguiente
 HISTORIA DEL USUARIO 1 (H.U.1): 
 ```
 
-**HU1**: Pantalla de inicio : COMO jugador@ de **Pokemon** DESEO leer una breve descripción del juego e ingresar mi nombre, PARA sentir la experiencia más personalizada y tener una idea general de que trata el juego.
+**HU1**: Pantalla de inicio : COMO jugador@ de **Pokemon** DESEO ingresar mi nombre, PARA sentir la experiencia más personalizada y luego poder visualizar a los Pokemones.
 
 **Criterios de aceptación:** 💡
 <br>
@@ -80,19 +86,19 @@ HISTORIA DEL USUARIO 1 (H.U.1):
 
 **Testing con usuarios** :
 
-1. Al inicio no entendían (como figura en la primera HU) que era Pokemon.
-2. Resaltaron que querian que fuera más personalizado (por lo que hicimos un input de 'ingrese su nombre') 
-3. Resaltaron que se les hacia mas fácil agregar un botón que los dirija a ver a todos los pokemones, por lo cual 
-se optó por poner un botón de **Enter** que cumpla esta funcionalidad.
-4. El testing de la primera historia fue aprobada por los usuarios.
+1. Resaltaron que querian que fuera más personalizado (por lo que hicimos un input de 'ingrese su nombre') 
+2. Resaltaron que el botón **Enter** sea mas grande y no tenga un fondo transparente.
+3. El testing de la primera historia fue aprobada por los usuarios.
 
 ## Prototipado BAJA FIDELIDAD 
-![](./src/assets/HU/int1BFmofidicada.jpeg) <!-- Aqui agregar imagen de baja fifelifdad -->
+[MIRA EL 👉 FIGMA](https://www.figma.com/file/R21AYiHTe90bbNRjOvcbRr/Pokemon-GO-(Propuesta)-_feedback-web?node-id=0%3A1)
+<br>
+
+![p1](https://user-images.githubusercontent.com/60514118/109513930-93892b00-7a73-11eb-8d25-afb01dc180cf.JPG)
+
 
 ## Prototipado ALTA FIDELIDAD 
-[MIRA EL 👉 FIGMA](LINK DE FIGMA)
-![Portada](https://user-images.githubusercontent.com/60514118/109263223-e68f8380-77d0-11eb-97a8-804a3bd89424.JPG)
-
+![hu1](https://user-images.githubusercontent.com/60514118/109509772-3f7c4780-7a6f-11eb-9422-cc011b07813c.JPG)
 
 **********************************
 ```js
@@ -103,9 +109,9 @@ HISTORIA DEL USUARIO 2 (H.U.2):
 
 **Criterios de aceptación:** 💡
 <br>
- - Como jugador quiero que se muestren los tipos de liga (rango de CP-poder de combate) para saber qué pokemones están habilitados a participar.<br>
+
  - Como usuario quiero que se muestren los atributos como (ataque, defensa, histamina) para saber qué tan fuerte es mi pokemón.<br>
- - Como usuario quiero que me muestren filtros de resistencia y debilidad para seleccionar el mejor contrincante.<br>
+ - Como jugador@ quiero ordenar a los pokemones por CP para saber cuales son los pokemones más fuertes.<br>
 
 **Definición de terminado:** ✔ 
 <br>
@@ -116,18 +122,17 @@ HISTORIA DEL USUARIO 2 (H.U.2):
 -Desplejar en Github pages.<br>
 
 ## Prototipado BAJA FIDELIDAD 
-![]( ) <!-- Aqui agregar imagen de baja fifelifdad -->
+![HU2](https://user-images.githubusercontent.com/60514118/109264497-13dd3100-77d3-11eb-84f4-842bd516a5c4.JPG)
 
 ## Prototipado ALTA FIDELIDAD 
-[MIRA EL 👉 FIGMA](LINK DE FIGMA)
-![HU2](https://user-images.githubusercontent.com/60514118/109264497-13dd3100-77d3-11eb-84f4-842bd516a5c4.JPG)
+![HU2](https://user-images.githubusercontent.com/60514118/109511441-06dd6d80-7a71-11eb-9e37-c2f29c560b2d.JPG)
 
 
 **********************************
 ```js
 HISTORIA DEL USUARIO 3 (H.U.3): 
 ```
-**HU2**: Como jugador@ de **Pokemon** deseo saber la cantidad de caramelos le faltan a mi **Pokemon** para que evolucione.
+**HU3**: Como jugador@ de **Pokemon** deseo saber la cantidad de caramelos le faltan a mi **Pokemon** para que evolucione.
 
 **Criterios de aceptación:** 💡
 <br>
@@ -143,11 +148,10 @@ HISTORIA DEL USUARIO 3 (H.U.3):
 -Desplejar en Github pages.<br>
 
 ## Prototipado BAJA FIDELIDAD 
-![]( ) <!-- Aqui agregar imagen de baja fifelifdad -->
+![baja](https://user-images.githubusercontent.com/60514118/109512994-aa7b4d80-7a72-11eb-85c9-145d67cfc1d1.JPG)
 
 ## Prototipado ALTA FIDELIDAD 
-[MIRA EL 👉 FIGMA](LINK DE FIGMA)
-![modal](https://user-images.githubusercontent.com/60514118/109265233-33288e00-77d4-11eb-87bb-a019e4a296a1.JPG)
+![modal](https://user-images.githubusercontent.com/60514118/109512756-6d16c000-7a72-11eb-9c3b-14466129f76e.JPG)
 
 **********************************
 ```js
@@ -168,12 +172,10 @@ HISTORIA DEL USUARIO 4 (H.U.4):
 -Desplejar en Github pages.<br>
 
 ## Prototipado BAJA FIDELIDAD 
-![]( ) <!-- Aqui agregar imagen de baja fifelifdad -->
-
-## Prototipado ALTA FIDELIDAD 
-[MIRA EL 👉 FIGMA](LINK DE FIGMA)
 ![HU2](https://user-images.githubusercontent.com/60514118/109264497-13dd3100-77d3-11eb-84f4-842bd516a5c4.JPG)
 
+## Prototipado ALTA FIDELIDAD 
+![10alta](https://user-images.githubusercontent.com/60514118/109513483-283f5900-7a73-11eb-951e-ed014264bb2d.JPG)
 
 ## 4. Objetivos de aprendizaje 
 
