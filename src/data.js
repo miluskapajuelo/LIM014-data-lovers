@@ -1,5 +1,46 @@
 const funciones = {
-  /*  NUEVA DATA */
+  
+  /*  FILTER BY TYPE OF POKEMON */
+  FilterData: (data, type) => data.filter((element) => element.type == type),
+  
+  /*  FILTER BY NAME OF POKEMON */
+  FindTxt: (data, textValue) => data.filter((element) => element.name.includes(textValue)),
+   
+  /* ORDER DATA */
+  sortData: (data, sortOrder) => {
+    switch(sortOrder){
+      case 'Ascendent':
+        data.sort((a, b) => {
+          if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+        }); return data; 
+      case "Descendent":
+        data.sort((a, b) => {
+          if (b.name.toLowerCase() < a.name.toLowerCase()) return -1;
+        });return data;
+      case "+CombatPower":
+        data.sort((a, b) => {
+          return parseInt(b.maxCp) - parseInt(a.maxCp)
+        }); 
+        return data;
+      case "-CombatPower":
+        data.sort((a, b) => {
+          return parseInt(a.maxCp) - parseInt(b.maxCp)
+        }); 
+        return data;
+      default: return data}},
+  
+  top: (data, number) =>{
+        data.sort((a, b) => {
+          return parseFloat(b.spawnChance) - parseFloat(a.spawnChance)
+        }); 
+        return data.slice(0,number)} ,
+
+  computeStats: (data) =>{
+    let array = data.map(elemento => parseInt(elemento.maxCp))
+    return array
+  },
+
+  /*  NEW DATA */
   NewData: (data) => data.map(pokemones => ({
     "img": pokemones.img,
     "name": pokemones.name,
@@ -19,56 +60,9 @@ const funciones = {
     "evolution": pokemones.evolution,
     "evolutionNext": pokemones.evolution["next-evolution"],
     "evolutionPrev": pokemones.evolution["prev-evolution"],
-    "especialAttack": pokemones["special-attack"],  
     "spawnChance" : pokemones["spawn-chance"]
+    
   })),
-  /*  FILTRAR POR TIPO POKEMON */
-  FilterData: (data, tipo) => data.filter((element) => element.type == tipo),
-  
-  /*  FILTRAR NOMBRE POKEMON */
-  FindTxt: (data, valorTexto) => data.filter((elemento) => elemento.name.includes(valorTexto)),
-   
-  /* ORDENAR DATA */
-  sortData: (data, sortOrder) => {
-    if (sortOrder === "Ascendente") {
-      
-      data.sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-        if (b.name.toLowerCase() > a.name.toLowerCase()) return 1;
-        return 0;
-      });
-      return data
-      
-    } else if (sortOrder === "Descendente") {
-      data.sort((a, b) => {
-        if (b.name.toLowerCase() < a.name.toLowerCase()) return -1;
-        if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
-        return 0;
-      });
-      return data
-    }else if (sortOrder === "+CombatPower") {
-      data.sort((a, b) => {
-        return parseInt(b.maxCp) - parseInt(a.maxCp)
-      });
-      return data
-      
-    }  else if (sortOrder === "-CombatPower") {
-      data.sort((a, b) => {
-        return parseInt(a.maxCp) - parseInt(b.maxCp)
-      });
-      return data
-       
-}},
-  top: (data, number) =>{
-        data.sort((a, b) => {
-          return parseFloat(b.spawnChance) - parseFloat(a.spawnChance)
-        }); 
-        return data.slice(0,number)} ,
-
-  computeStats: (data) =>{
-    let array = data.map(elemento => parseInt(elemento.maxCp))
-    return array
-  }
 };
 export default funciones;
 

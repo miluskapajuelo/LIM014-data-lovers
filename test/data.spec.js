@@ -71,9 +71,9 @@ describe('funciones.FilterData', () => {
     }
   ];
 
-    const order = "Ascendente";
+    const sortOrder = "Ascendent";
 
-    expect(funciones.sortData(data,order)).toStrictEqual(result);
+    expect(funciones.sortData(data,sortOrder)).toStrictEqual(result);
   })
 
   // Prueba 3 : Ordenar Data
@@ -101,7 +101,7 @@ describe('funciones.FilterData', () => {
     }
   ];
 
-    const order = "Descendente";
+    const order = "Descendent";
 
     expect(funciones.sortData(data,order)).toStrictEqual(result);
   });
@@ -162,7 +162,37 @@ describe('funciones.FilterData', () => {
 
     expect(funciones.sortData(data,order)).toStrictEqual(result);
   })
+  it('It should return "data', () => {
+
+   
+    const data = [{
+      name: 'Ivysaur',
+    },
+    {
+      name: 'Charmander',
+    },
+    {
+      name: 'Pikachu',
+    }
+  ];
+  const result = [{
+    name: 'Ivysaur',
+  },
+  {
+    name: 'Charmander',
+  },
+  {
+    name: 'Pikachu',
+  }
+  ];
+
+    const order = "sorted by";
+
+    expect(funciones.sortData(data,order)).toStrictEqual(result);
+  });
+
 });
+
 
 describe('funciones.computeStats', () => {
   // Prueba 6 : ¿Es función?
@@ -227,3 +257,109 @@ describe('funciones.computeStats', () => {
       const number = 3;
       expect(funciones.top(data,number)).toStrictEqual(result);
     })})
+
+    // Prueba 8 : ¿Es función?
+describe('funciones.FindTxt', () => {
+  // Prueba 8 : ¿Es función?
+  it('is a function', () => {
+    expect(typeof funciones.FindTxt).toBe('function');
+  });
+
+  // Prueba 8 :Filtrar data
+  it('It should return "charmander, charmeleon"', () => {
+
+    const data = [{
+      name: [
+        "charmander",
+    ]},
+    {
+      name: [
+        "charmeleon",
+    ]},
+    { name: [
+        "pikachu",
+  ]}];
+
+    const result = [{"name": ["charmeleon"]}];
+    const textValue = "charmeleon";
+
+    expect(funciones.FindTxt(data, textValue)).toStrictEqual(result);
+  }); 
+});
+    // Prueba 9 : ¿Es función?
+    describe('funciones.NewData', () => {
+      // Prueba 8 : ¿Es función?
+      it('is a function', () => {
+        expect(typeof funciones.NewData).toBe('function');
+      });
+    
+      // Prueba 8 :Filtrar data
+      it('It should return "charmander, charmeleon"', () => {
+    
+        const data = [{
+          "num": "245",
+          "name": "suicune",
+          "generation": {
+            "num": "generation ii",
+            "name": "johto"
+          },
+          "about": "Suicune embodies the compassion of a pure spring of water. It runs across the land with gracefulness. This Pokémon has the power to purify dirty water.",
+          "img": "https://www.serebii.net/pokemongo/pokemon/245.png",
+          "size": {
+            "height": "2.01 m",
+            "weight": "187.0 kg"
+          },
+          "type": [
+            "water"
+          ],
+          "spawn-chance": "0",
+          "stats": {
+            "base-attack": "180",
+            "base-defense": "235",
+            "base-stamina": "225",
+            "max-cp": "2983",
+            "max-hp": "189"
+          },
+          "resistant": [
+            "fire",
+            "water",
+            "ice",
+            "steel"
+          ],
+          "weaknesses": [
+            "electric",
+            "grass"
+          ],
+          "egg": "not in eggs",
+          "buddy-distance-km": "20",
+          "evolution": {
+            "candy": "suicune candy"
+          }
+        }];
+    
+        const result = [{
+          about: "Suicune embodies the compassion of a pure spring of water. It runs across the land with gracefulness. This Pokémon has the power to purify dirty water.",
+          baseAttack: "180",
+          baseDefense: "235",
+          baseStamina: "225",
+          evolution: {candy: "suicune candy"},
+          generation: "johto",
+          height: "2.01 m",
+          img: "https://www.serebii.net/pokemongo/pokemon/245.png",
+          maxCp: "2983",
+          maxHp: "189",
+          name: "suicune",
+          num: "245",
+          resistant: ["fire", "water", "ice", "steel"],
+          spawnChance: "0",
+          type: ["water"],
+          weaknesses: ["electric", "grass"],
+          weight: "187.0 kg",
+          evolutionNext: undefined,
+          evolutionPrev: undefined}];
+          
+    
+        expect(funciones.NewData(data)).toStrictEqual(result);
+      }); 
+    });
+

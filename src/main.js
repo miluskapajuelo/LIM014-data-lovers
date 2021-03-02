@@ -278,7 +278,7 @@ function mostrarCard(array) {
       }
     });
   } else {
-    dashboard.innerHTML = "<h1>No se han encontrado pokemones</h1>";
+    dashboard.textContent = "No se han encontrado pokemones";
   }
 } 
 
