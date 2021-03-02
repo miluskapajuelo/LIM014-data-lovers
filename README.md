@@ -19,12 +19,15 @@
 
 ***
 
+
+
 ## 1. Descripción del producto digital 👩‍💻💻
 
 ## Análisis UX: ✏️
 Es una página web que permite al usuario (novatos y experimentados), mostrar todos los pokemones, filtrar y ordenar la lista de **Pokemon** para seleccionar uno en específico  o por ligas, habilidades especiales y ver sus estadísticas generales (more stats) y principales (ataque, defensa), ello con el objetivo de tener una mayor información de cual usar para combatir una lucha **Pokemón**.
 [Planning 👉Trello](https://trello.com/b/GhE9iODV/proyectolaboratoriadatalovers)
-
+[Página terminada](https://pamelapaolacb.github.io/LIM014-data-lovers/src)
+ 
 `¿Quienes son los principales usuarios del producto?`
 <br>
 Todos aquellos a los cuales les guste el juego de Pokemon, no hay una población en edades referenciales, dado que a cualquier
