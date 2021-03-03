@@ -84,7 +84,7 @@ function getPrevEvol(evol){
 
 function mostrarCard(array) {
   if (array.length !== 0) {
-    array.forEach(function (element) {
+    array.map(function (element) {
       let figcaptionCP = document.createElement("figcaption");
       let figurePokemon = document.createElement("figure");
       let imgPokemon = document.createElement("img");
