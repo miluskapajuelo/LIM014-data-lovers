@@ -3,7 +3,7 @@ import data from "./data/pokemon/pokemon.js";
 
 
 const dashboard = document.getElementById("lista");
-const modalMode = document.getElementById("modal-mode"); 
+const modalMode = document.getElementById("modal-mode");
 const modalWindow = document.getElementById("modal-window");
 let newData = funciones.NewData(data.pokemon);
 
@@ -20,7 +20,7 @@ enter.addEventListener("click", () => {
 
   textUser = document.getElementById("textUser").value;
   document.getElementById("UserName").innerHTML = "Welcome " + textUser + " !";
-}); 
+});
 
 
 /* MENU DROPDOWN */
@@ -30,7 +30,7 @@ menu.addEventListener("click", function press2() {
   let siteNav = document.getElementById("site-nav");
   siteNav.classList.toggle("site-nav-open");
   menu.classList.toggle("menu-open");
-}); 
+});
 
 /* AUDIO POKEMON SONG */
 const audio = document.getElementById("audio2");
@@ -46,7 +46,7 @@ playPauseBTN.addEventListener("click", function playPause() {
     audio.pause();
     playPauseBTN.innerHTML = "Play &#9658;";
   }
-}); 
+});
 
 /* EXISTS PREV OR NEXT EVOLUTION */
 function getNextEvol(evol){
@@ -71,7 +71,7 @@ function getPrevEvol(evol){
 
 /* FUNCTION TO CREATE ELEMENTS IN DASHBOARD */
 
-       /* FILTER BY TOP 10 */  
+       /* FILTER BY TOP 10 */
 
        const top = document.getElementById("top");
        top.addEventListener("click",function(){
@@ -102,14 +102,14 @@ function mostrarCard(array) {
       figura.appendChild(figcaptionName);
       figura.appendChild(divPokemon);
       divPokemon.appendChild(description);
-      
+
 
 
       /* POKEMON EVOLUTION (NEXT-PREV) */
       /* NEXT EVOLUTION */
       let next;
       function evolucionNext(){
-        if(element.evolution){ 
+        if(element.evolution){
           let result = "";
           if(element.evolutionNext){
             next = getNextEvol(element.evolutionNext);
@@ -125,7 +125,7 @@ function mostrarCard(array) {
     /* PREV EVOLUTION */
     let prev;
     function evolucionPre(){
-      if(element.evolution){ 
+      if(element.evolution){
         let result = "";
         if(element.evolutionPrev){
           prev = getPrevEvol(element.evolutionPrev);
@@ -139,10 +139,10 @@ function mostrarCard(array) {
     }
   }
 
- 
+
 
   /* TABLE RESISTANT */
-  
+
   function resistant(){
     let result = "";
       if(element.resistant){
@@ -164,39 +164,39 @@ function mostrarCard(array) {
       /* CLICK TO SHOW MODAL */
       let btnModal = figurePokemon.querySelector(".cap");
       btnModal.addEventListener("click", showModal);
-      
+
       function showModal() {
-    
+
         modalMode.classList.toggle("hide");
         modalWindow.classList.toggle("hide");
-        
-              
-        modalWindow.innerHTML = 
+
+
+        modalWindow.innerHTML =
         `<div id="div-img-modal"><img src="${element.img}" alt="" id="img-pokemon-modal" class="image-modal">
-            </div> 
+            </div>
             <section id="body-modal" class="modal flex-wrap">
-            <article id="NameModal" class="font f-medium f-green one-fraction"> 
+            <article id="NameModal" class="font f-medium f-green one-fraction">
             <p class="nameP"></p>
             ${element.name}
             </article>
-            <article id="pokemon-generacion-modal" class="font-g f-medium-g f-green-g one-fraction "> 
+            <article id="pokemon-generacion-modal" class="font-g f-medium-g f-green-g one-fraction ">
             Generación : ${element.generation}
             </article>
             <br>
             <br>
-            <div class="column-1 flex-wrap color-container ">  
-            <img src="./img/talla.png" alt="" class="icon-medium">           
+            <div class="column-1 flex-wrap color-container ">
+            <img src="./img/talla.png" alt="" class="icon-medium">
             <div class="font f-small">
                 <span class="block f-green">Height: </span><span id="otro" class="">${element.height}</span>
-            </div> 
             </div>
-            <div class="column-1 flex-wrap color-container ">  
-            <img src="./img/weight.png" alt="" class="icon-medium">           
+            </div>
+            <div class="column-1 flex-wrap color-container ">
+            <img src="./img/weight.png" alt="" class="icon-medium">
             <div class="font f-small">
                 <span class="block f-green">Weight: </span><span id="value-height" class="">${element.weight}</span>
-            </div> 
             </div>
-            <div class="column-1 flex-wrap color-container ">            
+            </div>
+            <div class="column-1 flex-wrap color-container ">
             <div class="font f-small">
                 <span class="image-size">Type: </span>
                 <span id="value-height">
@@ -204,7 +204,7 @@ function mostrarCard(array) {
                    '<img src="./img/' + element.type[0]+ '.png" alt="" class="icon-medium">' :
                    '<img src="./img/' + element.type[0]+ '.png" alt="" class="icon-medium"><img src="./img/' + element.type[1]+ '.png" alt="" class="icon-medium">'}
                 </span>
-            </div> 
+            </div>
             </div>
             </section>
             <section id="body-modal2" class="modal2 flex-wrap2">
@@ -238,12 +238,14 @@ function mostrarCard(array) {
               <div id="move-and-attack" class="column-5 flex-wrap2" style="display: flex;">
                 <table id="stats-table" class="column-5 font">
                 <caption class="titulo">Evolution Table</caption>
-                <tbody><tr>
-                <td>Evolution</td>
-                <td>Name</td>
-                <td>Me</td>
-                <td>Candy-Cost</td>
-                </tr></tbody>
+                <thead>
+                    <tr>
+                      <th>Evolution</th>
+                      <th>Name</th>
+                      <th>Image</th>
+                      <th>Candy-Cost</th>
+                    </tr>
+                </thead>
                 <tbody>
                 ${evolucionPre()}
                 </tbody>
@@ -255,18 +257,19 @@ function mostrarCard(array) {
                 </tr></tbody>
                 <tbody>
                 ${evolucionNext()}</tbody>
-                
+
                 </table>
               </div>
             </div>
+
             <footer class="footerModal"> <p class="chance">Spawn Chance: ${element.spawnChance}</p>
             </footer>
             <div>
             <a href="#" title="Close" class="modal-close">Close</a>
             </div>
             </section>`;
-        
-        
+
+
         const btnCloseModal = modalWindow.querySelector(".modal-close");
 
         btnCloseModal.addEventListener("click", cerrarModal);
@@ -280,7 +283,7 @@ function mostrarCard(array) {
   } else {
     dashboard.innerHTML = "<h1>No se han encontrado pokemones</h1>";
   }
-} 
+}
 
 /* ANOTHER VALUES */
 
@@ -300,7 +303,7 @@ function mostrarCard(array) {
   Pavg.innerHTML = `<p>PROM CP:</p><p>${average}</p>`;
 }
 
-/* FILTER BY TYPE POKEMON */  
+/* FILTER BY TYPE POKEMON */
 
 const buttons = document.querySelectorAll(".fa");
 const choose = (event) => {
@@ -315,7 +318,7 @@ buttons.forEach((button) => {
 });
 
 
- 
+
 /* ORDER BY A-Z /Z-A/+CP/-CP */
 const orderData = (data) => {
 const choose = document.querySelector("#selecta");
@@ -340,7 +343,7 @@ const FilterDat = () => {
 };
 text.addEventListener("keyup", FilterDat);
 FilterDat()
-; 
+;
 
 /* GRAFICO RADIAL */
 /* var marksCanvas = document.getElementById("marksChart");
@@ -359,5 +362,5 @@ var marksData = {
 var radarChart = new Chart(marksCanvas, {
   type: 'radar',
   data: marksData
-}); 
+});
 return radarChart */
