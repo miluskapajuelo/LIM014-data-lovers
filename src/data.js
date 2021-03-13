@@ -1,38 +1,38 @@
 const funciones = {
-  
+
   /*  FILTER BY TYPE OF POKEMON */
   FilterData: (data, type) => data.filter((element) => element.type == type),
-  
+
   /*  FILTER BY NAME OF POKEMON */
   FindTxt: (data, textValue) => data.filter((element) => element.name.includes(textValue)),
-   
+
   /* ORDER DATA */
   sortData: (data, sortOrder) => {
     switch(sortOrder){
-      case 'Ascendent':
+      case 'Ascendente':
         data.sort((a, b) => {
           if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-        }); return data; 
-      case "Descendent":
+        }); return data;
+      case "Descendente":
         data.sort((a, b) => {
           if (b.name.toLowerCase() < a.name.toLowerCase()) return -1;
         });return data;
       case "+CombatPower":
         data.sort((a, b) => {
           return parseInt(b.maxCp) - parseInt(a.maxCp)
-        }); 
+        });
         return data;
       case "-CombatPower":
         data.sort((a, b) => {
           return parseInt(a.maxCp) - parseInt(b.maxCp)
-        }); 
+        });
         return data;
       default: return data}},
-  
+
   top: (data, number) =>{
         data.sort((a, b) => {
           return parseFloat(b.spawnChance) - parseFloat(a.spawnChance)
-        }); 
+        });
         return data.slice(0,number)} ,
 
   computeStats: (data) =>{
@@ -61,7 +61,7 @@ const funciones = {
     "evolutionNext": pokemones.evolution["next-evolution"],
     "evolutionPrev": pokemones.evolution["prev-evolution"],
     "spawnChance" : pokemones["spawn-chance"]
-    
+
   })),
 };
 export default funciones;
@@ -93,7 +93,7 @@ export default funciones;
                 }
             }
         }
-          
+
       })
       return chart}
        */
