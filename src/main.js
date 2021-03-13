@@ -76,15 +76,15 @@ function getPrevEvol(evol){
        const top = document.getElementById("top");
        top.addEventListener("click",function(){
          dashboard.innerHTML = "";
-         let a = funciones.top(newData,10)
-         mostrarCard(a)
-         anotherValues(a)
-         orderData(a)
+         let dat = funciones.top(newData,10)
+         showCard(dat)
+         anotherValues(dat)
+         orderData(dat)
        });
 
-function mostrarCard(array) {
-  if (array.length !== 0) {
-    array.map(function (element) {
+function showCard(data) {
+  if (data.length !== 0) {
+    data.map(function (element) {
       let figcaptionCP = document.createElement("figcaption");
       let figurePokemon = document.createElement("figure");
       let imgPokemon = document.createElement("img");
@@ -285,11 +285,11 @@ function mostrarCard(array) {
 /* ANOTHER VALUES */
 
   const anotherValues = (a) => {
-  let array = funciones.computeStats(a);
-  let sum = array.reduce((a, b) => a + b, 0);
-  let avg = sum / array.length;
-  let max = Math.max(...array);
-  let min = Math.min(...array);
+  let data = funciones.computeStats(a);
+  let sum = data.reduce((a, b) => a + b, 0);
+  let avg = sum / data.length;
+  let max = Math.max(...data);
+  let min = Math.min(...data);
   let average = avg.toFixed(2);
 
   const PMax = document.getElementById("max");
@@ -305,10 +305,10 @@ function mostrarCard(array) {
 const buttons = document.querySelectorAll(".fa");
 const choose = (event) => {
   dashboard.innerHTML = "";
-  let a = funciones.FilterData(newData, event.target.id);
-  mostrarCard(a)
-  anotherValues(a)
-  orderData(a)
+  let dat = funciones.FilterData(newData, event.target.id);
+  showCard(dat)
+  anotherValues(dat)
+  orderData(dat)
 };
 buttons.forEach((button) => {
   button.addEventListener("click", choose);
@@ -322,9 +322,9 @@ const choose = document.querySelector("#selecta");
 choose.addEventListener("change", (event) => {
   dashboard.innerHTML = "";
   let valor = event.target.value;
-  let a = funciones.sortData(data, valor);
-  mostrarCard(a)
-  anotherValues(a)
+  let dat = funciones.sortData(data, valor);
+  showCard(dat)
+  anotherValues(dat)
 })};
 
 
@@ -333,10 +333,10 @@ const text = document.querySelector("#text");
 const FilterDat = () => {
   dashboard.innerHTML = "";
   const TextValue = text.value.toLowerCase();
-  let a = funciones.FindTxt(newData, TextValue);
-  mostrarCard(a);
-  anotherValues(a)
-  orderData(a)
+  let dat = funciones.FindTxt(newData, TextValue);
+  showCard(dat);
+  anotherValues(dat)
+  orderData(dat)
 };
 text.addEventListener("keyup", FilterDat);
 FilterDat()
